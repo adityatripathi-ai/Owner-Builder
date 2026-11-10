@@ -28,7 +28,7 @@ export default function Hero() {
               {tags.map((tag) => (
                 <li
                   key={tag}
-                  className="rounded-sm border border-[#1d2056]/25 bg-[#e9e7f2] px-2 py-[3px] text-[9px] text-[#1d2056]"
+                  className="rounded-sm border border-[#1d2056]/25 bg-white px-2 py-[3px] text-[9px] text-[#1d2056]"
                 >
                   {tag}
                 </li>
