@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 
 import phone1 from "../../../assets/images/phone-1.png";
@@ -7,38 +6,34 @@ import phone3 from "../../../assets/images/phone-3.png";
 
 const screens = [
   {
-    number: "01",
-    title: "Project Overview",
+    title: "Understand the estimate",
     description:
-      "Keep your project information and important details organised in one place.",
+      "Organize bid categories and amounts before moving into cost review.",
     image: phone1,
   },
   {
-    number: "02",
-    title: "Manage Your Budget",
+    title: "Coordinate the next trade",
     description:
-      "Keep track of project costs and stay informed about your spending.",
+      "Keep scheduled work and subcontractor information together.",
     image: phone2,
   },
   {
-    number: "03",
-    title: "Track Your Progress",
+    title: "Contractor",
     description:
-      "Follow your project activities and stay updated at every stage.",
+      "Organize bid categories and amounts before moving into cost review.",
     image: phone3,
   },
   {
-    number: "04",
-    title: "Project Documents",
+    title: "Keep agreements close",
     description:
-      "Keep your important project documents and records organised.",
+      "Maintain a clear place for forms and contracts throughout the project.",
     image: phone1, // Temporary image: replace with phone4 later
   },
 ];
 
 const ServicesWorkSection = () => {
   return (
-    <section className="w-full bg-[#F5F3EF] px-5 sm:px-8 lg:px-10 py-12 sm:py-16 lg:py-20">
+    <section className="w-full bg-[#EAE6DF] px-5 sm:px-8 lg:px-10 py-12 sm:py-16 lg:py-20">
       <div className="max-w-[1200px] mx-auto">
 
         {/* SECTION HEADING */}
@@ -47,64 +42,57 @@ const ServicesWorkSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="max-w-[600px] mb-9 sm:mb-12"
+          className="mb-10 sm:mb-12"
         >
-          <p className="text-[#7771D5] text-[8px] sm:text-[9px] uppercase tracking-[1.5px] font-semibold mb-3">
-            Inside the Platform
+          <p className="text-[#20244F] text-[9px] sm:text-[10px] uppercase tracking-[0.12em] font-semibold mb-4">
+            A closer look
           </p>
 
-          <h2
-            className="text-[#303438] text-[28px] sm:text-[36px] lg:text-[44px] leading-[1.12] font-normal"
-            style={{ fontFamily: "Georgia, serif" }}
-          >
+          <h2 className="font-serif text-[#20244F] text-[28px] sm:text-[36px] lg:text-[44px] leading-[1.12] tracking-[-0.01em] font-normal">
             The work, brought into focus.
           </h2>
 
-          <p className="mt-3 text-[#777777] text-[10px] sm:text-[11px] leading-[1.8] max-w-[480px]">
-            A clearer view of the tools that help you organise
-            your project, manage the details and keep everything
-            moving forward.
+          <p className="mt-4 text-[#6F6F7E] text-[12px] sm:text-[13px] lg:text-[14px] leading-[1.7] max-w-[640px]">
+            Explore the original application screens for estimates, trade
+            scheduling and project agreements.
           </p>
         </motion.div>
 
-        {/* FOUR PHONE IMAGES */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-5 sm:gap-6 lg:gap-8 items-start">
+        {/* FOUR PHONE SCREENS */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-x-5 gap-y-10 sm:gap-x-6 lg:gap-x-8 items-start">
           {screens.map((screen, index) => (
             <motion.div
-              key={screen.number}
+              key={screen.title}
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.12 }}
-              className="w-full text-center"
+              className="w-full"
             >
-              {/* PHONE IMAGE */}
-              <div className="flex justify-center items-center h-[230px] sm:h-[270px] lg:h-[320px] -translate-x-2 sm:-translate-x-3 lg:-translate-x-4">
-                <img
-                  src={screen.image}
-                  alt={screen.title}
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
+              {/* PHONE IMAGE: left aligned with the text below */}
+              <img
+                src={screen.image}
+                alt={screen.title}
+                className="h-[240px] sm:h-[320px] lg:h-[430px] w-auto max-w-full object-contain object-left"
+              />
 
-              {/* DESCRIPTION */}
-              <div className="mt-4 text-left max-w-[220px] mx-auto">
-               
+              {/* TEXT */}
+              <h3 className="font-serif text-[#20244F] text-[17px] sm:text-[19px] lg:text-[20px] leading-tight mt-5">
+                {screen.title}
+              </h3>
 
-                <h3
-                  className="text-[#20244F] text-[13px] sm:text-[15px] mt-1 ml-5"
-                  style={{ fontFamily: "Georgia, serif" }}
-                >
-                  {screen.title}
-                </h3>
-
-                <p className="text-[#777777] text-[9px] ml-5 sm:text-[10px] leading-[1.7] mt-2">
-                  {screen.description}
-                </p>
-              </div>
+              <p className="text-[#777777] text-[11px] sm:text-[12px] leading-[1.7] mt-2 max-w-[250px]">
+                {screen.description}
+              </p>
             </motion.div>
           ))}
         </div>
+
+        {/* CAPTION */}
+        <p className="mt-10 sm:mt-12 text-[10px] sm:text-[11px] text-[#777777]">
+          Unchanged source application screens. Sample entries shown are
+          demonstration content.
+        </p>
 
       </div>
     </section>

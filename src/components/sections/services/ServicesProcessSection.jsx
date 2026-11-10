@@ -1,30 +1,69 @@
-
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
+const iconProps = {
+  viewBox: "0 0 24 24",
+  className: "h-5 w-5 text-[#20244F]",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: 1.5,
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  "aria-hidden": true,
+};
+
+// Placeholder icons: apne asli icons se badal sakte ho
+const PersonIcon = () => (
+  <svg {...iconProps}>
+    <circle cx="10" cy="8" r="3.2" />
+    <path d="M4 20c0-3.5 2.7-6 6-6s6 2.5 6 6" />
+    <path d="M18 4v4M16 6h4" />
+  </svg>
+);
+
+const BuildingIcon = () => (
+  <svg {...iconProps}>
+    <path d="M4 20h16M6 20v-6h12v6" />
+    <path d="M8 14V9l4-4 4 4v5" />
+    <path d="M10 20v-3h4v3" />
+  </svg>
+);
+
+const HomeIcon = () => (
+  <svg {...iconProps}>
+    <path d="M4 11 12 4l8 7" />
+    <path d="M6 10v10h12V10" />
+    <path d="M10 20v-5h4v5" />
+  </svg>
+);
 
 const processSteps = [
   {
-    number: "01",
-    title: "Bring everything together",
+    icon: <PersonIcon />,
+    stage: "Before construction",
+    title: "Prepare the project",
     description:
-      "Keep your plans, project information and important documents organised in one place.",
+      "Collect project details, organize estimates and create a place for early documents and selections.",
   },
   {
-    number: "02",
-    title: "Stay on top of the details",
+    icon: <BuildingIcon />,
+    stage: "During construction",
+    title: "Coordinate the details",
     description:
-      "Follow tasks, budgets and decisions with a clearer view of what's happening.",
+      "Follow the action schedule, keep trade contacts handy, review costs and record progress.",
   },
   {
-    number: "03",
-    title: "Move forward with confidence",
+    icon: <HomeIcon />,
+    stage: "Toward completion",
+    title: "Close the loop",
     description:
-      "Stay connected with your project and make informed decisions at every stage.",
+      "Review punch items, follow up on unfinished work and preserve the project's pictures and documents.",
   },
 ];
 
 const ServicesProcessSection = () => {
   return (
-    <section className="w-full bg-[#20244F] px-5 sm:px-8 lg:px-10 py-14 sm:py-16 lg:py-20">
+    <section className="w-full bg-[#1D1F6B] px-5 sm:px-8 lg:px-10 py-14 sm:py-16 lg:py-20">
       <div className="max-w-[1200px] mx-auto">
 
         {/* SECTION HEADING */}
@@ -33,67 +72,61 @@ const ServicesProcessSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="max-w-[600px] mb-9 sm:mb-12"
+          className="mb-8 sm:mb-10"
         >
-          <p className="text-[#A9A5F5] text-[8px] sm:text-[9px] uppercase tracking-[1.5px] font-semibold mb-3">
-            A Better Building Experience
+          <p className="text-white/70 text-[9px] sm:text-[10px] uppercase tracking-[0.12em] mb-4">
+            Put it into practice
           </p>
 
-          <h2
-            className="text-white text-[28px] sm:text-[36px] lg:text-[44px] leading-[1.12] font-normal"
-            style={{ fontFamily: "Georgia, serif" }}
-          >
+          <h2 className="font-serif text-white text-[28px] sm:text-[36px] lg:text-[42px] leading-[1.12] tracking-[-0.01em] font-normal max-w-[680px]">
             A simpler way to move through the build.
           </h2>
-
-          <p className="mt-3 text-white/65 text-[10px] sm:text-[11px] leading-[1.8] max-w-[480px]">
-            A more organised approach helps you understand what's
-            happening, stay involved and make decisions with clarity.
-          </p>
         </motion.div>
 
         {/* PROCESS CARDS */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5">
+        <ul className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
           {processSteps.map((step, index) => (
-            <motion.div
-              key={step.number}
+            <motion.li
+              key={step.title}
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.12 }}
-              className="
-                bg-white
-                min-h-[170px]
-                sm:min-h-[190px]
-                p-5 sm:p-6
-                rounded-[2px]
-                flex flex-col
-                justify-between
-              "
+              className="bg-white rounded-md p-5 sm:p-6"
             >
-              <div className="flex items-center justify-between">
-                <span className="text-[#7771D5] text-[9px] font-semibold">
-                  {step.number}
+              <div className="flex items-start justify-between gap-3">
+                {step.icon}
+                <span className="text-[#9A9AAE] text-[8px] sm:text-[9px] uppercase tracking-[0.1em] text-right">
+                  {step.stage}
                 </span>
-
-                <span className="text-[#7771D5] text-sm">↗</span>
               </div>
 
-              <div className="mt-8">
-                <h3
-                  className="text-[#20244F] text-[16px] sm:text-[18px] leading-[1.3]"
-                  style={{ fontFamily: "Georgia, serif" }}
-                >
-                  {step.title}
-                </h3>
+              <h3 className="mt-6 text-[#20244F] text-[15px] sm:text-[16px] font-medium leading-[1.3]">
+                {step.title}
+              </h3>
 
-                <p className="mt-2 text-[#777777] text-[10px] sm:text-[11px] leading-[1.8]">
-                  {step.description}
-                </p>
-              </div>
-            </motion.div>
+              <p className="mt-2 text-[#777777] text-[11px] sm:text-[12px] leading-[1.65]">
+                {step.description}
+              </p>
+            </motion.li>
           ))}
-        </div>
+        </ul>
+
+        {/* QUESTIONS BOX */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="mt-8 sm:mt-10"
+        >
+          <Link
+            to="/contact"
+            className="inline-block w-full sm:w-auto rounded-md bg-white px-6 sm:px-12 py-5 sm:py-6 text-center text-[13px] sm:text-[14px] text-[#20244F] transition-colors hover:bg-[#F4F2ED] focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#1D1F6B]"
+          >
+            Got Questions?... Ask the builder right in your pocket
+          </Link>
+        </motion.div>
 
       </div>
     </section>
