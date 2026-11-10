@@ -2,58 +2,28 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
+import featureIcon1 from "../../assets/icons/Vector-1.png";
+import featureIcon2 from "../../assets/icons/Vector-2.png";
+import featureIcon3 from "../../assets/icons/Vector-3.png";
+
 const features = [
   {
     number: "01",
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        className="w-5 h-5"
-      >
-        <circle cx="12" cy="12" r="8" />
-        <circle cx="12" cy="12" r="3" />
-        <path d="M12 2v3M22 12h-3M12 22v-3M2 12h3" />
-      </svg>
-    ),
+    icon: featureIcon1,
     title: "See the bigger picture",
     description:
       "Bring project details and supporting information together instead of searching across scattered notes.",
   },
   {
     number: "02",
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        className="w-5 h-5"
-      >
-        <rect x="5" y="3" width="14" height="18" rx="2" />
-        <path d="M9 7h6M9 11h6M9 15h3" />
-      </svg>
-    ),
+    icon: featureIcon2,
     title: "Understand your costs",
     description:
       "Organize bids, track actual costs and review variances as your project takes shape.",
   },
   {
     number: "03",
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        className="w-5 h-5"
-      >
-        <rect x="3" y="4" width="18" height="17" rx="2" />
-        <path d="M16 2v4M8 2v4M3 9h18M8 13h3M8 17h3" />
-      </svg>
-    ),
+    icon: featureIcon3,
     title: "Know what comes next",
     description:
       "Keep schedules, daily tasks and the people doing the work in view.",
@@ -148,8 +118,12 @@ const About = () => {
               "
             >
               {/* ICON */}
-              <div className="text-[#7771D5] mb-3">
-                {feature.icon}
+              <div className="mb-3">
+                <img
+                  src={feature.icon}
+                  alt={`${feature.title} icon`}
+                  className="w-5 h-5 object-contain"
+                />
               </div>
 
               {/* TITLE */}

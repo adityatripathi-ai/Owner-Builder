@@ -1,21 +1,27 @@
-
 import { motion } from "framer-motion";
+
+import featureIcon1 from "../../assets/icons/Vector-7.png";
+import featureIcon2 from "../../assets/icons/Vector-8.png";
+import featureIcon3 from "../../assets/icons/Vector-9.png";
 
 const steps = [
   {
-    number: "01",
+    number: "01/PREPARE",
+    icon: featureIcon1,
     title: "Set your foundation",
     description:
       "Define your project goals, initial estimates and timelines before the real work begins.",
   },
   {
-    number: "02",
+    number: "02/COORDINATE",
+    icon: featureIcon2,
     title: "Connect the details",
     description:
       "Organize your schedules, estimates, project documents and team coordination in one place.",
   },
   {
-    number: "03",
+    number: "03/FOLLOW THOUGHT",
+    icon: featureIcon3,
     title: "Keep the build in view",
     description:
       "Review updates, capture work and document the progress as your project moves forward.",
@@ -55,9 +61,11 @@ const PlanningSection = () => {
               className="bg-white rounded-[4px] p-5 sm:p-6 min-h-[125px] flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300"
             >
               <div className="flex items-center justify-between mb-5">
-                <span className="text-[#7771D5] text-[17px]">
-                  {index === 0 ? "⌂" : index === 1 ? "✧" : "▤"}
-                </span>
+                <img
+                  src={step.icon}
+                  alt={`${step.title} icon`}
+                  className="w-5 h-5 object-contain"
+                />
 
                 <span className="text-[#A6A3B9] text-[9px] tracking-wider">
                   {step.number}

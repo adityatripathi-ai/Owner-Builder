@@ -1,21 +1,25 @@
 
 import { motion } from "framer-motion";
 
+import featureIcon1 from "../../assets/icons/Vector-4.png";
+import featureIcon2 from "../../assets/icons/Vector-5.png";
+import featureIcon3 from "../../assets/icons/Vector-6.png";
+
 const benefits = [
   {
-    icon: "✧",
+    icon: featureIcon1,
     title: "Plan with context",
     description:
       "Project organization, bid estimates, and timelines all work together to keep your project decisions in one flow.",
   },
   {
-    icon: "⌕",
+    icon: featureIcon2,
     title: "Coordinate the work",
     description:
       "Schedules, task lists, team coordination, and updates stay in one place as your project progresses.",
   },
   {
-    icon: "♧",
+    icon: featureIcon3,
     title: "Keep a clear record",
     description:
       "Plans, contracts, decisions, documents and project records stay organized throughout the project.",
@@ -59,8 +63,13 @@ const PlatformBenefits = () => {
               transition={{ duration: 0.5, delay: index * 0.15 }}
               className="bg-white rounded-[4px] border border-[#EAE8E2] p-5 sm:p-6 min-h-[125px] hover:shadow-md transition-shadow duration-300"
             >
-              <div className="text-[#7771D5] text-[19px] mb-3">
-                {item.icon}
+              {/* ICON */}
+              <div className="mb-3">
+                <img
+                  src={item.icon}
+                  alt={`${item.title} icon`}
+                  className="w-5 h-5 object-contain"
+                />
               </div>
 
               <h3 className="text-[#20244F] text-[13px] sm:text-[14px] font-medium mb-2">

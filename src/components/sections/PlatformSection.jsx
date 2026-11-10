@@ -1,30 +1,26 @@
-
 import { motion } from "framer-motion";
 
 const platformFeatures = [
   {
-    number: "01",
     title: "Visible costs",
     description:
-      "Review estimates and project costs rather than relying on guesses.",
+      "Review estimates and actual costs, rather than relying on memory.",
   },
   {
-    number: "02",
     title: "Clear responsibilities",
     description:
-      "Find task ownership and know who is responsible for each step.",
+      "Keep trade contacts and scheduled work easy to reference.",
   },
   {
-    number: "03",
     title: "Documented decisions",
     description:
-      "Build a useful record of decisions, agreements and progress.",
+      "Build a useful record of selections, agreements and progress.",
   },
 ];
 
 const PlatformSection = () => {
   return (
-    <section className="w-full bg-[#20244F] text-white overflow-hidden">
+    <section className="w-full bg-[#1D1F6B] text-white overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-10 py-12 sm:py-14 md:py-16">
 
         {/* Heading */}
@@ -34,46 +30,41 @@ const PlatformSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-[#A9A5F5] text-[9px] sm:text-[10px] uppercase tracking-[1.5px] mb-3">
+          <p className="text-white/70 text-[9px] sm:text-[10px] uppercase tracking-[0.12em] mb-4">
             Confidence through clarity
           </p>
 
-          <h2 className="font-serif text-[27px] sm:text-[32px] md:text-[38px] leading-[1.1] max-w-[600px]">
+          <h2 className="font-serif text-[30px] sm:text-[34px] md:text-[40px] leading-[1.1] max-w-[640px]">
             A platform, not a promise of
             <br className="hidden sm:block" /> shortcuts.
           </h2>
 
-          <p className="text-white/65 text-[11px] sm:text-[12px] leading-[1.8] mt-4 max-w-[570px]">
+          <p className="text-white/80 text-[12px] sm:text-[13px] md:text-[14px] leading-[1.7] mt-5 max-w-[660px]">
             Good decisions need good information. Owner Builder supports an
             organized process while you stay in control of your project and
             your professional team.
           </p>
         </motion.div>
 
-        {/* Feature Columns */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 mt-8 sm:mt-10 border-t border-white/20">
+        {/* Feature columns: separate top lines with gaps between them */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-6 md:gap-x-8 gap-y-8 mt-10 md:mt-12">
           {platformFeatures.map((feature, index) => (
             <motion.div
-              key={feature.number}
+              key={feature.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.15 }}
-              className={`py-5 sm:py-6 sm:pr-6 ${
-                index !== 0 ? "sm:pl-6" : ""
-              } ${
-                index !== 2 ? "border-b sm:border-b-0 sm:border-r border-white/20" : ""
+              // first column sits slightly higher, as in the design
+              className={`border-t border-white/20 pt-5 ${
+                index === 0 ? "sm:-translate-y-2.5" : ""
               }`}
             >
-              <span className="text-[#A9A5F5] text-[9px]">
-                {feature.number}
-              </span>
-
-              <h3 className="font-serif text-[16px] sm:text-[17px] mt-3 mb-2">
+              <h3 className="text-[15px] md:text-[17px] font-medium">
                 {feature.title}
               </h3>
 
-              <p className="text-white/60 text-[10px] sm:text-[11px] leading-[1.7] max-w-[280px]">
+              <p className="text-white/65 text-[11px] md:text-[12px] leading-[1.7] mt-2 max-w-[340px]">
                 {feature.description}
               </p>
             </motion.div>
