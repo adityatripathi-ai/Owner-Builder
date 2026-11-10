@@ -1,5 +1,5 @@
 import { useState } from "react";
-import aboutImage from "../../../assets/images/herobg.png";
+import aboutImage from "../../../assets/images/Architectural-photography-3.png";
 
 const stages = [
   "Just exploring",
