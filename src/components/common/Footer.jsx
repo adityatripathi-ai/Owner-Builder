@@ -43,12 +43,13 @@ const Footer = () => {
               Explore
             </h4>
 
-            <ul className="flex flex-col gap-1.5 sm:gap-2.5 text-xs sm:text-sm md:text-[11px] text-[#45456A]">
+            <ul className="flex flex-col gap-1 sm:gap-2 md:gap-2.5 text-xs sm:text-sm md:text-[11px] text-[#45456A]">
               {exploreLinks.map((link) => (
                 <li key={link.name}>
+                  {/* py-1 on mobile = bigger tap area */}
                   <Link
                     to={link.to}
-                    className="inline-block py-0.5 hover:text-[#7771D5] transition-colors duration-200"
+                    className="inline-block py-1 md:py-0.5 hover:text-[#7771D5] transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -103,14 +104,14 @@ const Footer = () => {
 
         </div>
 
-        {/* BOTTOM FOOTER: mobile = stacked, sm+ = ek line */}
-        <div className="border-t border-[#EAEAEA] py-4 sm:py-5 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-3">
+        {/* BOTTOM FOOTER: jagah ho to ek line, warna apne aap wrap */}
+        <div className="border-t border-[#EAEAEA] py-4 sm:py-5 flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
 
-          <p className="text-[11px] sm:text-xs md:text-[10px] text-[#888888]">
+          <p className="text-[10px] sm:text-xs md:text-[10px] text-[#888888]">
             © 2026 Owner Builder. All rights reserved.
           </p>
 
-          <div className="flex flex-wrap items-center gap-x-5 gap-y-1 text-[11px] sm:text-xs md:text-[10px] text-[#888888]">
+          <div className="flex flex-wrap items-center gap-x-4 sm:gap-x-5 gap-y-1 text-[10px] sm:text-xs md:text-[10px] text-[#888888]">
             <Link
               to="/privacy-policy"
               className="hover:text-[#20244F] transition-colors"

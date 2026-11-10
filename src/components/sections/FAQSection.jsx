@@ -6,17 +6,17 @@ const faqItems = [
   {
     question: "Is Owner Builder a construction company?",
     answer:
-      "Owner Builder is a platform that helps homeowners organize their project. It helps you manage information, coordinate tasks and keep track of your building journey.",
+      "Owner Builder is a project coordination platform. It helps you organize building information; your appointed professionals remain responsible for design, construction and local requirements.",
   },
   {
     question: "What can I manage in one project?",
     answer:
-      "You can organize estimates, schedules, documents, tasks and project updates in one place, making it easier to keep everything connected.",
+      "Keep bid estimates, costs, schedules, trade contacts, contracts, selections and completion details organized around your house-building project",
   },
   {
     question: "Where should I begin?",
     answer:
-      "Start with your project details and goals. Create a plan, organize important documents and use the platform to keep track of your next steps.",
+      "Start with your project details and a list of the decisions ahead. Contact us to discuss which parts of the platform are most relevant to your build.",
   },
 ];
 

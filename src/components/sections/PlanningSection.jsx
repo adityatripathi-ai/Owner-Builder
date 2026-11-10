@@ -10,21 +10,21 @@ const steps = [
     icon: featureIcon1,
     title: "Set your foundation",
     description:
-      "Define your project goals, initial estimates and timelines before the real work begins.",
+      "Gather project details, initial estimates and the documents that define your build.",
   },
   {
     number: "02/COORDINATE",
     icon: featureIcon2,
     title: "Connect the details",
     description:
-      "Organize your schedules, estimates, project documents and team coordination in one place.",
+      "Organize your trades, selections and schedule around the work ahead.",
   },
   {
     number: "03/FOLLOW THOUGHT",
     icon: featureIcon3,
     title: "Keep the build in view",
     description:
-      "Review updates, capture work and document the progress as your project moves forward.",
+      "Review costs, update tasks and document the final items that need attention.",
   },
 ];
 
@@ -41,8 +41,7 @@ const PlanningSection = () => {
           transition={{ duration: 0.6 }}
         >
           <p className="text-[9px] sm:text-[10px] uppercase tracking-[1.5px] text-[#A9A5F5] font-semibold mb-3">
-            A clear path forward
-          </p>
+A practical rhythm          </p>
 
           <h2 className="font-serif text-white text-[26px] sm:text-[32px] md:text-[38px] leading-tight max-w-[600px]">
             From a plan to a place to call home.

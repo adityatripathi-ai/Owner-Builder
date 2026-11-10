@@ -34,7 +34,7 @@ const PreparationSection = () => {
             className="max-w-[480px]"
           >
             <p className="text-[#7771D5] text-[9px] sm:text-[10px] uppercase tracking-[1.5px] font-semibold mb-3">
-              Start with the right mindset
+              The owner’s field notes
             </p>
 
             <h2 className="font-serif text-[#20244F] text-[27px] sm:text-[32px] md:text-[35px] leading-[1.15]">
@@ -42,9 +42,7 @@ const PreparationSection = () => {
             </h2>
 
             <p className="text-[#777777] text-[11px] sm:text-[12px] leading-[1.8] mt-4">
-              Explore practical guidance on planning, comparing bids and
-              organizing project documents. Start with the right resources
-              to make informed decisions throughout your home-building journey.
+              Explore proposed guides on planning, comparing bids and organizing project documents. Start with the practical previews in our resource library.
             </p>
 
             <Link
@@ -56,8 +54,7 @@ const PreparationSection = () => {
             </Link>
 
             <p className="text-[#999999] text-[9px] leading-[1.6] mt-5 max-w-[390px]">
-              Good preparation helps you approach your project with greater
-              clarity and confidence.
+              Editorial previews are proposed content. Final guides and downloads await approval.
             </p>
           </motion.div>
 

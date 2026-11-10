@@ -10,19 +10,19 @@ const benefits = [
     icon: featureIcon1,
     title: "Plan with context",
     description:
-      "Project organization, bid estimates, and timelines all work together to keep your project decisions in one flow.",
+      "Project organization, bid estimates, cost breakdowns and selections help bring early decisions into focus.",
   },
   {
     icon: featureIcon2,
     title: "Coordinate the work",
     description:
-      "Schedules, task lists, team coordination, and updates stay in one place as your project progresses.",
+      "Schedules, action tasks, subcontractors, vendors and utility setup keep moving parts organized",
   },
   {
     icon: featureIcon3,
     title: "Keep a clear record",
     description:
-      "Plans, contracts, decisions, documents and project records stay organized throughout the project.",
+      "Forms, contracts, pictures, documents and punch lists preserve the details through completion.",
   },
 ];
 
