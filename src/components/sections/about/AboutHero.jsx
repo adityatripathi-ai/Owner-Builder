@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-import aboutImage from "../../../assets/images/herobg.png";
+import aboutImage from "../../../assets/images/Residential-material-and-light.png";
 
 const AboutHero = () => {
   return (

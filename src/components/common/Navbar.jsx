@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -23,6 +23,33 @@ const linkClass = (size) => ({ isActive }) =>
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const closeMenu = () => setMenuOpen(false);
+
+  // Menu khula ho to: page scroll lock + Esc se band + desktop size pe auto close
+  useEffect(() => {
+    if (!menuOpen) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    const onKeyDown = (e) => {
+      if (e.key === "Escape") setMenuOpen(false);
+    };
+    const desktop = window.matchMedia("(min-width: 1024px)");
+    const onChange = (e) => {
+      if (e.matches) setMenuOpen(false);
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    desktop.addEventListener("change", onChange);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", onKeyDown);
+      desktop.removeEventListener("change", onChange);
+    };
+  }, [menuOpen]);
 
   return (
     <header className="w-full bg-white relative z-50">
@@ -84,55 +111,87 @@ const Navbar = () => {
 
           {/* MOBILE MENU BUTTON */}
           <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="lg:hidden text-[#20244F] text-xl p-2"
-            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            type="button"
+            onClick={() => setMenuOpen(true)}
+            className="lg:hidden p-2 -mr-2 text-[#20244F]"
+            aria-label="Open menu"
             aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
           >
-            {menuOpen ? "✕" : "☰"}
+            <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
           </button>
         </div>
+      </nav>
 
-        {/* MOBILE MENU */}
-        <AnimatePresence>
-          {menuOpen && (
+      {/* MOBILE MENU: right side se slide-in drawer */}
+      <AnimatePresence>
+        {menuOpen && (
+          <>
+            {/* Backdrop */}
             <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
-              className="lg:hidden overflow-hidden bg-white"
+              key="backdrop"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.25 }}
+              onClick={closeMenu}
+              className="lg:hidden fixed inset-0 z-40 bg-[#20244F]/40"
+              aria-hidden="true"
+            />
+
+            {/* Drawer */}
+            <motion.aside
+              key="drawer"
+              id="mobile-menu"
+              role="dialog"
+              aria-modal="true"
+              aria-label="Mobile menu"
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "tween", ease: "easeOut", duration: 0.3 }}
+              className="lg:hidden fixed top-0 right-0 z-50 flex max-h-full w-[82%] max-w-[320px] flex-col overflow-y-auto rounded-bl-2xl bg-white shadow-2xl"
             >
-              <div className="bg-white border-t border-gray-100 py-5 px-4 flex flex-col gap-4">
+              <div className="h-[65px] shrink-0 flex items-center justify-end px-5">
+                <button
+                  type="button"
+                  onClick={closeMenu}
+                  className="p-2 -mr-2 text-[#20244F]"
+                  aria-label="Close menu"
+                >
+                  <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden="true">
+                    <path d="M6 6l12 12M18 6 6 18" />
+                  </svg>
+                </button>
+              </div>
+
+              <div className="px-5 pb-6 flex flex-col gap-5">
                 {navLinks.map((link) => (
                   <NavLink
                     key={link.name}
                     to={link.href}
                     end={link.href === "/"}
-                    onClick={() => setMenuOpen(false)}
-                    className={(state) => `w-fit ${linkClass("text-xs")(state)}`}
+                    onClick={closeMenu}
+                    className={(state) => `w-fit py-1 ${linkClass("text-base")(state)}`}
                   >
                     {link.name}
                   </NavLink>
                 ))}
 
-                <Link
-                  to="/contact"
-                  onClick={() => setMenuOpen(false)}
-                  className="w-fit"
-                >
+                <Link to="/contact" onClick={closeMenu} className="mt-2 w-fit">
                   <img
                     src={apps}
                     alt="Primary actions"
-                    className="w-[100px] h-auto object-contain"
+                    className="w-[110px] h-auto object-contain"
                   />
                 </Link>
               </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-
-      </nav>
+            </motion.aside>
+          </>
+        )}
+      </AnimatePresence>
     </header>
   );
 };

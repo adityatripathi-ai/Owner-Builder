@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import aboutImage from "../../../assets/images/herobg.png";
+import aboutImage from "../../../assets/images/Architectural-photography-1.png";
 
 const points = [
   {

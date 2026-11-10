@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 
-import featureIcon1 from "../../../assets/icons/Vector-1.png";
-import featureIcon2 from "../../../assets/icons/Vector-2.png";
-import featureIcon3 from "../../../assets/icons/Vector-3.png";
+import featureIcon1 from "../../../assets/icons/Vector-2.png";
+import featureIcon2 from "../../../assets/icons/Vector-15.png";
+import featureIcon3 from "../../../assets/icons/Vector-7.png";
 
 const features = [
   {
