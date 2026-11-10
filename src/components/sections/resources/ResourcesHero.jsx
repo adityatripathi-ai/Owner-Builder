@@ -17,7 +17,7 @@ const ResourcesHero = () => {
             transition={{ duration: 0.7 }}
           >
             <p className="text-[#7771D5] text-[9px] sm:text-[10px] uppercase tracking-[2px] mb-3">
-              Resources
+              Home / Resources
             </p>
 
             <h1 className="font-serif text-[#20244F] text-[34px] sm:text-[42px] lg:text-[48px] leading-[1.05] tracking-tight">
@@ -27,9 +27,7 @@ const ResourcesHero = () => {
             </h1>
 
             <p className="text-[#777777] text-[10px] sm:text-xs leading-6 mt-4 max-w-[580px]">
-              Explore useful insights, practical guidance and trusted
-              resources to help you make informed decisions throughout
-              your building journey.
+              Practical starting points for the decisions ahead. Explore planning ideas, organizational guides and proposed project documents.
             </p>
           </motion.div>
 
@@ -41,24 +39,21 @@ const ResourcesHero = () => {
             className="bg-white border border-[#EAE8E2] p-5 sm:p-6"
           >
             <p className="text-[#20244F] text-[9px] font-semibold uppercase tracking-[1px]">
-              A little guidance
+              A considered starting point
             </p>
 
-            <h2 className="font-serif text-[#20244F] text-sm sm:text-base mt-3 leading-snug">
-              Start with the right information.
-            </h2>
+            
 
             <p className="text-[#777777] text-[10px] sm:text-[11px] leading-5 mt-2">
-              Understand your options, explore helpful resources
-              and take your next step with confidence.
+              This library presents proposed editorial content. Guide previews are for review; final resource documents and downloads will be supplied or approved by the client.
             </p>
 
             <Link
               to="/contact"
               className="inline-flex items-center gap-2 text-[#20244F] text-[10px] font-semibold mt-3 hover:text-[#7771D5] transition-colors"
             >
-              Explore resources
-              <span>↗</span>
+              Preview library / Not a download archive
+            
             </Link>
           </motion.div>
 

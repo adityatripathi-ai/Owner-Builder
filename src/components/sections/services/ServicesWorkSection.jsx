@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 
-import phone1 from "../../../assets/images/phone-1.png";
-import phone2 from "../../../assets/images/phone-2.png";
-import phone3 from "../../../assets/images/phone-3.png";
+import phone1 from "../../../assets/images/Mobile-device-mockup-2.png";
+import phone2 from "../../../assets/images/Mobile-device-mockup-3.png";
+import phone3 from "../../../assets/images/Mobile-device-mockup-4.png";
+import phone4 from "../../../assets/images/Mobile-device-mockup.png";
 
 const screens = [
   {
@@ -27,7 +28,7 @@ const screens = [
     title: "Keep agreements close",
     description:
       "Maintain a clear place for forms and contracts throughout the project.",
-    image: phone1, // Temporary image: replace with phone4 later
+    image: phone4, // Temporary image: replace with phone4 later
   },
 ];
 

@@ -27,18 +27,8 @@ const AdviceSection = () => {
 
           {/* DESCRIPTION */}
           <p className="text-[#777777] text-[10px] sm:text-xs leading-6 mt-4 max-w-[600px]">
-            The information and resources provided here are intended
-            to help you understand your home building journey.
-            Every project is different, so always seek advice from
-            qualified professionals before making important
-            decisions about your property or construction.
+            General resources can help organize your thinking. Always confirm technical, legal, financial and local building requirements with the appropriate qualified professionals.
           </p>
-
-          <p className="text-[#777777] text-[10px] sm:text-xs leading-6 mt-2 max-w-[600px]">
-            Regulations, requirements and circumstances may vary
-            depending on your location and individual project.
-          </p>
-
         </motion.div>
 
       </div>

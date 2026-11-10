@@ -19,16 +19,15 @@ const CTASection = () => {
           {/* LEFT CONTENT */}
           <div>
             <p className="text-[#A6A4E9] text-[9px] sm:text-[10px] uppercase tracking-[2px] mb-3">
-              Let's talk
+              Start with a conversation
             </p>
 
             <h2 className="font-serif text-white text-[26px] sm:text-[32px] lg:text-[38px] leading-tight">
               Have a question about your next step?
             </h2>
 
-            <p className="text-white/60 text-[10px] sm:text-xs mt-3 leading-6 max-w-[500px]">
-              We're here to help you find the right information
-              and move forward with confidence.
+            <p className="text-white/60 text-[10px] sm:text-xs mt-3 leading-6 max-w-[700px]">
+             Tell us where you are in your building journey. Let’s explore how Owner Builder can help you organize what comes next.
             </p>
           </div>
 
