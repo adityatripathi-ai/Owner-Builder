@@ -124,14 +124,14 @@ const AboutHero = () => {
                 "
               >
                 <p className="text-[#7771D5] text-[6px] sm:text-[7px] font-semibold uppercase tracking-[0.5px] mb-1">
-                  A SIMPLE OUTLET
+                  A SIMPLE BELIEF
                 </p>
 
                 <p
                   className="text-[#303438] text-[12px] sm:text-[11px] lg:text-[17px] leading-[1.15]"
                   style={{ fontFamily: "Georgia, serif" }}
                 >
-                  Your attention belongs on the home you're creating.
+                  Your attention belongs on the home you’re creating.
                 </p>
               </motion.div>
 

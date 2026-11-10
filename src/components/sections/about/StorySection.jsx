@@ -15,7 +15,7 @@ const StorySection = () => {
             transition={{ duration: 0.7 }}
           >
             <p className="text-[#7771D5] text-[9px] font-semibold uppercase tracking-[1.5px] mb-4">
-              Our Story
+              Why Owner Builder
             </p>
 
             <h2
@@ -47,17 +47,15 @@ const StorySection = () => {
             className="flex flex-col justify-center"
           >
             <p className="text-[#666666] text-[11px] sm:text-xs leading-[1.9]">
-              Every successful build involves countless decisions,
-              conversations and moving parts. From the first plans
-              to the final details, keeping everything organised
-              can make a real difference.
+              Building a home involves more than a set of plans. It means comparing estimates, coordinating people, tracking decisions and keeping information available when it matters.
             </p>
 
             <p className="text-[#666666] text-[11px] sm:text-xs leading-[1.9] mt-4">
-              Owner Builders was created to bring more clarity to
-              that process. By helping owners keep track of the
-              details, people and decisions involved, we make the
-              building journey easier to understand and manage.
+              Owner Builder brings these practical needs into a project-centered platform. Its focus is the day-to-day organization of residential building—from early preparation and trade coordination through records and completion.
+            </p>
+
+            <p className="text-[#666666] text-[11px] sm:text-xs leading-[1.9] mt-4">
+              The platform supports your process. It does not replace the qualified professionals, local approvals or careful judgment your project requires.
             </p>
           </motion.div>
 

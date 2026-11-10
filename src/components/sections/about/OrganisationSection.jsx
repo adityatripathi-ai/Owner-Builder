@@ -1,20 +1,24 @@
 import { motion } from "framer-motion";
 
+import featureIcon1 from "../../../assets/icons/Vector-1.png";
+import featureIcon2 from "../../../assets/icons/Vector-2.png";
+import featureIcon3 from "../../../assets/icons/Vector-3.png";
+
 const features = [
   {
-    number: "01",
+    icon: featureIcon1,
     title: "Building knowledge",
     description:
       "Understand the building process, important stages and the details that matter when planning your home.",
   },
   {
-    number: "02",
+    icon: featureIcon2,
     title: "Project organisation",
     description:
       "Keep your plans, tasks, documents and important project information organised in one place.",
   },
   {
-    number: "03",
+    icon: featureIcon3,
     title: "Clear coordination",
     description:
       "Bring the people involved in your project together and make communication and decisions easier.",
@@ -35,7 +39,7 @@ const OrganisationSection = () => {
           className="max-w-[650px] mb-10 md:mb-12"
         >
           <p className="text-[#7771D5] text-[9px] font-semibold uppercase tracking-[1.5px] mb-4">
-            What We Bring Together
+            Practical by design
           </p>
 
           <h2
@@ -54,6 +58,10 @@ const OrganisationSection = () => {
             <br className="hidden sm:block" />
             meets project organisation.
           </h2>
+
+          <p className="text-gray-500 text-[16px] sm:text-[13px] leading-[1.9] mt-5">
+            The platform’s capabilities reflect the real categories of information owners need to manage.
+          </p>
         </motion.div>
 
         {/* FEATURE CARDS */}
@@ -61,7 +69,7 @@ const OrganisationSection = () => {
 
           {features.map((feature, index) => (
             <motion.div
-              key={feature.number}
+              key={feature.title}
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
@@ -76,10 +84,12 @@ const OrganisationSection = () => {
                 transition-colors duration-300
               "
             >
-              {/* NUMBER */}
-              <span className="text-[#7771D5] text-[10px] font-semibold tracking-wide">
-                {feature.number}
-              </span>
+              {/* ICON */}
+              <img
+                src={feature.icon}
+                alt={`${feature.title} icon`}
+                className="w-5 h-5 object-contain"
+              />
 
               {/* TITLE */}
               <h3
@@ -103,7 +113,6 @@ const OrganisationSection = () => {
           ))}
 
         </div>
-
       </div>
     </section>
   );

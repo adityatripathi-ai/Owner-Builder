@@ -15,7 +15,7 @@ const MissionSection = () => {
 
           {/* LABEL */}
           <p className="text-[#A9A5F5] text-[9px] font-semibold uppercase tracking-[1.5px] mb-5">
-            Our Approach
+            Our Mission
           </p>
 
           {/* HEADING */}
@@ -40,17 +40,13 @@ const MissionSection = () => {
           {/* DESCRIPTION */}
           <p className="
             text-white/70
-            text-[10px]
+            text-[12px]
             sm:text-[11px]
             leading-[1.9]
             mt-5
             max-w-[750px]
           ">
-            Building a home involves more than making big decisions.
-            It is the small details, conversations and everyday tasks
-            that keep a project moving. Our approach brings these
-            moving parts together, helping owners stay informed,
-            organised and confident throughout their building journey.
+           We believe an organized project gives owners a stronger foundation for conversations, decisions and the work ahead. Clarity should be part of the building process, not something you have to build yourself.
           </p>
 
         </motion.div>
