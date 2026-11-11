@@ -11,31 +11,13 @@ const points = [
 ];
 
 const CheckIcon = () => (
-  <svg
-    viewBox="0 0 24 24"
-    className="h-3 w-3 shrink-0 text-[#20244F]"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2.4"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    aria-hidden="true"
-  >
+  <svg viewBox="0 0 24 24" className="h-3 w-3 shrink-0 text-[#20244F]" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
     <path d="m5 12.5 4.5 4.5L19 7.5" />
   </svg>
 );
 
 const ArrowIcon = () => (
-  <svg
-    viewBox="0 0 24 24"
-    className="h-3 w-3"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    aria-hidden="true"
-  >
+  <svg viewBox="0 0 24 24" className="h-3 w-3" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
     <path d="M7 17 17 7M8 7h9v9" />
   </svg>
 );
@@ -53,15 +35,10 @@ const PerspectiveSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            // tinted panel peeks out on the right of the photo, like the design
             className="rounded-md bg-[#E9E6DF] pr-3 md:pr-4"
           >
             <div className="relative aspect-[15/16] w-full overflow-hidden rounded-md">
-              <img
-                src={warmBg}
-                alt=""
-                className="absolute inset-0 h-full w-full object-cover"
-              />
+              <img src={warmBg} alt="" className="absolute inset-0 h-full w-full object-cover" />
 
               <img
                 src={phone4}
@@ -79,16 +56,14 @@ const PerspectiveSection = () => {
             transition={{ duration: 0.8 }}
             className="max-w-[480px]"
           >
-            <p className="text-[#20244F] text-[9px] uppercase tracking-[0.14em] font-semibold mb-4">
-              At the desk. On the site.
-            </p>
+            <p className="text-[#7771D5] text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px] mb-3">At the desk. On the site.</p>
 
-            <h2 className="font-serif text-[#20244F] text-[30px] sm:text-[36px] md:text-[38px] lg:text-[44px] leading-[1.12] tracking-[-0.01em]">
+            <h2 className="font-['Georgia',serif] text-[26px] sm:text-[30px] md:text-[34px] lg:text-[38px] font-normal leading-[1.15] text-[#20244F]">
               Keep the next step close
               <br className="hidden lg:block" /> at hand.
             </h2>
 
-            <p className="text-[#6F6F7E] text-[12px] sm:text-[13px] leading-[1.7] mt-5">
+            <p className="text-[#666666] text-[12px] sm:text-[13px] leading-[1.7] mt-5">
               Building doesn’t happen in one place. Keep your to-do list,
               project information and important records within reach when it’s
               time to make a decision.
@@ -96,10 +71,7 @@ const PerspectiveSection = () => {
 
             <ul className="mt-5 flex flex-col gap-2.5">
               {points.map((point) => (
-                <li
-                  key={point}
-                  className="flex items-center gap-2.5 text-[11px] text-[#20244F]/80"
-                >
+                <li key={point} className="text-[#666666] text-[11px] sm:text-[12px] leading-[1.6] flex items-center gap-2.5">
                   <CheckIcon />
                   {point}
                 </li>
@@ -108,7 +80,7 @@ const PerspectiveSection = () => {
 
             <Link
               to="/services"
-              className="inline-flex items-center gap-3 mt-7 rounded-[3px] border border-[#DDDAD1] bg-white px-4 py-2.5 text-[11px] font-medium text-[#20244F] transition-colors duration-300 hover:border-[#20244F]"
+              className="text-[11px] sm:text-[12px] font-medium inline-flex items-center gap-3 mt-7 rounded-[3px] border border-[#DDDAD1] bg-white px-4 py-2.5 text-[#20244F] transition-colors duration-300 hover:border-[#20244F]"
             >
               Explore project tools
               <ArrowIcon />

@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -11,7 +10,7 @@ const faqItems = [
   {
     question: "What can I manage in one project?",
     answer:
-      "Keep bid estimates, costs, schedules, trade contacts, contracts, selections and completion details organized around your house-building project",
+      "Keep bid estimates, costs, schedules, trade contacts, contracts, selections and completion details organized around your house-building project.",
   },
   {
     question: "Where should I begin?",
@@ -25,9 +24,7 @@ const FAQSection = () => {
 
   const toggleFAQ = (index) => {
     setOpenItems((prev) =>
-      prev.includes(index)
-        ? prev.filter((item) => item !== index)
-        : [...prev, index]
+      prev.includes(index) ? prev.filter((item) => item !== index) : [...prev, index]
     );
   };
 
@@ -35,23 +32,17 @@ const FAQSection = () => {
     <section className="w-full bg-[#F8F7F3]">
       <div className="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-10 py-10 sm:py-14 md:py-16">
 
-        {/* SECTION HEADING */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-[#7771D5] text-[9px] sm:text-[10px] uppercase tracking-[1.5px] font-semibold mb-2">
-            A little more clarity
-          </p>
+          <p className="text-[#7771D5] text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px] mb-3">A little more clarity</p>
 
-          <h2 className="font-serif text-[#20244F] text-[26px] sm:text-[30px] md:text-[34px] leading-tight">
-            Frequently Asked Questions
-          </h2>
+          <h2 className="font-['Georgia',serif] text-[26px] sm:text-[30px] md:text-[34px] lg:text-[38px] font-normal leading-[1.15] text-[#20244F]">Frequently Asked Questions</h2>
         </motion.div>
 
-        {/* FAQ LIST */}
         <div className="mt-6 sm:mt-8 border-t border-[#E1DFD8]">
           {faqItems.map((item, index) => {
             const isOpen = openItems.includes(index);
@@ -71,9 +62,7 @@ const FAQSection = () => {
                   aria-expanded={isOpen}
                   className="w-full flex items-center justify-between gap-4 pt-4 pb-2 text-left"
                 >
-                  <span className="text-[#20244F] text-[11px] sm:text-[12px] font-semibold">
-                    {item.question}
-                  </span>
+                  <span className="text-[#20244F] text-[13px] sm:text-[14px] font-semibold leading-snug">{item.question}</span>
 
                   <span className="text-[#7771D5] text-[15px] shrink-0">
                     {isOpen ? "−" : "+"}
@@ -89,9 +78,7 @@ const FAQSection = () => {
                       transition={{ duration: 0.25 }}
                       className="overflow-hidden"
                     >
-                      <p className="text-[#777777] text-[9px] sm:text-[10px] leading-[1.7] pb-4 pr-8 max-w-[850px]">
-                        {item.answer}
-                      </p>
+                      <p className="text-[#666666] text-[11px] sm:text-[12px] leading-[1.6] pb-4 pr-8 max-w-[850px]">{item.answer}</p>
                     </motion.div>
                   )}
                 </AnimatePresence>
