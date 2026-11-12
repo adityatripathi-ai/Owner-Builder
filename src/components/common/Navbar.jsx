@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
@@ -13,7 +14,6 @@ const navLinks = [
   { name: "Contact", href: "/contact" },
 ];
 
-// Active page = bold + underline, baaki links normal (hover pe purple)
 const linkClass = (size) => ({ isActive }) =>
   `${size} transition-colors duration-300 ${
     isActive
@@ -35,7 +35,7 @@ const Navbar = () => {
             <img
               src={logo}
               alt="Website Logo"
-              className="w-[110px] h-[38px] object-contain object-left"
+              className="h-12 sm:h-14 md:h-14 w-auto max-w-[220px] object-contain object-left"
             />
           </Link>
 
@@ -110,7 +110,9 @@ const Navbar = () => {
                     to={link.href}
                     end={link.href === "/"}
                     onClick={() => setMenuOpen(false)}
-                    className={(state) => `w-fit ${linkClass("text-[15px]")(state)}`}
+                    className={(state) =>
+                      `w-fit ${linkClass("text-[14px]")(state)}`
+                    }
                   >
                     {link.name}
                   </NavLink>
