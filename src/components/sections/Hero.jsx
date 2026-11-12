@@ -54,7 +54,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.6 }}
-              className="text-[#666666] text-[12 px] sm:text-[15px] leading-[1.7] mt-3 sm:mt-4 max-w-[340px]"
+              className="text-[#666666] text-[12px] sm:text-[15px] leading-[1.7] mt-3 sm:mt-4 max-w-[340px]"
             >
               Bring your plans, people and decisions together. Owner
               Builder helps you coordinate the details, so you can move
@@ -82,7 +82,7 @@ const Hero = () => {
             initial={{ opacity: 0, scaleX: 0 }}
             animate={{ opacity: 1, scaleX: 1 }}
             transition={{ duration: 0.8, delay: 1.1 }}
-            className="absolute bottom-3 sm:bottom-5 left-3 right-3 sm:left-6 sm:right-6 min-h-[30px] bg-white/90 rounded-full origin-left flex items-center px-3 py-2"
+            className="absolute bottom-1 sm:bottom-5 left-3 right-3 sm:left-6 sm:right-6 min-h-[30px] bg-white/90 rounded-full origin-left flex items-center px-3 py-2"
           >
             <span className="text-[#555555] text-[10px] sm:text-[15px] leading-tight">
               A little more planning for a confident build
