@@ -18,16 +18,16 @@ const CTASection = () => {
 
           {/* LEFT CONTENT */}
           <div>
-            <p className="text-[#A6A4E9] text-[9px] sm:text-[10px] uppercase tracking-[2px] mb-3">
+            <p className="text-[#A6A4E9] text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px] mb-3">
               Start with a conversation
             </p>
 
-            <h2 className="font-serif text-white text-[26px] sm:text-[32px] lg:text-[38px] leading-tight">
+            <h2 className="text-white text-[26px] sm:text-[30px] md:text-[34px] lg:text-[38px] leading-[1.15] tracking-[-1px] font-normal [font-family:Georgia,serif]">
               Have a question about your next step?
             </h2>
 
-            <p className="text-white/60 text-[10px] sm:text-xs mt-3 leading-6 max-w-[700px]">
-             Tell us where you are in your building journey. Let’s explore how Owner Builder can help you organize what comes next.
+            <p className="text-white/60 text-[12px] sm:text-[13px] mt-3 leading-[1.7] max-w-[700px]">
+              Tell us where you are in your building journey. Let’s explore how Owner Builder can help you organize what comes next.
             </p>
           </div>
 
@@ -50,13 +50,13 @@ const CTASection = () => {
               <Link
                 to="/contact"
                 className="
-               inline-flex items-center gap-2
-  bg-white text-[#20244F]
-  text-[8px] sm:text-[9px]
-  px-3 py-2
-  rounded-sm
-  hover:bg-[#A9A5F5]
-  transition-colors duration-300
+                  inline-flex items-center gap-2
+                  bg-white text-[#20244F]
+                  text-[11px] sm:text-[12px] font-medium
+                  px-3 py-2
+                  rounded-sm
+                  hover:bg-[#A9A5F5]
+                  transition-colors duration-300
                 "
               >
                 Discuss your project
@@ -65,8 +65,8 @@ const CTASection = () => {
             </motion.div>
 
             {/* BUTTON DESCRIPTION */}
-            <p className="mt-4 max-w-[220px] text-[10px] sm:text-[11px] text-white/60 leading-5">
-              A practical next step. No Pressure. 
+            <p className="mt-4 max-w-[220px] text-[10px] sm:text-[11px] text-white/60 leading-[1.6]">
+              A practical next step. No Pressure.
             </p>
           </motion.div>
 

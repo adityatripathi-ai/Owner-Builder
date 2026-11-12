@@ -16,17 +16,17 @@ const ResourcesHero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
-            <p className="text-[#7771D5] text-[9px] sm:text-[10px] uppercase tracking-[2px] mb-3">
+            <p className="text-[#7771D5] text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px] mb-3">
               Home / Resources
             </p>
 
-            <h1 className="font-serif text-[#20244F] text-[34px] sm:text-[42px] lg:text-[48px] leading-[1.05] tracking-tight">
+            <h1 className="text-[#20244F] text-[32px] min-[380px]:text-[36px] sm:text-[38px] md:text-[44px] lg:text-[48px] leading-[1.05] tracking-[-1px] font-normal [font-family:Georgia,serif]">
               Build your knowledge.
               <br />
               Then your home.
             </h1>
 
-            <p className="text-[#777777] text-[10px] sm:text-xs leading-6 mt-4 max-w-[580px]">
+            <p className="text-[#777777] text-[12px] sm:text-[13px] leading-[1.7] mt-4 max-w-[580px]">
               Practical starting points for the decisions ahead. Explore planning ideas, organizational guides and proposed project documents.
             </p>
           </motion.div>
@@ -38,22 +38,19 @@ const ResourcesHero = () => {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="bg-white border border-[#EAE8E2] p-5 sm:p-6"
           >
-            <p className="text-[#20244F] text-[9px] font-semibold uppercase tracking-[1px]">
+            <p className="text-[#20244F] text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px]">
               A considered starting point
             </p>
 
-            
-
-            <p className="text-[#777777] text-[10px] sm:text-[11px] leading-5 mt-2">
+            <p className="text-[#777777] text-[11px] sm:text-[12px] leading-[1.7] mt-2">
               This library presents proposed editorial content. Guide previews are for review; final resource documents and downloads will be supplied or approved by the client.
             </p>
 
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 text-[#20244F] text-[10px] font-semibold mt-3 hover:text-[#7771D5] transition-colors"
+              className="inline-flex items-center gap-2 text-[#20244F] text-[11px] sm:text-[12px] font-medium mt-3 hover:text-[#7771D5] transition-colors"
             >
               Preview library / Not a download archive
-            
             </Link>
           </motion.div>
 

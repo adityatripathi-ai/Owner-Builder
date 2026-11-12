@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -35,7 +36,6 @@ const ToggleIcon = ({ open }) => (
 );
 
 const ServicesFAQSection = () => {
-  // Figma me teeno answers khule dikh rahe hain
   const [openItems, setOpenItems] = useState([0, 1, 2]);
 
   const toggleFAQ = (index) => {
@@ -57,16 +57,16 @@ const ServicesFAQSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-[#1D1F6B] text-[9px] sm:text-[10px] uppercase tracking-[0.12em] font-semibold mb-3">
+          <p className="text-[#1D1F6B] text-[10px] sm:text-[11px] uppercase tracking-[1.5px] font-semibold mb-3">
             A little more clarity
           </p>
 
-          <h2 className="font-serif text-[#20244F] text-[30px] sm:text-[36px] lg:text-[42px] leading-[1.1] tracking-[-0.01em]">
+          <h2 className="font-['Georgia',serif] text-[26px] sm:text-[30px] md:text-[34px] lg:text-[38px] font-normal leading-[1.15] text-[#20244F]">
             Before you begin.
           </h2>
         </motion.div>
 
-        {/* FAQ LIST: sirf items ke beech patli lines */}
+        {/* FAQ LIST */}
         <div className="mt-8 sm:mt-10 divide-y divide-[#E6E4DE]">
           {faqItems.map((item, index) => {
             const isOpen = openItems.includes(index);
@@ -87,7 +87,7 @@ const ServicesFAQSection = () => {
                   aria-controls={panelId}
                   className="w-full flex items-center justify-between gap-4 pt-5 pb-2 text-left"
                 >
-                  <span className="text-[#20244F] text-[14px] sm:text-[16px] font-medium leading-snug">
+                  <span className="text-[#20244F] text-[13px] sm:text-[14px] font-semibold leading-snug">
                     {item.question}
                   </span>
 
@@ -104,7 +104,7 @@ const ServicesFAQSection = () => {
                       transition={{ duration: 0.25 }}
                       className="overflow-hidden"
                     >
-                      <p className="text-[#777777] text-[12px] sm:text-[14px] leading-[1.7] pb-5 pr-6 sm:pr-8">
+                      <p className="text-[#666666] text-[11px] sm:text-[12px] leading-[1.6] pb-5 pr-6 sm:pr-8 max-w-[850px]">
                         {item.answer}
                       </p>
                     </motion.div>

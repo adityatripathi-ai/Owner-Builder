@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 
 // Document icon. Baad me apna asli icon yahan badal dena.
@@ -36,11 +37,11 @@ const ResourcesSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <p className="text-[#1D1F6B] text-[9px] sm:text-[10px] font-semibold uppercase tracking-[0.12em] mb-4">
+          <p className="text-[#1D1F6B] text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px] mb-4">
             Project documents
           </p>
 
-          <h2 className="font-serif text-[#20244F] text-[28px] sm:text-[34px] lg:text-[40px] leading-[1.12] tracking-[-0.01em] max-w-[680px]">
+          <h2 className="text-[#20244F] text-[26px] sm:text-[30px] md:text-[34px] lg:text-[38px] leading-[1.15] tracking-[-1px] font-normal max-w-[680px] [font-family:Georgia,serif]">
             Useful structure. Approved files to follow.
           </h2>
 
@@ -71,15 +72,15 @@ const ResourcesSection = () => {
                 />
 
                 <div>
-                  <p className="text-[#1D1F6B] text-[8px] sm:text-[9px] uppercase tracking-[0.1em] font-semibold">
+                  <p className="text-[#1D1F6B] text-[10px] sm:text-[11px] uppercase tracking-[1.5px] font-semibold">
                     {resource.category}
                   </p>
 
-                  <h3 className="text-[#20244F] text-[15px] sm:text-[16px] font-medium mt-1">
+                  <h3 className="text-[#20244F] text-[13px] sm:text-[14px] font-semibold leading-[1.3] mt-1">
                     {resource.title}
                   </h3>
 
-                  <p className="text-[#777777] text-[11px] sm:text-[12px] leading-[1.6] mt-1 max-w-[600px]">
+                  <p className="text-[#777777] text-[11px] sm:text-[12px] leading-[1.7] mt-1 max-w-[600px]">
                     {resource.description}
                   </p>
                 </div>
@@ -90,7 +91,7 @@ const ResourcesSection = () => {
                 type="button"
                 disabled
                 aria-disabled="true"
-                className="self-start sm:self-center shrink-0 cursor-not-allowed rounded-[3px] border border-[#E6E3DA] bg-[#F4F2ED] px-4 py-2.5 text-[10px] sm:text-[11px] text-[#8A8A98]"
+                className="self-start sm:self-center shrink-0 cursor-not-allowed rounded-[3px] border border-[#E6E3DA] bg-[#F4F2ED] px-4 py-2.5 text-[11px] sm:text-[12px] font-medium text-[#8A8A98]"
               >
                 Download · Pending approval
               </button>

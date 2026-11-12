@@ -31,7 +31,7 @@ const Footer = () => {
               />
             </Link>
 
-            <p className="text-[#777777] text-xs sm:text-sm md:text-[11px] leading-[1.8] max-w-[320px] mt-4">
+            <p className="text-[#5B5E70] text-[14px] leading-[1.75] max-w-[320px] mt-4">
               A clearer way to organize the journey from your first
               plan to your final walkthrough.
             </p>
@@ -39,11 +39,11 @@ const Footer = () => {
 
           {/* EXPLORE LINKS */}
           <div className="min-w-0">
-            <h4 className="text-[10px] sm:text-xs md:text-[10px] uppercase tracking-[1px] font-semibold mb-3 sm:mb-4">
+            <h4 className="text-[12px] uppercase tracking-[0.12em] font-semibold mb-3 sm:mb-4">
               Explore
             </h4>
 
-            <ul className="flex flex-col gap-1 sm:gap-2 md:gap-2.5 text-xs sm:text-sm md:text-[11px] text-[#45456A]">
+            <ul className="flex flex-col gap-1 sm:gap-2 md:gap-2.5 text-[14px] text-[#3D4056]">
               {exploreLinks.map((link) => (
                 <li key={link.name}>
                   {/* py-1 on mobile = bigger tap area */}
@@ -60,16 +60,16 @@ const Footer = () => {
 
           {/* CONTACT & APP LINKS */}
           <div className="min-w-0">
-            <h4 className="text-[10px] sm:text-xs md:text-[10px] uppercase tracking-[1px] font-semibold mb-3 sm:mb-4">
+            <h4 className="text-[12px] uppercase tracking-[0.12em] font-semibold mb-3 sm:mb-4">
               Get in touch
             </h4>
 
             <div className="flex flex-col gap-2 sm:gap-3">
-              <p className="text-xs sm:text-sm md:text-[11px] text-[#777777]">
+              <p className="text-[14px] text-[#5B5E70]">
                 Email to be confirmed
               </p>
 
-              <p className="text-xs sm:text-sm md:text-[11px] text-[#777777]">
+              <p className="text-[14px] text-[#5B5E70]">
                 Phone to be confirmed
               </p>
 
@@ -107,11 +107,11 @@ const Footer = () => {
         {/* BOTTOM FOOTER: jagah ho to ek line, warna apne aap wrap */}
         <div className="border-t border-[#EAEAEA] py-4 sm:py-5 flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
 
-          <p className="text-[10px] sm:text-xs md:text-[10px] text-[#888888]">
+          <p className="text-[12px] text-[#6B6E7E]">
             © 2026 Owner Builder. All rights reserved.
           </p>
 
-          <div className="flex flex-wrap items-center gap-x-4 sm:gap-x-5 gap-y-1 text-[10px] sm:text-xs md:text-[10px] text-[#888888]">
+          <div className="flex flex-wrap items-center gap-x-4 sm:gap-x-5 gap-y-1 text-[12px] text-[#6B6E7E]">
             <Link
               to="/privacy-policy"
               className="hover:text-[#20244F] transition-colors"

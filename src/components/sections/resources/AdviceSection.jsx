@@ -16,17 +16,17 @@ const AdviceSection = () => {
         >
 
           {/* LABEL */}
-          <p className="text-[#7771D5] text-[9px] sm:text-[10px] font-semibold uppercase tracking-[1.5px] mb-3">
+          <p className="text-[#7771D5] text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px] mb-3">
             Important information
           </p>
 
           {/* HEADING */}
-          <h2 className="font-serif text-[#20244F] text-[27px] sm:text-[34px] lg:text-[38px] leading-[1.1]">
+          <h2 className="text-[#20244F] text-[26px] sm:text-[30px] md:text-[34px] lg:text-[38px] leading-[1.15] tracking-[-1px] font-normal [font-family:Georgia,serif]">
             A starting point, not professional advice.
           </h2>
 
           {/* DESCRIPTION */}
-          <p className="text-[#777777] text-[10px] sm:text-xs leading-6 mt-4 max-w-[600px]">
+          <p className="text-[#777777] text-[12px] sm:text-[13px] leading-[1.7] mt-4 max-w-[600px]">
             General resources can help organize your thinking. Always confirm technical, legal, financial and local building requirements with the appropriate qualified professionals.
           </p>
         </motion.div>

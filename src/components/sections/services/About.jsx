@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 
 const About = () => {
@@ -14,11 +15,11 @@ const About = () => {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.7 }}
           >
-            <p className="text-[#1D1F6B] text-[8px] sm:text-[9px] font-semibold uppercase tracking-[0.12em] mb-4">
+            <p className="text-[#1D1F6B] text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px] mb-4">
               Your project. Your team in your pocket
             </p>
 
-            <h2 className="font-serif text-[#20244F] text-[30px] sm:text-[36px] lg:text-[42px] leading-[1.12] tracking-[-0.01em] font-normal max-w-[470px]">
+            <h2 className="font-['Georgia',serif] text-[#20244F] text-[26px] sm:text-[30px] md:text-[34px] lg:text-[38px] leading-[1.15] tracking-[-1px] font-normal max-w-[470px]">
               Support for the process. Not a substitute for expertise.
             </h2>
           </motion.div>
@@ -31,7 +32,7 @@ const About = () => {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="max-w-[520px]"
           >
-            <p className="text-[#6F6F7E] text-[13px] sm:text-[14px] leading-[1.7]">
+            <p className="text-[#6F6F7E] text-[12px] sm:text-[13px] leading-[1.7]">
               Owner Builder helps organize information. Your architect,
               builder, trades and other appointed professionals remain
               essential to the work and decisions on your project.

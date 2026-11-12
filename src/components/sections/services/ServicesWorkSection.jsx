@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 
-import phone1 from "../../../assets/images/Mobile-device-mockup-2.png";
-import phone2 from "../../../assets/images/Mobile-device-mockup-3.png";
-import phone3 from "../../../assets/images/Mobile-device-mockup-4.png";
-import phone4 from "../../../assets/images/Mobile-device-mockup.png";
+import phone1 from "../../../assets/images/Mobile-device-mockup.png";   // Bid Estimates
+import phone2 from "../../../assets/images/Mobile-device-mockup-3.png"; // Action Schedule
+import phone3 from "../../../assets/images/Mobile-device-mockup-4.png"; // Brick / Contractor
+import phone4 from "../../../assets/images/Mobile-device-mockup-2.png"; // Cards grid
 
 const screens = [
   {
@@ -28,7 +28,7 @@ const screens = [
     title: "Keep agreements close",
     description:
       "Maintain a clear place for forms and contracts throughout the project.",
-    image: phone4, // Temporary image: replace with phone4 later
+    image: phone4,
   },
 ];
 
@@ -36,14 +36,13 @@ const ServicesWorkSection = () => {
   return (
     <section className="w-full bg-[#EAE6DF] px-5 sm:px-8 lg:px-10 py-12 sm:py-16 lg:py-20">
       <div className="max-w-[1200px] mx-auto">
-
         {/* SECTION HEADING */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="mb-10 sm:mb-12"
+          className="mb-8 sm:mb-10"
         >
           <p className="text-[#20244F] text-[9px] sm:text-[10px] uppercase tracking-[0.12em] font-semibold mb-4">
             A closer look
@@ -60,7 +59,7 @@ const ServicesWorkSection = () => {
         </motion.div>
 
         {/* FOUR PHONE SCREENS */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-x-5 gap-y-10 sm:gap-x-6 lg:gap-x-8 items-start">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-x-5 gap-y-10 sm:gap-x-6 lg:gap-x-8 items-center ml-10">
           {screens.map((screen, index) => (
             <motion.div
               key={screen.title}
@@ -70,11 +69,13 @@ const ServicesWorkSection = () => {
               transition={{ duration: 0.6, delay: index * 0.12 }}
               className="w-full"
             >
-              {/* PHONE IMAGE: left aligned with the text below */}
+              {/* PHONE IMAGE: negative margins cut the transparent PNG padding,
+                  so phone edge lines up with the text below */}
               <img
                 src={screen.image}
                 alt={screen.title}
-                className="h-[240px] sm:h-[320px] lg:h-[430px] w-auto max-w-full object-contain object-left"
+                className="h-[240px] sm:h-[320px] lg:h-[430px] w-auto max-w-none object-contain object-left
+                           -ml-[12%] -mt-[6%] -mb-[8%]"
               />
 
               {/* TEXT */}
@@ -94,7 +95,6 @@ const ServicesWorkSection = () => {
           Unchanged source application screens. Sample entries shown are
           demonstration content.
         </p>
-
       </div>
     </section>
   );

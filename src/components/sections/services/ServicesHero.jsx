@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -12,7 +13,7 @@ const ServicesHero = () => {
         {/* BREADCRUMB */}
         <nav
           aria-label="Breadcrumb"
-          className="text-[9px] sm:text-[10px] font-medium uppercase tracking-[0.12em] text-[#20244F]/70"
+          className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px] text-[#20244F]/70"
         >
           <Link to="/" className="hover:underline">Home</Link>
           <span className="mx-1.5" aria-hidden="true">/</span>
@@ -27,11 +28,23 @@ const ServicesHero = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
           >
-            <h1 className="font-serif text-[#292929] text-[38px] sm:text-[48px] lg:text-[60px] leading-[1.08] tracking-[-0.01em] max-w-[520px]">
+            <h1 className="
+              font-['Georgia',serif]
+              text-[#292929]
+              text-[32px]
+              min-[380px]:text-[36px]
+              sm:text-[38px]
+              md:text-[44px]
+              lg:text-[48px]
+              leading-[1.05]
+              tracking-[-1px]
+              font-normal
+              max-w-[520px]
+            ">
               Builder Owner software connects you to every stage and decision of your home
             </h1>
 
-            <p className="text-[#777777] text-[12px] sm:text-[13px] lg:text-[14px] leading-[1.7] mt-6 max-w-[500px]">
+            <p className="text-[#777777] text-[12px] sm:text-[13px] leading-[1.7] mt-6 max-w-[500px]">
               Simplify the way you coordinate your build. Owner Builder brings
               project information, costs, people and paperwork into a connected
               set of practical tools.
@@ -59,7 +72,7 @@ const ServicesHero = () => {
               className="absolute inset-0 w-full h-full object-cover"
             />
 
-            {/* Phone: image ke beech me, almost poori height */}
+            {/* PHONE IMAGE */}
             <img
               src={phoneImage}
               alt="Owner Builder mobile app showing projects"

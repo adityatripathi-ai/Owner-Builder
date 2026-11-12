@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -79,11 +80,11 @@ const InformationSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <p className="text-[#1D1F6B] text-[9px] sm:text-[10px] font-semibold uppercase tracking-[0.12em] mb-4">
+          <p className="text-[#1D1F6B] text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px] mb-4">
             Explore by topic
           </p>
 
-          <h2 className="font-serif text-[#20244F] text-[28px] sm:text-[36px] lg:text-[42px] leading-[1.12] tracking-[-0.01em] max-w-[650px]">
+          <h2 className="text-[#20244F] text-[26px] sm:text-[30px] md:text-[34px] lg:text-[38px] leading-[1.15] tracking-[-1px] font-normal max-w-[650px] [font-family:Georgia,serif]">
             The right information for the next decision.
           </h2>
         </motion.div>
@@ -103,7 +104,7 @@ const InformationSection = () => {
                 type="button"
                 onClick={() => setActiveCategory(filter.value)}
                 aria-pressed={isActive}
-                className={`shrink-0 rounded-[3px] px-3 py-1.5 text-[10px] sm:text-[11px] transition-colors duration-200 ${
+                className={`shrink-0 rounded-[3px] px-3 py-1.5 text-[11px] sm:text-[12px] font-medium transition-colors duration-200 ${
                   isActive
                     ? "bg-[#1D1F6B] text-white border border-[#1D1F6B]"
                     : "bg-white text-[#20244F]/70 border border-[#E4E1DA] hover:text-[#20244F]"
@@ -128,7 +129,7 @@ const InformationSection = () => {
             >
               {/* CATEGORY + ICON */}
               <div className="flex items-center justify-between">
-                <span className="text-[#1D1F6B] text-[8px] sm:text-[9px] font-semibold uppercase tracking-[0.1em]">
+                <span className="text-[#1D1F6B] text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px]">
                   {card.category}
                 </span>
 
@@ -141,17 +142,17 @@ const InformationSection = () => {
               </div>
 
               {/* TITLE */}
-              <h3 className="font-serif text-[#20244F] text-[20px] sm:text-[22px] leading-[1.2] mt-5">
+              <h3 className="text-[#20244F] text-[13px] sm:text-[14px] font-semibold leading-[1.3] mt-5">
                 {card.title}
               </h3>
 
               {/* DESCRIPTION */}
-              <p className="text-[#777777] text-[11px] sm:text-[12px] leading-[1.6] mt-3">
+              <p className="text-[#777777] text-[11px] sm:text-[12px] leading-[1.7] mt-3">
                 {card.description}
               </p>
 
               {/* TAGS */}
-              <p className="text-[#8A8A98] text-[9px] sm:text-[10px] mt-4">
+              <p className="text-[#8A8A98] text-[10px] sm:text-[11px] leading-[1.6] mt-4">
                 {card.tags.join(" • ")}
               </p>
 
@@ -159,12 +160,12 @@ const InformationSection = () => {
               <div className="mt-4 pt-4 border-t border-[#ECEAE4]">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-1 text-[#20244F] text-[10px] sm:text-[11px] font-semibold hover:text-[#7771D5] transition-colors"
+                  className="inline-flex items-center gap-1 text-[#20244F] text-[11px] sm:text-[12px] font-medium hover:text-[#7771D5] transition-colors"
                 >
                   View editorial preview <span aria-hidden="true">↗</span>
                 </Link>
 
-                <p className="text-[#8A8A98] text-[9px] sm:text-[10px] mt-2">
+                <p className="text-[#8A8A98] text-[10px] sm:text-[11px] leading-[1.6] mt-2">
                   Proposed guide · Awaiting approval
                 </p>
               </div>

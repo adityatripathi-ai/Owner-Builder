@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import aboutImage from "../../../assets/images/Architectural-photography-3.png";
 
@@ -20,7 +21,7 @@ const initialForm = {
 
 const inputClass =
   "mt-1.5 w-full rounded-[3px] border border-[#dcd9d0] bg-white px-3 py-2.5 text-[12px] text-[#1d2056] placeholder:text-[#1d2056]/40 focus:border-[#1d2056] focus:outline-none focus:ring-2 focus:ring-[#1d2056]/20";
-const labelClass = "block text-[11px] font-medium text-[#1d2056]";
+const labelClass = "block text-[11px] sm:text-[12px] font-medium text-[#1d2056]";
 
 function Field({ label, htmlFor, children }) {
   return (
@@ -81,10 +82,10 @@ export default function ContactSection() {
       <div className="mx-auto grid max-w-[1280px] items-start gap-10 px-6 md:px-12 lg:grid-cols-[2.2fr_1fr] lg:gap-14">
         {/* Form card */}
         <div className="rounded-md bg-[#f4f2ed] p-6 md:p-8">
-          <h2 className="font-serif text-[24px] leading-tight text-[#1d2056] md:text-[28px]">
+          <h2 className="font-serif text-[26px] sm:text-[30px] md:text-[34px] lg:text-[38px] font-normal leading-[1.15] tracking-[-1px] text-[#1d2056]">
             Tell us about your project.
           </h2>
-          <p className="mt-1.5 text-[11px] text-[#1d2056]/60">
+          <p className="mt-1.5 text-[10px] sm:text-[11px] leading-[1.6] text-[#1d2056]/60">
             Fields marked * are required. Share the details below and we’ll follow up.
           </p>
 
@@ -119,7 +120,7 @@ export default function ContactSection() {
               <textarea id="message" name="message" required rows={6} value={form.message} onChange={update} placeholder="Tell us about your build, the decisions you need to make and where you’d like help." className={`${inputClass} resize-y`} />
             </Field>
 
-            <label className="flex items-start gap-2 pt-1 text-[10px] text-[#1d2056]/70">
+            <label className="flex items-start gap-2 pt-1 text-[10px] sm:text-[11px] leading-[1.6] text-[#1d2056]/70">
               <input type="checkbox" name="consent" required checked={form.consent} onChange={update} className="mt-px h-3 w-3 accent-[#1d2056]" />
               <span>
                 I agree to be contacted about this inquiry and accept the{" "}
@@ -127,11 +128,11 @@ export default function ContactSection() {
               </span>
             </label>
 
-            <button type="submit" className="inline-flex items-center gap-2 rounded-[3px] bg-[#1d1f6b] px-4 py-2.5 text-[11px] font-medium text-white transition hover:bg-[#2a2d8f] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1d2056] focus-visible:ring-offset-2">
+            <button type="submit" className="inline-flex items-center gap-2 rounded-[3px] bg-[#1d1f6b] px-4 py-2.5 text-[11px] sm:text-[12px] font-medium text-white transition hover:bg-[#2a2d8f] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1d2056] focus-visible:ring-offset-2">
               <SendIcon /> Send inquiry
             </button>
 
-            <p role="status" className="text-[10px] text-[#1d2056]/55">
+            <p role="status" className="text-[10px] sm:text-[11px] leading-[1.6] text-[#1d2056]/55">
               {sent
                 ? "Thanks, your inquiry has been sent. We’ll reply by email."
                 : "Please don’t include payment or sensitive personal details."}
@@ -141,13 +142,13 @@ export default function ContactSection() {
 
         {/* Info panel */}
         <div className="text-white">
-          <p className="text-[9px] font-medium uppercase tracking-[0.14em] text-white/60">
+          <p className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px] text-white/60">
             Talk to our team
           </p>
-          <h2 className="mt-3 max-w-[300px] font-serif text-[32px] leading-[1.08] md:text-[40px]">
+          <h2 className="mt-3 max-w-[300px] font-serif text-[26px] sm:text-[30px] md:text-[34px] lg:text-[38px] font-normal leading-[1.15] tracking-[-1px]">
             Let’s make the next step clearer.
           </h2>
-          <p className="mt-3 max-w-[300px] text-[12px] leading-relaxed text-white/75">
+          <p className="mt-3 max-w-[300px] text-[12px] sm:text-[13px] leading-[1.7] text-white/75">
             Use the inquiry form for questions about the platform and how it can
             support your building process.
           </p>
@@ -159,14 +160,14 @@ export default function ContactSection() {
                   {item.icon}
                 </span>
                 <span>
-                  <span className="block text-[9px] text-white/55">{item.label}</span>
-                  <span className="block text-[11px]">{item.value}</span>
+                  <span className="block text-[10px] sm:text-[11px] leading-[1.6] text-white/55">{item.label}</span>
+                  <span className="block text-[11px] sm:text-[12px] leading-[1.6]">{item.value}</span>
                 </span>
               </li>
             ))}
           </ul>
 
-          <p className="mt-3 max-w-[300px] text-[9px] text-white/45">
+          <p className="mt-3 max-w-[300px] text-[10px] sm:text-[11px] leading-[1.6] text-white/45">
             Business contatct details are awaiting confirmation before publication.
           </p>
 
@@ -175,7 +176,7 @@ export default function ContactSection() {
             alt="Timber-framed home interior with large glass doors"
             className="mt-6 aspect-square w-full rounded-md object-cover"
           />
-          <p className="mt-2 max-w-[300px] text-[12px] leading-relaxed text-white/40">
+          <p className="mt-2 max-w-[300px] text-[11px] sm:text-[12px] leading-[1.7] text-white/40">
             A short description of your project, its current stage and the part you're finding hardest to organize is a useful place to start,
           </p>
         </div>

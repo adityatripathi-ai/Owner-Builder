@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 
 import aboutImage from "../../../assets/images/Project-planning-still-life.png";
@@ -43,10 +44,10 @@ const FeaturedSection = () => {
           />
 
           <figcaption className="absolute inset-x-4 bottom-4 sm:inset-x-5 sm:bottom-5 rounded-md bg-[#F8F6F1]/95 px-4 py-3 sm:px-5 sm:py-4">
-            <p className="text-[#1D1F6B] text-[8px] sm:text-[9px] font-semibold uppercase tracking-[0.1em]">
+            <p className="text-[#1D1F6B] text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px]">
               The owner’s field notes
             </p>
-            <p className="mt-1.5 font-serif text-[#20244F] text-[18px] sm:text-[22px] leading-tight">
+            <p className="mt-1.5 text-[#20244F] text-[13px] sm:text-[14px] font-semibold leading-[1.3]">
               Preparation is part of the build.
             </p>
           </figcaption>
@@ -59,11 +60,11 @@ const FeaturedSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.1 }}
         >
-          <p className="text-white/70 text-[8px] sm:text-[9px] uppercase tracking-[0.12em] mb-4">
+          <p className="text-white/70 text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px] mb-4">
             Featured / Planning / Editorial preview
           </p>
 
-          <h2 className="font-serif text-white text-[28px] sm:text-[34px] lg:text-[40px] leading-[1.12] tracking-[-0.01em] font-normal max-w-[520px]">
+          <h2 className="text-white text-[26px] sm:text-[30px] md:text-[34px] lg:text-[38px] leading-[1.15] tracking-[-1px] font-normal max-w-[520px] [font-family:Georgia,serif]">
             Before the first estimate,
             <br className="hidden sm:block" /> get clear on the brief.
           </h2>
@@ -76,15 +77,15 @@ const FeaturedSection = () => {
           <ol className="mt-6 space-y-5">
             {briefQuestions.map((item) => (
               <li key={item.number} className="grid grid-cols-[32px_1fr] items-start">
-                <span className="pt-1 text-white/50 text-[9px] sm:text-[10px]">
+                <span className="pt-1 text-white/50 text-[10px] sm:text-[11px]">
                   {item.number}
                 </span>
 
                 <div>
-                  <h3 className="text-white text-[14px] sm:text-[15px] font-medium">
+                  <h3 className="text-white text-[13px] sm:text-[14px] font-semibold leading-[1.3]">
                     {item.title}
                   </h3>
-                  <p className="mt-1 text-white/65 text-[11px] sm:text-[12px] leading-[1.6] max-w-[460px]">
+                  <p className="mt-1 text-white/65 text-[11px] sm:text-[12px] leading-[1.7] max-w-[460px]">
                     {item.description}
                   </p>
                 </div>

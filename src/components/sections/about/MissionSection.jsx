@@ -14,23 +14,22 @@ const MissionSection = () => {
         >
 
           {/* LABEL */}
-          <p className="text-[#A9A5F5] text-[9px] font-semibold uppercase tracking-[1.5px] mb-5">
+          <p className="text-[#A9A5F5] text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px] mb-5">
             Our Mission
           </p>
 
           {/* HEADING */}
           <h2
             className="
+              font-['Georgia',serif]
               text-white
-              text-[30px]
-              sm:text-[36px]
-              md:text-[42px]
-              lg:text-[48px]
-              leading-[1.08]
-              tracking-[-1px]
+              text-[26px]
+              sm:text-[30px]
+              md:text-[34px]
+              lg:text-[38px]
+              leading-[1.15]
               font-normal
             "
-            style={{ fontFamily: "Georgia, serif" }}
           >
             Make the complex feel manageable—
             <br className="hidden md:block" />
@@ -39,10 +38,10 @@ const MissionSection = () => {
 
           {/* DESCRIPTION */}
           <p className="
-            text-white/70
+            text-white/80
             text-[12px]
-            sm:text-[11px]
-            leading-[1.9]
+            sm:text-[13px]
+            leading-[1.7]
             mt-5
             max-w-[750px]
           ">

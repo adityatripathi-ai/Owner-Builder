@@ -63,7 +63,7 @@ const Navbar = () => {
                 <NavLink
                   to={link.href}
                   end={link.href === "/"}
-                  className={linkClass("text-[11px] xl:text-xs")}
+                  className={linkClass("text-[14px]")}
                 >
                   {link.name}
                 </NavLink>
@@ -110,7 +110,7 @@ const Navbar = () => {
                     to={link.href}
                     end={link.href === "/"}
                     onClick={() => setMenuOpen(false)}
-                    className={(state) => `w-fit ${linkClass("text-xs")(state)}`}
+                    className={(state) => `w-fit ${linkClass("text-[15px]")(state)}`}
                   >
                     {link.name}
                   </NavLink>

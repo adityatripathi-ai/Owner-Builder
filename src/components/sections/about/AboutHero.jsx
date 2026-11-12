@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -14,7 +13,7 @@ const AboutHero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
-          className="text-[#20244F] text-[6px] sm:text-[8px] uppercase tracking-[0.3px] mb-8 sm:mb-10 lg:mb-12"
+          className="text-[#7771D5] text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px] mb-8 sm:mb-10 lg:mb-12"
         >
           HOME / ABOUT OWNER BUILDER
         </motion.p>
@@ -32,16 +31,18 @@ const AboutHero = () => {
             {/* HEADING */}
             <h1
               className="
-                text-[#303438]
-                text-[34px]
+                font-['Georgia',serif]
+                text-[#303030]
+                text-[32px]
+                min-[380px]:text-[36px]
                 min-[480px]:text-[27px]
-                sm:text-[34px]
-                lg:text-[49px]
+                sm:text-[38px]
+                md:text-[44px]
+                lg:text-[48px]
                 leading-[1.05]
-                tracking-[-0.7px]
+                tracking-[-1px]
                 font-normal
               "
-              style={{ fontFamily: "Georgia, serif" }}
             >
               Behind every
               <br />
@@ -51,7 +52,7 @@ const AboutHero = () => {
             </h1>
 
             {/* DESCRIPTION */}
-            <p className="mt-4 text-[#777777] text-[10px] min-[480px]:text-[7px] sm:text-[10px] lg:text-[12px] leading-[1.65] max-w-[390px]">
+            <p className="mt-4 text-[#666666] text-[12px] min-[480px]:text-[11px] sm:text-[13px] leading-[1.7] max-w-[390px]">
               Owner Builder exists to make the coordination of a
               house-building project easier to understand, easier
               to organize and easier to follow through.
@@ -70,7 +71,8 @@ const AboutHero = () => {
                   inline-flex items-center gap-2
                   border border-[#DAD8D2]
                   text-[#20244F]
-                  text-[7px] min-[480px]:text-[6px] sm:text-[9px]
+                  font-medium
+                  text-[11px] min-[480px]:text-[10px] sm:text-[12px]
                   px-3 py-2
                   rounded-[2px]
                   hover:bg-[#20244F]
@@ -123,14 +125,11 @@ const AboutHero = () => {
                   z-10
                 "
               >
-                <p className="text-[#7771D5] text-[6px] sm:text-[7px] font-semibold uppercase tracking-[0.5px] mb-1">
+                <p className="text-[#7771D5] text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px] mb-1">
                   A SIMPLE BELIEF
                 </p>
 
-                <p
-                  className="text-[#303438] text-[12px] sm:text-[11px] lg:text-[17px] leading-[1.15]"
-                  style={{ fontFamily: "Georgia, serif" }}
-                >
+                <p className="font-['Georgia',serif] text-[#303030] text-[14px] sm:text-[14px] lg:text-[17px] leading-[1.15]">
                   Your attention belongs on the home you’re creating.
                 </p>
               </motion.div>

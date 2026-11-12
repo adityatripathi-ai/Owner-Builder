@@ -1,7 +1,6 @@
+
 import { motion } from "framer-motion";
 
-// Abhi sab cards me Vector-1 hai. Baad me har card ka apna icon import karke
-// neeche `icon:` me badal dena (jaise Vector-2, Vector-3...).
 import vector1 from "../../../assets/icons/Vector-10.png";
 import vector2 from "../../../assets/icons/Vector-11.png";
 import vector3 from "../../../assets/icons/Vector-12.png";
@@ -82,15 +81,15 @@ const ServicesFeatures = () => {
           transition={{ duration: 0.6 }}
           className="mb-8 sm:mb-10"
         >
-          <p className="text-[9px] sm:text-[10px] tracking-[0.12em] text-white/70 uppercase mb-4">
+          <p className="text-[10px] sm:text-[11px] tracking-[1.5px] font-semibold text-white/70 uppercase mb-4">
             The platform toolkit
           </p>
 
-          <h2 className="font-serif text-white text-[28px] sm:text-[34px] lg:text-[42px] leading-[1.1] tracking-[-0.01em]">
+          <h2 className="font-['Georgia',serif] text-white text-[26px] sm:text-[30px] md:text-[34px] lg:text-[38px] leading-[1.15] tracking-[-1px] font-normal">
             Built for the Whole Construction Process
           </h2>
 
-          <p className="text-white/80 text-[12px] sm:text-[13px] lg:text-[14px] mt-4 max-w-[640px] leading-[1.7]">
+          <p className="text-white/80 text-[12px] sm:text-[13px] mt-4 max-w-[640px] leading-[1.7]">
             The tools that fit the work in front of you, while keeping the
             wider project in view.
           </p>
@@ -119,11 +118,11 @@ const ServicesFeatures = () => {
                 </span>
               </div>
 
-              <h3 className="text-[#20244F] text-[14px] sm:text-[15px] font-medium mb-2">
+              <h3 className="text-[#20244F] text-[13px] sm:text-[14px] font-semibold leading-snug mb-2">
                 {feature.title}
               </h3>
 
-              <p className="text-[#777777] text-[11px] sm:text-[12px] leading-[1.65]">
+              <p className="text-[#777777] text-[11px] sm:text-[12px] leading-[1.7]">
                 {feature.description}
               </p>
             </motion.li>

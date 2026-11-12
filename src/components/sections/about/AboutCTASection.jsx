@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -16,15 +15,15 @@ const AboutCTASection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <p className="text-[#D0CDFB] text-[8px] sm:text-[9px] uppercase tracking-[1.5px] font-medium mb-3">
+            <p className="text-[#A9A5F5] text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px] mb-3">
               Start with a conversation
             </p>
 
-            <h2 className="font-serif text-[27px] sm:text-[32px] md:text-[36px] lg:text-[40px] leading-[1.08] max-w-[650px]">
+            <h2 className="font-['Georgia',serif] text-[26px] sm:text-[30px] md:text-[34px] lg:text-[38px] font-normal leading-[1.15] text-white max-w-[650px]">
               Let’s bring more clarity to your building journey.
             </h2>
 
-            <p className="text-white/70 text-[10px] sm:text-[11px] leading-[1.7] mt-4 max-w-[650px]">
+            <p className="text-white/80 text-[12px] sm:text-[13px] leading-[1.7] mt-4 max-w-[650px]">
               Tell us where you are in your building journey. Let’s explore how Owner Builder can help you organize what comes next.
             </p>
           </motion.div>
@@ -50,7 +49,7 @@ const AboutCTASection = () => {
                 className="
                inline-flex items-center gap-2
   bg-white text-[#20244F]
-  text-[8px] sm:text-[9px]
+  text-[11px] sm:text-[12px] font-medium
   px-3 py-2
   rounded-sm
   hover:bg-[#A9A5F5]
@@ -63,7 +62,7 @@ const AboutCTASection = () => {
             </motion.div>
 
             {/* BUTTON DESCRIPTION */}
-            <p className="mt-4 max-w-[220px] text-[10px] sm:text-[11px] text-white/60 leading-5">
+            <p className="mt-4 max-w-[220px] text-[10px] sm:text-[11px] text-white/70 leading-[1.6]">
              A practical next step. No pressure
             </p>
           </motion.div>

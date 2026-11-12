@@ -27,15 +27,15 @@ export default function NextSteps() {
       <div className="mx-auto max-w-[1280px] px-5 sm:px-6 md:px-12 py-14 md:py-20">
 
         {/* SECTION HEADING */}
-        <p className="text-[9px] font-medium uppercase tracking-[0.14em] text-[#1d2056]/60">
+        <p className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px] text-[#1d2056]/60">
           A clear next step
         </p>
 
-        <h2 className="mt-3 font-serif text-[30px] leading-tight sm:text-[34px] md:text-[40px]">
+        <h2 className="mt-3 font-serif text-[26px] sm:text-[30px] md:text-[34px] lg:text-[38px] font-normal leading-[1.15] tracking-[-1px]">
           Start with the right conversation.
         </h2>
 
-        <p className="mt-3 max-w-xl text-[12px] sm:text-[13px] leading-relaxed text-[#1d2056]/70">
+        <p className="mt-3 max-w-xl text-[12px] sm:text-[13px] leading-[1.7] text-[#1d2056]/70">
           Your inquiry helps frame a practical discussion about your project and
           the platform.
         </p>
@@ -62,18 +62,18 @@ export default function NextSteps() {
                   className="w-4 h-4 object-contain"
                 />
 
-                <span className="text-[10px] text-[#1d2056]/45">
+                <span className="text-[10px] sm:text-[11px] leading-[1.6] text-[#1d2056]/45">
                   {String(i + 1).padStart(2, "0")}
                 </span>
               </div>
 
               {/* TITLE */}
-              <h3 className="mt-6 text-[14px] font-semibold">
+              <h3 className="mt-6 text-[13px] sm:text-[14px] font-semibold leading-[1.3]">
                 {step.title}
               </h3>
 
               {/* DESCRIPTION */}
-              <p className="mt-1.5 max-w-[260px] text-[11px] sm:text-[12px] leading-relaxed text-[#1d2056]/65">
+              <p className="mt-1.5 max-w-[260px] text-[11px] sm:text-[12px] leading-[1.7] text-[#1d2056]/65">
                 {step.text}
               </p>
             </li>
