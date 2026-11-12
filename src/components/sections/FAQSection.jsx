@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { SplitText } from "../common/Animations";
 
 const faqItems = [
   {
@@ -40,7 +41,9 @@ const FAQSection = () => {
         >
           <p className="text-[#7771D5] text-[10px] sm:text-[14px] font-semibold uppercase tracking-[1.5px] mb-3">A little more clarity</p>
 
-          <h2 className="font-['Georgia',serif] text-[26px] sm:text-[30px] md:text-[34px] lg:text-[38px] font-normal leading-[1.15] text-[#20244F]">Frequently Asked Questions</h2>
+          <h2 className="font-['Georgia',serif] text-[26px] sm:text-[30px] md:text-[34px] lg:text-[38px] font-normal leading-[1.15] text-[#20244F]">
+            <SplitText text="Frequently Asked Questions" />
+          </h2>
         </motion.div>
 
         <div className="mt-6 sm:mt-8 border-t border-[#E1DFD8]">
@@ -56,26 +59,39 @@ const FAQSection = () => {
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 className="border-b border-[#E1DFD8]"
               >
-                <button
+                <motion.button
                   type="button"
                   onClick={() => toggleFAQ(index)}
                   aria-expanded={isOpen}
+                  whileHover="hover"
                   className="w-full flex items-center justify-between gap-4 pt-4 pb-2 text-left"
                 >
-                  <span className="text-[#20244F] text-[13px] sm:text-[15px] font-semibold leading-snug">{item.question}</span>
+                  <motion.span
+                    variants={{ hover: { x: 8 } }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                    className="text-[#20244F] text-[13px] sm:text-[15px] font-semibold leading-snug"
+                  >
+                    {item.question}
+                  </motion.span>
 
-                  <span className="text-[#7771D5] text-[15px] shrink-0">
+                  <motion.span
+                    animate={{ rotate: isOpen ? 180 : 0 }}
+                    variants={{ hover: { scale: 1.3 } }}
+                    transition={{ duration: 0.35 }}
+                    className="text-[#7771D5] text-[15px] shrink-0"
+                  >
                     {isOpen ? "−" : "+"}
-                  </span>
-                </button>
+                  </motion.span>
+                </motion.button>
 
                 <AnimatePresence initial={false}>
                   {isOpen && (
                     <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.25 }}
+                      initial={{ height: 0, opacity: 0, rotateX: -30 }}
+                      animate={{ height: "auto", opacity: 1, rotateX: 0 }}
+                      exit={{ height: 0, opacity: 0, rotateX: -30 }}
+                      transition={{ duration: 0.35, ease: "easeOut" }}
+                      style={{ transformPerspective: 700, transformOrigin: "top" }}
                       className="overflow-hidden"
                     >
                       <p className="text-[#666666] text-[11px] sm:text-[14px] leading-[1.6] pb-4 pr-8 max-w-[850px]">{item.answer}</p>

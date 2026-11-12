@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 
+import { SplitText, FloatingOrbs } from "../common/Animations";
+
 const platformFeatures = [
   {
     title: "Visible costs",
@@ -17,8 +19,10 @@ const platformFeatures = [
 
 const PlatformSection = () => {
   return (
-    <section className="w-full bg-[#1D1F6B] text-white overflow-hidden">
-      <div className="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-10 py-12 sm:py-14 md:py-16">
+    <section className="relative w-full bg-[#1D1F6B] text-white overflow-hidden">
+      <FloatingOrbs />
+
+      <div className="relative z-10 max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-10 py-12 sm:py-14 md:py-16">
 
         <motion.div
           initial={{ opacity: 0, y: 25 }}
@@ -29,8 +33,9 @@ const PlatformSection = () => {
           <p className="text-[#A9A5F5] text-[10px] sm:text-[14px] font-semibold uppercase tracking-[1.5px] mb-3">Confidence through clarity</p>
 
           <h2 className="font-['Georgia',serif] text-[26px] sm:text-[30px] md:text-[34px] lg:text-[38px] font-normal leading-[1.15] text-white max-w-[640px]">
-            A platform, not a promise of
-            <br className="hidden sm:block" /> shortcuts.
+            <SplitText text="A platform, not a promise of" />{" "}
+            <br className="hidden sm:block" />
+            <SplitText text="shortcuts." delay={0.45} />
           </h2>
 
           <p className="text-white/80 text-[12px] sm:text-[15px] leading-[1.7] mt-5 max-w-[660px]">
@@ -48,8 +53,18 @@ const PlatformSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.15 }}
-              className={`border-t border-white/20 pt-5 ${index === 0 ? "sm:-translate-y-2.5" : ""}`}
+              className={`relative border-t border-white/20 pt-5 ${index === 0 ? "sm:-translate-y-2.5" : ""}`}
             >
+              {/* animated line that draws over the border */}
+              <motion.span
+                aria-hidden="true"
+                className="absolute -top-px left-0 h-px w-full origin-left bg-[#A9A5F5]"
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, delay: 0.3 + index * 0.2, ease: "easeOut" }}
+              />
+
               <h3 className="text-white text-[13px] sm:text-[16px] font-semibold leading-snug">
                 {feature.title}
               </h3>

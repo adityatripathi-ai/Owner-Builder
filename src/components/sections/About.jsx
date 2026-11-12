@@ -1,9 +1,11 @@
+
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 import featureIcon1 from "../../assets/icons/Vector-1.png";
 import featureIcon2 from "../../assets/icons/Vector-2.png";
 import featureIcon3 from "../../assets/icons/Vector-3.png";
+import { SplitText, TiltCard } from "../common/Animations";
 
 const features = [
   {
@@ -43,10 +45,12 @@ const About = () => {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.7 }}
           >
-            <p className="text-[#7771D5] text-[12px] sm:text-[14px] font-semibold uppercase tracking-[1.5px] mb-3">Meet Owner Builder</p>
+            <p className="text-[#7771D5] text-[12px] sm:text-[14px] font-semibold uppercase tracking-[1.5px] mb-3">
+              Meet Owner Builder
+            </p>
 
             <h2 className="font-['Georgia',serif] text-[26px] sm:text-[30px] md:text-[34px] lg:text-[38px] font-normal leading-[1.15] text-[#303030] max-w-[430px]">
-              One place for the many parts of building.
+              <SplitText text="One place for the many parts of building." />
             </h2>
           </motion.div>
 
@@ -66,10 +70,12 @@ const About = () => {
 
             <Link
               to="/about"
-              className="text-[11px] sm:text-[15px] font-medium inline-flex items-center gap-2 text-[#20244F] mt-4 hover:text-[#7771D5] transition-colors"
+              className="group text-[11px] sm:text-[15px] font-medium inline-flex items-center gap-2 text-[#20244F] mt-4 hover:text-[#7771D5] transition-colors"
             >
               The thinking behind Owner Builder
-              <span>↗</span>
+              <span className="inline-block transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
+                ↗
+              </span>
             </Link>
           </motion.div>
 
@@ -82,33 +88,52 @@ const About = () => {
           viewport={{ once: true, amount: 0.2 }}
           variants={{
             hidden: {},
-            visible: { transition: { staggerChildren: 0.15 } },
+            visible: {
+              transition: { staggerChildren: 0.15 },
+            },
           }}
           className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4"
         >
           {features.map((feature) => (
-            <motion.div
+            <TiltCard
               key={feature.number}
               variants={{
                 hidden: { opacity: 0, y: 25 },
                 visible: { opacity: 1, y: 0 },
+                hover: { y: -5 },
               }}
               transition={{ duration: 0.6 }}
-              whileHover={{ y: -5 }}
+              whileHover="hover"
               className="bg-white border border-gray-100 rounded-md p-4 sm:p-4 md:p-5 min-h-[125px] transition-shadow duration-300 hover:shadow-md"
             >
+              {/* ICON ANIMATION */}
               <div className="mb-3">
-                <img
+                <motion.img
                   src={feature.icon}
                   alt={`${feature.title} icon`}
                   className="w-5 h-5 object-contain"
+                  style={{ transformPerspective: 400 }}
+                  variants={{
+                    hover: {
+                      rotateY: 360,
+                      scale: 1.15,
+                      transition: {
+                        duration: 0.7,
+                        ease: "easeInOut",
+                      },
+                    },
+                  }}
                 />
               </div>
 
-              <h3 className="text-[#20244F] text-[13px] sm:text-[16px] font-semibold leading-snug mb-2">{feature.title}</h3>
+              <h3 className="text-[#20244F] text-[13px] sm:text-[16px] font-semibold leading-snug mb-2">
+                {feature.title}
+              </h3>
 
-              <p className="text-[#666666] text-[11px] sm:text-[14px] leading-[1.6]">{feature.description}</p>
-            </motion.div>
+              <p className="text-[#666666] text-[11px] sm:text-[14px] leading-[1.6]">
+                {feature.description}
+              </p>
+            </TiltCard>
           ))}
         </motion.div>
 
