@@ -17,13 +17,13 @@ const CTASection = () => {
             transition={{ duration: 0.7 }}
             className="w-full"
           >
-            <p className="text-[#A9A5F5] text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px] mb-3">Start with a conversation</p>
+            <p className="text-[#A9A5F5] text-[10px] sm:text-[14px] font-semibold uppercase tracking-[1.5px] mb-3">Start with a conversation</p>
 
             <h2 className="font-['Georgia',serif] text-[26px] sm:text-[30px] md:text-[34px] lg:text-[38px] font-normal leading-[1.15] text-white max-w-[650px]">
               Your home. Your vision. A clearer way forward.
             </h2>
 
-            <p className="text-white/80 text-[12px] sm:text-[13px] leading-[1.7] mt-4 max-w-[650px]">
+            <p className="text-white/80 text-[12px] sm:text-[15px] leading-[1.7] mt-4 max-w-[650px]">
               Tell us where you are in your building journey.
               Let's explore how Owner Builder can help you organize
               what comes next.
@@ -61,7 +61,7 @@ const CTASection = () => {
 
             </div>
 
-            <p className="text-white/70 text-[10px] sm:text-[11px] leading-[1.6] mt-1 text-center">
+            <p className="text-white/70 text-[10px] sm:text-[13px] leading-[1.6] mt-1 text-center">
               A practical next step. No pressure.
             </p>
           </motion.div>

@@ -44,7 +44,7 @@ const ServicesWorkSection = () => {
           transition={{ duration: 0.7 }}
           className="mb-8 sm:mb-10"
         >
-          <p className="text-[#20244F] text-[9px] sm:text-[10px] uppercase tracking-[0.12em] font-semibold mb-4">
+          <p className="text-[#20244F] text-[9px] sm:text-[14px] uppercase tracking-[0.12em] font-semibold mb-4">
             A closer look
           </p>
 
@@ -52,7 +52,7 @@ const ServicesWorkSection = () => {
             The work, brought into focus.
           </h2>
 
-          <p className="mt-4 text-[#6F6F7E] text-[12px] sm:text-[13px] lg:text-[14px] leading-[1.7] max-w-[640px]">
+          <p className="mt-4 text-[#6F6F7E] text-[12px] sm:text-[15px] lg:text-[14px] leading-[1.7] max-w-[640px]">
             Explore the original application screens for estimates, trade
             scheduling and project agreements.
           </p>
@@ -83,7 +83,7 @@ const ServicesWorkSection = () => {
                 {screen.title}
               </h3>
 
-              <p className="text-[#777777] text-[11px] sm:text-[12px] leading-[1.7] mt-2 max-w-[250px]">
+              <p className="text-[#777777] text-[11px] sm:text-[15px] leading-[1.7] mt-2 max-w-[250px]">
                 {screen.description}
               </p>
             </motion.div>
@@ -91,7 +91,7 @@ const ServicesWorkSection = () => {
         </div>
 
         {/* CAPTION */}
-        <p className="mt-10 sm:mt-12 text-[10px] sm:text-[11px] text-[#777777]">
+        <p className="mt-10 sm:mt-12 text-[10px] sm:text-[13px] text-[#5b5a5a]">
           Unchanged source application screens. Sample entries shown are
           demonstration content.
         </p>

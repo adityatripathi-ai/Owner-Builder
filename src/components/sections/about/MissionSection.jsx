@@ -14,7 +14,7 @@ const MissionSection = () => {
         >
 
           {/* LABEL */}
-          <p className="text-[#A9A5F5] text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px] mb-5">
+          <p className="text-[#A9A5F5] text-[10px] sm:text-[14px] font-semibold uppercase tracking-[1.5px] mb-5">
             Our Mission
           </p>
 
@@ -40,7 +40,7 @@ const MissionSection = () => {
           <p className="
             text-white/80
             text-[12px]
-            sm:text-[13px]
+            sm:text-[15px]
             leading-[1.7]
             mt-5
             max-w-[750px]

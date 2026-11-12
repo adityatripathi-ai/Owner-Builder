@@ -43,7 +43,7 @@ const About = () => {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.7 }}
           >
-            <p className="text-[#7771D5] text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px] mb-3">Meet Owner Builder</p>
+            <p className="text-[#7771D5] text-[12px] sm:text-[14px] font-semibold uppercase tracking-[1.5px] mb-3">Meet Owner Builder</p>
 
             <h2 className="font-['Georgia',serif] text-[26px] sm:text-[30px] md:text-[34px] lg:text-[38px] font-normal leading-[1.15] text-[#303030] max-w-[430px]">
               One place for the many parts of building.
@@ -57,7 +57,7 @@ const About = () => {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="flex flex-col justify-center"
           >
-            <p className="text-[#666666] text-[12px] sm:text-[13px] leading-[1.7]">
+            <p className="text-[#666666] text-[12px] sm:text-[15px] leading-[1.7]">
               A house is built through thousands of connected decisions.
               Owner Builder is a construction and real-estate project
               platform that gives those decisions a home — from the first
@@ -66,7 +66,7 @@ const About = () => {
 
             <Link
               to="/about"
-              className="text-[11px] sm:text-[12px] font-medium inline-flex items-center gap-2 text-[#20244F] mt-4 hover:text-[#7771D5] transition-colors"
+              className="text-[11px] sm:text-[15px] font-medium inline-flex items-center gap-2 text-[#20244F] mt-4 hover:text-[#7771D5] transition-colors"
             >
               The thinking behind Owner Builder
               <span>↗</span>
@@ -105,9 +105,9 @@ const About = () => {
                 />
               </div>
 
-              <h3 className="text-[#20244F] text-[13px] sm:text-[14px] font-semibold leading-snug mb-2">{feature.title}</h3>
+              <h3 className="text-[#20244F] text-[13px] sm:text-[16px] font-semibold leading-snug mb-2">{feature.title}</h3>
 
-              <p className="text-[#666666] text-[11px] sm:text-[12px] leading-[1.6]">{feature.description}</p>
+              <p className="text-[#666666] text-[11px] sm:text-[14px] leading-[1.6]">{feature.description}</p>
             </motion.div>
           ))}
         </motion.div>

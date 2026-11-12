@@ -36,11 +36,11 @@ const PlatformBenefits = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-[#7771D5] text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px] mb-3">Built around your project</p>
+          <p className="text-[#7771D5] text-[10px] sm:text-[14px] font-semibold uppercase tracking-[1.5px] mb-3">Built around your project</p>
 
           <h2 className="font-['Georgia',serif] text-[26px] sm:text-[30px] md:text-[34px] lg:text-[38px] font-normal leading-[1.15] text-[#20244F]">Less scattered. More connected.</h2>
 
-          <p className="text-[#666666] text-[12px] sm:text-[13px] leading-[1.7] mt-3 max-w-[550px]">
+          <p className="text-[#666666] text-[12px] sm:text-[15px] leading-[1.7] mt-3 max-w-[550px]">
             Practical tools for the responsibilities that come with building
             your own home.
           </p>
@@ -60,9 +60,9 @@ const PlatformBenefits = () => {
                 <img src={item.icon} alt={`${item.title} icon`} className="w-5 h-5 object-contain" />
               </div>
 
-              <h3 className="text-[#20244F] text-[13px] sm:text-[14px] font-semibold leading-snug mb-2">{item.title}</h3>
+              <h3 className="text-[#20244F] text-[16px] sm:text-[16px] font-semibold leading-snug mb-2">{item.title}</h3>
 
-              <p className="text-[#666666] text-[11px] sm:text-[12px] leading-[1.6]">{item.description}</p>
+              <p className="text-[#666666] text-[11px] sm:text-[13px] leading-[1.6]">{item.description}</p>
             </motion.div>
           ))}
         </div>
@@ -74,7 +74,7 @@ const PlatformBenefits = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="mt-6"
         >
-          <button className="text-[11px] sm:text-[12px] font-medium inline-flex items-center gap-3 border border-[#DAD8D2] px-4 py-2 text-[#20244F] hover:bg-[#20244F] hover:text-white transition-colors duration-300">
+          <button className="text-[11px] sm:text-[13px] font-medium inline-flex items-center gap-3 border border-[#DAD8D2] px-4 py-2 text-[#20244F] hover:bg-[#20244F] hover:text-white transition-colors duration-300">
             See all offerings
             <span>→</span>
           </button>

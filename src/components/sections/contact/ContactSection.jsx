@@ -120,7 +120,7 @@ export default function ContactSection() {
             Tell us about your project.
           </h2>
 
-          <p className="mt-1.5 text-[10px] sm:text-[11px] leading-[1.6] text-[#1d2056]/60">
+          <p className="mt-1.5 text-[10px] sm:text-[14px] leading-[1.6] text-[#1d2056]/60">
             Fields marked * are required. Share the details below and we’ll follow up.
           </p>
 
@@ -209,7 +209,7 @@ export default function ContactSection() {
               />
             </Field>
 
-            <label className="flex items-start gap-2 pt-1 text-[10px] sm:text-[11px] leading-[1.6] text-[#1d2056]/70">
+            <label className="flex items-start gap-2 pt-1 text-[10px] sm:text-[13px] leading-[1.6] text-[#1d2056]/70">
               <input
                 type="checkbox"
                 name="consent"
@@ -236,7 +236,7 @@ export default function ContactSection() {
 
             <p
               role="status"
-              className="text-[10px] sm:text-[11px] leading-[1.6] text-[#1d2056]/55"
+              className="text-[10px] sm:text-[13px] leading-[1.6] text-[#1d2056]/55"
             >
               {sent
                 ? "Thanks, your inquiry has been sent. We’ll reply by email."
@@ -253,7 +253,7 @@ export default function ContactSection() {
           transition={{ duration: 0.7 }}
           className="text-white"
         >
-          <p className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px] text-white/60">
+          <p className="text-[10px] sm:text-[14px] font-semibold uppercase tracking-[1.5px] text-white">
             Talk to our team
           </p>
 
@@ -261,7 +261,7 @@ export default function ContactSection() {
             Let’s make the next step clearer.
           </h2>
 
-          <p className="mt-3 max-w-[300px] text-[12px] sm:text-[13px] leading-[1.7] text-white/75">
+          <p className="mt-3 max-w-[300px] text-[12px] sm:text-[15px] leading-[1.7] text-white/75">
             Use the inquiry form for questions about the platform and how it can
             support your building process.
           </p>
@@ -293,7 +293,7 @@ export default function ContactSection() {
             ))}
           </ul>
 
-          <p className="mt-3 max-w-[300px] text-[10px] sm:text-[11px] leading-[1.6] text-white/45">
+          <p className="mt-3 max-w-[300px] text-[10px] sm:text-[13px] leading-[1.6] text-white/80">
             Business contatct details are awaiting confirmation before publication.
           </p>
 
@@ -312,7 +312,7 @@ export default function ContactSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="mt-2 max-w-[300px] text-[11px] sm:text-[12px] leading-[1.7] text-white/40"
+            className="mt-2 max-w-[300px] text-[11px] sm:text-[13px] leading-[1.7] text-white/70"
           >
             A short description of your project, its current stage and the part you're finding hardest to organize is a useful place to start,
           </motion.p>

@@ -44,7 +44,7 @@ const FeaturedSection = () => {
           />
 
           <figcaption className="absolute inset-x-4 bottom-4 sm:inset-x-5 sm:bottom-5 rounded-md bg-[#F8F6F1]/95 px-4 py-3 sm:px-5 sm:py-4">
-            <p className="text-[#1D1F6B] text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px]">
+            <p className="text-[#1D1F6B] text-[10px] sm:text-[14px] font-semibold uppercase tracking-[1.5px]">
               The owner’s field notes
             </p>
             <p className="mt-1.5 text-[#20244F] text-[13px] sm:text-[14px] font-semibold leading-[1.3]">
@@ -60,7 +60,7 @@ const FeaturedSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.1 }}
         >
-          <p className="text-white/70 text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px] mb-4">
+          <p className="text-white/70 text-[10px] sm:text-[14px] font-semibold uppercase tracking-[1.5px] mb-4">
             Featured / Planning / Editorial preview
           </p>
 
@@ -69,7 +69,7 @@ const FeaturedSection = () => {
             <br className="hidden sm:block" /> get clear on the brief.
           </h2>
 
-          <p className="mt-4 text-white/80 text-[12px] sm:text-[13px] leading-[1.7] max-w-[500px]">
+          <p className="mt-4 text-white/80 text-[12px] sm:text-[15px] leading-[1.7] max-w-[500px]">
             A useful project brief helps you describe the same scope to
             everyone you speak with. Begin with three simple questions:
           </p>
@@ -77,15 +77,15 @@ const FeaturedSection = () => {
           <ol className="mt-6 space-y-5">
             {briefQuestions.map((item) => (
               <li key={item.number} className="grid grid-cols-[32px_1fr] items-start">
-                <span className="pt-1 text-white/50 text-[10px] sm:text-[11px]">
+                <span className="pt-1 text-white text-[10px] sm:text-[13px]">
                   {item.number}
                 </span>
 
                 <div>
-                  <h3 className="text-white text-[13px] sm:text-[14px] font-semibold leading-[1.3]">
+                  <h3 className="text-white text-[13px] sm:text-[16px] font-semibold leading-[1.3]">
                     {item.title}
                   </h3>
-                  <p className="mt-1 text-white/65 text-[11px] sm:text-[12px] leading-[1.7] max-w-[460px]">
+                  <p className="mt-1 text-white/65 text-[11px] sm:text-[14px] leading-[1.7] max-w-[460px]">
                     {item.description}
                   </p>
                 </div>

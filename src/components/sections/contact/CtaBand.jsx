@@ -28,7 +28,7 @@ export default function CtaBand() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px] text-white/70">
+          <p className="text-[10px] sm:text-[14px] font-semibold uppercase tracking-[1.5px] text-white/80">
             Still exploring?
           </p>
 
@@ -36,7 +36,7 @@ export default function CtaBand() {
             Get to know the tools first.
           </h2>
 
-          <p className="mt-3 max-w-lg text-[12px] sm:text-[13px] leading-[1.7] text-white/80">
+          <p className="mt-3 max-w-lg text-[12px] sm:text-[15px] leading-[1.7] text-white/80">
             See how Owner Builder organizes the everyday details of a
             house-building project.
           </p>
@@ -49,7 +49,7 @@ export default function CtaBand() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="inline-flex items-center gap-2 self-start rounded-[3px] bg-white px-5 py-3 text-[11px] sm:text-[12px] font-medium text-[#1d2056] transition hover:bg-[#f4f2ed] focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#1d1f6b] md:self-center"
+          className="inline-flex items-center gap-2 self-start rounded-[3px] bg-white px-5 py-3 text-[11px] sm:text-[13px] font-medium text-[#1d2056] transition hover:bg-[#f4f2ed] focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#1d1f6b] md:self-center"
         >
           Explore offerings <ArrowIcon />
         </motion.a>

@@ -56,14 +56,14 @@ const PerspectiveSection = () => {
             transition={{ duration: 0.8 }}
             className="max-w-[480px]"
           >
-            <p className="text-[#7771D5] text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px] mb-3">At the desk. On the site.</p>
+            <p className="text-[#7771D5] text-[10px] sm:text-[14px] font-semibold uppercase tracking-[1.5px] mb-3">At the desk. On the site.</p>
 
             <h2 className="font-['Georgia',serif] text-[26px] sm:text-[30px] md:text-[34px] lg:text-[38px] font-normal leading-[1.15] text-[#20244F]">
               Keep the next step close
               <br className="hidden lg:block" /> at hand.
             </h2>
 
-            <p className="text-[#666666] text-[12px] sm:text-[13px] leading-[1.7] mt-5">
+            <p className="text-[#666666] text-[12px] sm:text-[15px] leading-[1.7] mt-5">
               Building doesn’t happen in one place. Keep your to-do list,
               project information and important records within reach when it’s
               time to make a decision.
@@ -71,7 +71,7 @@ const PerspectiveSection = () => {
 
             <ul className="mt-5 flex flex-col gap-2.5">
               {points.map((point) => (
-                <li key={point} className="text-[#666666] text-[11px] sm:text-[12px] leading-[1.6] flex items-center gap-2.5">
+                <li key={point} className="text-[#666666] text-[11px] sm:text-[15px] leading-[1.6] flex items-center gap-2.5">
                   <CheckIcon />
                   {point}
                 </li>
@@ -80,7 +80,7 @@ const PerspectiveSection = () => {
 
             <Link
               to="/services"
-              className="text-[11px] sm:text-[12px] font-medium inline-flex items-center gap-3 mt-7 rounded-[3px] border border-[#DDDAD1] bg-white px-4 py-2.5 text-[#20244F] transition-colors duration-300 hover:border-[#20244F]"
+              className="text-[11px] sm:text-[14px] font-medium inline-flex items-center gap-3 mt-7 rounded-[3px] border border-[#DDDAD1] bg-white px-4 py-2.5 text-[#20244F] transition-colors duration-300 hover:border-[#20244F]"
             >
               Explore project tools
               <ArrowIcon />

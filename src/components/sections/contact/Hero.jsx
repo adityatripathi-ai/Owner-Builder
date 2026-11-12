@@ -14,7 +14,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px] text-[#1d2056]/70"
+          className="text-[10px] sm:text-[14px] font-semibold uppercase tracking-[1.5px] text-[#1d2056]/70"
         >
           <a href="/" className="hover:underline">
             Home
@@ -43,7 +43,7 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="md:pt-3"
           >
-            <p className="max-w-[330px] text-[12px] sm:text-[13px] leading-[1.7] text-[#1d2056]/75">
+            <p className="max-w-[330px] text-[12px] sm:text-[15px] leading-[1.7] text-[#1d2056]/75">
               Planning your home, comparing options or already on site? Tell us
               what you’re working on and where you’d like more clarity.
             </p>
@@ -59,7 +59,7 @@ export default function Hero() {
                     duration: 0.4,
                     delay: 0.4 + index * 0.1,
                   }}
-                  className="rounded-sm border border-[#1d2056]/25 bg-white px-2 py-[3px] text-[10px] sm:text-[11px] leading-[1.6] text-[#1d2056]"
+                  className="rounded-sm border border-[#1d2056]/25 bg-white px-2 py-[3px] text-[10px] sm:text-[13px] leading-[1.6] text-[#1d2056]"
                 >
                   {tag}
                 </motion.li>

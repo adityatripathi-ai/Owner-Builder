@@ -63,7 +63,7 @@ const Navbar = () => {
                 <NavLink
                   to={link.href}
                   end={link.href === "/"}
-                  className={linkClass("text-[14px]")}
+                  className={linkClass("text-[15px]")}
                 >
                   {link.name}
                 </NavLink>

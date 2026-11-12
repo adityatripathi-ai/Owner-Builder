@@ -26,14 +26,14 @@ const PlatformSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-[#A9A5F5] text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px] mb-3">Confidence through clarity</p>
+          <p className="text-[#A9A5F5] text-[10px] sm:text-[14px] font-semibold uppercase tracking-[1.5px] mb-3">Confidence through clarity</p>
 
           <h2 className="font-['Georgia',serif] text-[26px] sm:text-[30px] md:text-[34px] lg:text-[38px] font-normal leading-[1.15] text-white max-w-[640px]">
             A platform, not a promise of
             <br className="hidden sm:block" /> shortcuts.
           </h2>
 
-          <p className="text-white/80 text-[12px] sm:text-[13px] leading-[1.7] mt-5 max-w-[660px]">
+          <p className="text-white/80 text-[12px] sm:text-[15px] leading-[1.7] mt-5 max-w-[660px]">
             Good decisions need good information. Owner Builder supports an
             organized process while you stay in control of your project and
             your professional team.
@@ -50,11 +50,11 @@ const PlatformSection = () => {
               transition={{ duration: 0.5, delay: index * 0.15 }}
               className={`border-t border-white/20 pt-5 ${index === 0 ? "sm:-translate-y-2.5" : ""}`}
             >
-              <h3 className="text-white text-[13px] sm:text-[14px] font-semibold leading-snug">
+              <h3 className="text-white text-[13px] sm:text-[16px] font-semibold leading-snug">
                 {feature.title}
               </h3>
 
-              <p className="text-white/75 text-[11px] sm:text-[12px] leading-[1.6] mt-2 max-w-[340px]">{feature.description}</p>
+              <p className="text-white/75 text-[11px] sm:text-[14px] leading-[1.6] mt-2 max-w-[340px]">{feature.description}</p>
             </motion.div>
           ))}
         </div>

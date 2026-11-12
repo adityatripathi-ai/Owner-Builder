@@ -13,7 +13,7 @@ const AboutHero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
-          className="text-[#7771D5] text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px] mb-8 sm:mb-10 lg:mb-12"
+          className="text-[#7771D5] text-[10px] sm:text-[14px] font-semibold uppercase tracking-[1.5px] mb-8 sm:mb-10 lg:mb-12"
         >
           HOME / ABOUT OWNER BUILDER
         </motion.p>
@@ -52,7 +52,7 @@ const AboutHero = () => {
             </h1>
 
             {/* DESCRIPTION */}
-            <p className="mt-4 text-[#666666] text-[12px] min-[480px]:text-[11px] sm:text-[13px] leading-[1.7] max-w-[390px]">
+            <p className="mt-4 text-[#666666] text-[12px] min-[480px]:text-[11px] sm:text-[15px] leading-[1.7] max-w-[390px]">
               Owner Builder exists to make the coordination of a
               house-building project easier to understand, easier
               to organize and easier to follow through.
@@ -72,7 +72,7 @@ const AboutHero = () => {
                   border border-[#DAD8D2]
                   text-[#20244F]
                   font-medium
-                  text-[11px] min-[480px]:text-[10px] sm:text-[12px]
+                  text-[11px] min-[480px]:text-[10px] sm:text-[13px]
                   px-3 py-2
                   rounded-[2px]
                   hover:bg-[#20244F]
@@ -125,11 +125,11 @@ const AboutHero = () => {
                   z-10
                 "
               >
-                <p className="text-[#7771D5] text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px] mb-1">
+                <p className="text-[#7771D5] text-[10px] sm:text-[13px] font-semibold uppercase tracking-[1.5px] mb-1">
                   A SIMPLE BELIEF
                 </p>
 
-                <p className="font-['Georgia',serif] text-[#303030] text-[14px] sm:text-[14px] lg:text-[17px] leading-[1.15]">
+                <p className="font-['Georgia',serif] text-[#303030] text-[14px] sm:text-[15px] lg:text-[17px] leading-[1.15]">
                   Your attention belongs on the home you’re creating.
                 </p>
               </motion.div>

@@ -15,7 +15,7 @@ const About = () => {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.7 }}
           >
-            <p className="text-[#1D1F6B] text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px] mb-4">
+            <p className="text-[#7771D5] text-[10px] sm:text-[14px] font-semibold uppercase tracking-[1.5px] mb-4">
               Your project. Your team in your pocket
             </p>
 
@@ -32,13 +32,13 @@ const About = () => {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="max-w-[520px]"
           >
-            <p className="text-[#6F6F7E] text-[12px] sm:text-[13px] leading-[1.7]">
+            <p className="text-[#6F6F7E] text-[12px] sm:text-[15px] leading-[1.7]">
               Owner Builder helps organize information. Your architect,
               builder, trades and other appointed professionals remain
               essential to the work and decisions on your project.
             </p>
 
-            <p className="mt-5 text-[#8A8A98] text-[11px] sm:text-[12px] leading-[1.7]">
+            <p className="mt-5 text-[#8A8A98] text-[11px] sm:text-[15px] leading-[1.7]">
               Confirm local requirements, contracts, costs and technical
               decisions with the appropriate professionals. Tools support good
               coordination; they don’t guarantee a cost or construction

@@ -30,25 +30,25 @@ const PreparationSection = () => {
             transition={{ duration: 0.7 }}
             className="max-w-[480px]"
           >
-            <p className="text-[#7771D5] text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px] mb-3">The owner’s field notes</p>
+            <p className="text-[#7771D5] text-[10px] sm:text-[14px] font-semibold uppercase tracking-[1.5px] mb-3">The owner’s field notes</p>
 
             <h2 className="font-['Georgia',serif] text-[26px] sm:text-[30px] md:text-[34px] lg:text-[38px] font-normal leading-[1.15] text-[#20244F]">
               A little preparation goes a long way.
             </h2>
 
-            <p className="text-[#666666] text-[12px] sm:text-[13px] leading-[1.7] mt-4">
+            <p className="text-[#666666] text-[12px] sm:text-[15px] leading-[1.7] mt-4">
               Explore proposed guides on planning, comparing bids and organizing project documents. Start with the practical previews in our resource library.
             </p>
 
             <Link
               to="/services"
-              className="text-[11px] sm:text-[12px] font-medium inline-flex items-center gap-3 mt-5 border border-[#DAD8D2] px-4 py-2.5 text-[#20244F] hover:bg-[#20244F] hover:text-white transition-all duration-300"
+              className="text-[11px] sm:text-[13px] font-medium inline-flex items-center gap-3 mt-5 border border-[#DAD8D2] px-4 py-2.5 text-[#20244F] hover:bg-[#20244F] hover:text-white transition-all duration-300"
             >
               Visit resources
               <span className="text-sm">→</span>
             </Link>
 
-            <p className="text-[#777777] text-[10px] sm:text-[11px] leading-[1.6] mt-5 max-w-[390px]">
+            <p className="text-[#777777] text-[10px] sm:text-[13px] leading-[1.6] mt-5 max-w-[390px]">
               Editorial previews are proposed content. Final guides and downloads await approval.
             </p>
           </motion.div>

@@ -32,7 +32,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.5 }}
-              className="text-[#7771D5] text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px] mb-3"
+              className="text-[#7771D5] text-[10px] sm:text-[13px] font-semibold uppercase tracking-[1.5px] mb-3"
             >
               The Owner's Advantage
             </motion.p>
@@ -54,7 +54,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.6 }}
-              className="text-[#666666] text-[12px] sm:text-[13px] leading-[1.7] mt-3 sm:mt-4 max-w-[340px]"
+              className="text-[#666666] text-[12 px] sm:text-[15px] leading-[1.7] mt-3 sm:mt-4 max-w-[340px]"
             >
               Bring your plans, people and decisions together. Owner
               Builder helps you coordinate the details, so you can move
@@ -69,7 +69,7 @@ const Hero = () => {
             >
               <Link
                 to="/contact"
-                className="text-[11px] sm:text-[12px] font-medium inline-flex items-center gap-2 bg-[#20244F] text-white px-4 py-2.5 rounded-sm hover:bg-[#7771D5] transition-colors duration-300"
+                className="text-[11px] sm:text-[15px] font-medium inline-flex items-center gap-2 bg-[#20244F] text-white px-4 py-2.5 rounded-sm hover:bg-[#7771D5] transition-colors duration-300"
               >
                 Discuss your project
                 <span>↗</span>
@@ -84,7 +84,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 1.1 }}
             className="absolute bottom-3 sm:bottom-5 left-3 right-3 sm:left-6 sm:right-6 min-h-[30px] bg-white/90 rounded-full origin-left flex items-center px-3 py-2"
           >
-            <span className="text-[#555555] text-[10px] sm:text-[11px] leading-tight">
+            <span className="text-[#555555] text-[10px] sm:text-[15px] leading-tight">
               A little more planning for a confident build
             </span>
           </motion.div>

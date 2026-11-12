@@ -13,7 +13,7 @@ const ServicesHero = () => {
         {/* BREADCRUMB */}
         <nav
           aria-label="Breadcrumb"
-          className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px] text-[#20244F]/70"
+          className="text-[10px] sm:text-[13px] font-semibold uppercase tracking-[1.5px] text-[#20244F]/70"
         >
           <Link to="/" className="hover:underline">Home</Link>
           <span className="mx-1.5" aria-hidden="true">/</span>
@@ -44,7 +44,7 @@ const ServicesHero = () => {
               Builder Owner software connects you to every stage and decision of your home
             </h1>
 
-            <p className="text-[#777777] text-[12px] sm:text-[13px] leading-[1.7] mt-6 max-w-[500px]">
+            <p className="text-[#777777] text-[12px] sm:text-[15px] leading-[1.7] mt-6 max-w-[500px]">
               Simplify the way you coordinate your build. Owner Builder brings
               project information, costs, people and paperwork into a connected
               set of practical tools.

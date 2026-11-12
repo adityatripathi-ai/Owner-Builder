@@ -16,16 +16,16 @@ const ServicesCTASection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <p className="text-[#D0CDFB] text-[8px] sm:text-[9px] uppercase tracking-[1.5px] font-medium mb-3">
+            <p className="text-[#D0CDFB] text-[8px] sm:text-[14px] uppercase tracking-[1.5px] font-medium mb-3">
               Start with a conversation
             </p>
 
-            <h2 className="font-serif text-[27px] sm:text-[32px] md:text-[36px] lg:text-[40px] leading-[1.08] max-w-[650px]">
+            <h2 className="font-serif text-[27px] sm:text-[34px] md:text-[36px] lg:text-[40px] leading-[1.08] max-w-[650px]">
               Your home. Your vision. A clearer way
               forward.
             </h2>
 
-            <p className="text-white/70 text-[10px] sm:text-[11px] leading-[1.7] mt-4 max-w-[650px]">
+            <p className="text-white/70 text-[10px] sm:text-[14px] leading-[1.7] mt-4 max-w-[650px]">
               Tell us where you are in your building journey.
               Let's explore how Owner Builder can help you organize
               what comes next.
@@ -53,7 +53,7 @@ const ServicesCTASection = () => {
                 className="
                inline-flex items-center gap-2
   bg-white text-[#20244F]
-  text-[8px] sm:text-[9px]
+  text-[8px] sm:text-[12px]
   px-3 py-2
   rounded-sm
   hover:bg-[#A9A5F5]
@@ -66,7 +66,7 @@ const ServicesCTASection = () => {
             </motion.div>
 
             {/* BUTTON DESCRIPTION */}
-            <p className="mt-4 max-w-[220px] text-[10px] sm:text-[11px] text-white/60 leading-5">
+            <p className="mt-4 max-w-[250px] text-[10px] sm:text-[12px] text-white/60 leading-5">
               Have a project in mind? Get in touch and let's explore
               how we can help.
             </p>

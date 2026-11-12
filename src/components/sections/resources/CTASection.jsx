@@ -18,7 +18,7 @@ const CTASection = () => {
 
           {/* LEFT CONTENT */}
           <div>
-            <p className="text-[#A6A4E9] text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px] mb-3">
+            <p className="text-[#A6A4E9] text-[10px] sm:text-[14px] font-semibold uppercase tracking-[1.5px] mb-3">
               Start with a conversation
             </p>
 
@@ -26,7 +26,7 @@ const CTASection = () => {
               Have a question about your next step?
             </h2>
 
-            <p className="text-white/60 text-[12px] sm:text-[13px] mt-3 leading-[1.7] max-w-[700px]">
+            <p className="text-white/60 text-[12px] sm:text-[15px] mt-3 leading-[1.7] max-w-[700px]">
               Tell us where you are in your building journey. Let’s explore how Owner Builder can help you organize what comes next.
             </p>
           </div>
@@ -52,7 +52,7 @@ const CTASection = () => {
                 className="
                   inline-flex items-center gap-2
                   bg-white text-[#20244F]
-                  text-[11px] sm:text-[12px] font-medium
+                  text-[11px] sm:text-[14px] font-medium
                   px-3 py-2
                   rounded-sm
                   hover:bg-[#A9A5F5]
@@ -65,7 +65,7 @@ const CTASection = () => {
             </motion.div>
 
             {/* BUTTON DESCRIPTION */}
-            <p className="mt-4 max-w-[220px] text-[10px] sm:text-[11px] text-white/60 leading-[1.6]">
+            <p className="mt-4 max-w-[220px] text-[10px] sm:text-[13px] text-white/60 leading-[1.6]">
               A practical next step. No Pressure.
             </p>
           </motion.div>

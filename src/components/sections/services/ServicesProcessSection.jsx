@@ -75,7 +75,7 @@ const ServicesProcessSection = () => {
           transition={{ duration: 0.7 }}
           className="mb-8 sm:mb-10"
         >
-          <p className="text-white/70 text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px] mb-4">
+          <p className="text-white/70 text-[10px] sm:text-[14px] font-semibold uppercase tracking-[1.5px] mb-4">
             Put it into practice
           </p>
 
@@ -102,11 +102,11 @@ const ServicesProcessSection = () => {
                 </span>
               </div>
 
-              <h3 className="mt-6 text-[#20244F] text-[13px] sm:text-[14px] font-semibold leading-[1.3]">
+              <h3 className="mt-6 text-[#20244F] text-[13px] sm:text-[16px] font-semibold leading-[1.3]">
                 {step.title}
               </h3>
 
-              <p className="mt-2 text-[#777777] text-[11px] sm:text-[12px] leading-[1.7]">
+              <p className="mt-2 text-[#777777] text-[11px] sm:text-[14px] leading-[1.7]">
                 {step.description}
               </p>
             </motion.li>
@@ -123,7 +123,7 @@ const ServicesProcessSection = () => {
         >
           <Link
             to="/contact"
-            className="inline-block w-full sm:w-auto rounded-md bg-white px-6 sm:px-12 py-5 sm:py-6 text-center text-[11px] sm:text-[12px] font-medium text-[#20244F] transition-colors hover:bg-[#F4F2ED] focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#1D1F6B]"
+            className="inline-block w-full sm:w-auto rounded-md bg-white px-6 sm:px-12 py-5 sm:py-4 text-center text-[11px] sm:text-[14px] font-medium text-[#20244F] transition-colors hover:bg-[#F4F2ED] focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#1D1F6B]"
           >
             Got Questions?... Ask the builder right in your pocket
           </Link>

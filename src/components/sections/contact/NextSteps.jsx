@@ -35,7 +35,7 @@ export default function NextSteps() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px] text-[#1d2056]/60">
+          <p className="text-[10px] sm:text-[14px] font-semibold uppercase tracking-[1.5px] text-[#1d2056]/60">
             A clear next step
           </p>
 
@@ -43,7 +43,7 @@ export default function NextSteps() {
             Start with the right conversation.
           </h2>
 
-          <p className="mt-3 max-w-xl text-[12px] sm:text-[13px] leading-[1.7] text-[#1d2056]/70">
+          <p className="mt-3 max-w-xl text-[12px] sm:text-[15px] leading-[1.7] text-[#1d2056]/70">
             Your inquiry helps frame a practical discussion about your project and
             the platform.
           </p>
@@ -75,18 +75,18 @@ export default function NextSteps() {
                   className="w-4 h-4 object-contain"
                 />
 
-                <span className="text-[10px] sm:text-[11px] leading-[1.6] text-[#1d2056]/45">
+                <span className="text-[10px] sm:text-[13px] leading-[1.6] text-[#1d2056]/45">
                   {String(i + 1).padStart(2, "0")}
                 </span>
               </div>
 
               {/* TITLE */}
-              <h3 className="mt-6 text-[13px] sm:text-[14px] font-semibold leading-[1.3]">
+              <h3 className="mt-6 text-[13px] sm:text-[16px] font-semibold leading-[1.3]">
                 {step.title}
               </h3>
 
               {/* DESCRIPTION */}
-              <p className="mt-1.5 max-w-[260px] text-[11px] sm:text-[12px] leading-[1.7] text-[#1d2056]/65">
+              <p className="mt-1.5 max-w-[260px] text-[11px] sm:text-[14px] leading-[1.7] text-[#1d2056]/65">
                 {step.text}
               </p>
             </motion.li>

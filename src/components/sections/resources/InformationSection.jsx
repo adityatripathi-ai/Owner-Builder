@@ -80,7 +80,7 @@ const InformationSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <p className="text-[#1D1F6B] text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px] mb-4">
+          <p className="text-[#1D1F6B] text-[10px] sm:text-[14px] font-semibold uppercase tracking-[1.5px] mb-4">
             Explore by topic
           </p>
 
@@ -129,7 +129,7 @@ const InformationSection = () => {
             >
               {/* CATEGORY + ICON */}
               <div className="flex items-center justify-between">
-                <span className="text-[#1D1F6B] text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px]">
+                <span className="text-[#1D1F6B] text-[10px] sm:text-[14px] font-semibold uppercase tracking-[1.5px]">
                   {card.category}
                 </span>
 
@@ -142,17 +142,17 @@ const InformationSection = () => {
               </div>
 
               {/* TITLE */}
-              <h3 className="text-[#20244F] text-[13px] sm:text-[14px] font-semibold leading-[1.3] mt-5">
+              <h3 className="text-[#20244F] text-[13px] sm:text-[16px] font-semibold leading-[1.3] mt-5">
                 {card.title}
               </h3>
 
               {/* DESCRIPTION */}
-              <p className="text-[#777777] text-[11px] sm:text-[12px] leading-[1.7] mt-3">
+              <p className="text-[#777777] text-[11px] sm:text-[14px] leading-[1.7] mt-3">
                 {card.description}
               </p>
 
               {/* TAGS */}
-              <p className="text-[#8A8A98] text-[10px] sm:text-[11px] leading-[1.6] mt-4">
+              <p className="text-[#8A8A98] text-[10px] sm:text-[12px] leading-[1.6] mt-4">
                 {card.tags.join(" • ")}
               </p>
 
@@ -160,12 +160,12 @@ const InformationSection = () => {
               <div className="mt-4 pt-4 border-t border-[#ECEAE4]">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-1 text-[#20244F] text-[11px] sm:text-[12px] font-medium hover:text-[#7771D5] transition-colors"
+                  className="inline-flex items-center gap-1 text-[#20244F] text-[12px] sm:text-[12px] font-medium hover:text-[#7771D5] transition-colors"
                 >
                   View editorial preview <span aria-hidden="true">↗</span>
                 </Link>
 
-                <p className="text-[#8A8A98] text-[10px] sm:text-[11px] leading-[1.6] mt-2">
+                <p className="text-[#8A8A98] text-[10px] sm:text-[12px] leading-[1.6] mt-2">
                   Proposed guide · Awaiting approval
                 </p>
               </div>

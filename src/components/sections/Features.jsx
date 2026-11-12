@@ -22,13 +22,13 @@ const Features = () => {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.7 }}
         >
-          <p className="text-[#A9A5F5] text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px] mb-3">Inside the platform</p>
+          <p className="text-[#A9A5F5] text-[10px] sm:text-[14px] font-semibold uppercase tracking-[1.5px] mb-3">Inside the platform</p>
 
           <h2 className="font-['Georgia',serif] text-[26px] sm:text-[30px] md:text-[34px] lg:text-[38px] font-normal leading-[1.15] text-white">
             Real tools. A more organized build.
           </h2>
 
-          <p className="text-white/80 text-[12px] sm:text-[13px] leading-[1.7] mt-3 max-w-[500px]">
+          <p className="text-white/80 text-[12px] sm:text-[15px] leading-[1.7] mt-3 max-w-[500px]">
             Project overview, bid estimates and daily to-dos — working screens
             from the Owner Builder application.
           </p>
@@ -73,7 +73,7 @@ const Features = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-white/70 text-[10px] sm:text-[11px] leading-[1.6] mt-5"
+          className="text-white/70 text-[11px] sm:text-[14px] leading-[1.6] mt-5"
         >
           Original mobile application screens shown intact in a browser
           showcase. Sample project information is illustrative.

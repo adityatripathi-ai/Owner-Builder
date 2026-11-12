@@ -57,7 +57,7 @@ const ServicesFAQSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-[#1D1F6B] text-[10px] sm:text-[11px] uppercase tracking-[1.5px] font-semibold mb-3">
+          <p className="text-[#1D1F6B] text-[10px] sm:text-[14px] uppercase tracking-[1.5px] font-semibold mb-3">
             A little more clarity
           </p>
 
@@ -87,7 +87,7 @@ const ServicesFAQSection = () => {
                   aria-controls={panelId}
                   className="w-full flex items-center justify-between gap-4 pt-5 pb-2 text-left"
                 >
-                  <span className="text-[#20244F] text-[13px] sm:text-[14px] font-semibold leading-snug">
+                  <span className="text-[#20244F] text-[13px] sm:text-[16px] font-semibold leading-snug">
                     {item.question}
                   </span>
 
@@ -104,7 +104,7 @@ const ServicesFAQSection = () => {
                       transition={{ duration: 0.25 }}
                       className="overflow-hidden"
                     >
-                      <p className="text-[#666666] text-[11px] sm:text-[12px] leading-[1.6] pb-5 pr-6 sm:pr-8 max-w-[850px]">
+                      <p className="text-[#666666] text-[11px] sm:text-[14px] leading-[1.6] pb-5 pr-6 sm:pr-8 max-w-[850px]">
                         {item.answer}
                       </p>
                     </motion.div>

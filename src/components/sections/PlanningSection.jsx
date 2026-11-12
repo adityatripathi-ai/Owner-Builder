@@ -39,7 +39,7 @@ const PlanningSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-[#A9A5F5] text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px] mb-3">A practical rhythm</p>
+          <p className="text-[#A9A5F5] text-[10px] sm:text-[14px] font-semibold uppercase tracking-[1.5px] mb-3">A practical rhythm</p>
 
           <h2 className="font-['Georgia',serif] text-[26px] sm:text-[30px] md:text-[34px] lg:text-[38px] font-normal leading-[1.15] text-white max-w-[600px]">
             From a plan to a place to call home.
@@ -58,12 +58,12 @@ const PlanningSection = () => {
             >
               <div className="flex items-center justify-between mb-5">
                 <img src={step.icon} alt={`${step.title} icon`} className="w-5 h-5 object-contain" />
-                <span className="text-[#A6A3B9] text-[10px] tracking-wider">{step.number}</span>
+                <span className="text-[#94929d] text-[12px] tracking-wider">{step.number}</span>
               </div>
 
               <div>
-                <h3 className="text-[#20244F] text-[13px] sm:text-[14px] font-semibold leading-snug mb-2">{step.title}</h3>
-                <p className="text-[#666666] text-[11px] sm:text-[12px] leading-[1.6]">{step.description}</p>
+                <h3 className="text-[#20244F] text-[13px] sm:text-[15px] font-semibold leading-snug mb-2">{step.title}</h3>
+                <p className="text-[#666666] text-[11px] sm:text-[14px] leading-[1.6]">{step.description}</p>
               </div>
             </motion.div>
           ))}

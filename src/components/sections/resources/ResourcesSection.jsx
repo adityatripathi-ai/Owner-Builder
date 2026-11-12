@@ -37,7 +37,7 @@ const ResourcesSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <p className="text-[#1D1F6B] text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px] mb-4">
+          <p className="text-[#1D1F6B] text-[10px] sm:text-[14px] font-semibold uppercase tracking-[1.5px] mb-4">
             Project documents
           </p>
 
@@ -45,7 +45,7 @@ const ResourcesSection = () => {
             Useful structure. Approved files to follow.
           </h2>
 
-          <p className="text-[#777777] text-[12px] sm:text-[13px] leading-[1.7] mt-5 max-w-[620px]">
+          <p className="text-[#777777] text-[12px] sm:text-[15px] leading-[1.7] mt-5 max-w-[620px]">
             These proposed documents are not yet available. Final content, file
             formats and suitability will be confirmed before publication.
           </p>
@@ -72,7 +72,7 @@ const ResourcesSection = () => {
                 />
 
                 <div>
-                  <p className="text-[#1D1F6B] text-[10px] sm:text-[11px] uppercase tracking-[1.5px] font-semibold">
+                  <p className="text-[#1D1F6B] text-[10px] sm:text-[13px] uppercase tracking-[1.5px] font-semibold">
                     {resource.category}
                   </p>
 
@@ -80,7 +80,7 @@ const ResourcesSection = () => {
                     {resource.title}
                   </h3>
 
-                  <p className="text-[#777777] text-[11px] sm:text-[12px] leading-[1.7] mt-1 max-w-[600px]">
+                  <p className="text-[#777777] text-[11px] sm:text-[13px] leading-[1.7] mt-1 max-w-[600px]">
                     {resource.description}
                   </p>
                 </div>
@@ -91,7 +91,7 @@ const ResourcesSection = () => {
                 type="button"
                 disabled
                 aria-disabled="true"
-                className="self-start sm:self-center shrink-0 cursor-not-allowed rounded-[3px] border border-[#E6E3DA] bg-[#F4F2ED] px-4 py-2.5 text-[11px] sm:text-[12px] font-medium text-[#8A8A98]"
+                className="self-start sm:self-center shrink-0 cursor-not-allowed rounded-[3px] border border-[#E6E3DA] bg-[#F4F2ED] px-4 py-2.5 text-[11px] sm:text-[13px] font-medium text-[#8A8A98]"
               >
                 Download · Pending approval
               </button>

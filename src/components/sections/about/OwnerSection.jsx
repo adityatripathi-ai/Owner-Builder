@@ -53,11 +53,11 @@ const OwnerSection = () => {
             transition={{ duration: 0.7 }}
             className="w-full"
           >
-            <p className="text-[#7771D5] text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px] mb-3">
+            <p className="text-[#7771D5] text-[10px] sm:text-[14px] font-semibold uppercase tracking-[1.5px] mb-3">
               Our approach
             </p>
 
-            <h2 className="font-['Georgia',serif] text-[26px] sm:text-[30px] md:text-[34px] lg:text-[38px] font-normal leading-[1.15] text-[#20244F] max-w-[460px]">
+            <h2 className="font-['Georgia',serif] text-[26px] sm:text-[40px] md:text-[34px] lg:text-[38px] font-normal leading-[1.15] text-[#20244F] max-w-[460px]">
               Keep the owner at the center.
             </h2>
 
@@ -65,11 +65,11 @@ const OwnerSection = () => {
             <div className="mt-7 flex flex-col gap-5 sm:gap-6">
               {points.map((point) => (
                 <div key={point.title}>
-                  <h3 className="text-[#20244F] text-[13px] sm:text-[14px] font-semibold leading-snug mb-2">
+                  <h3 className="text-[#20244F] text-[13px] sm:text-[16px] font-semibold leading-snug mb-2">
                     {point.title}
                   </h3>
 
-                  <p className="max-w-[460px] text-[#666666] text-[11px] sm:text-[12px] leading-[1.7]">
+                  <p className="max-w-[460px] text-[#666666] text-[11px] sm:text-[14px] leading-[1.7]">
                     {point.description}
                   </p>
                 </div>

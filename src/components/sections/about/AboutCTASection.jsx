@@ -15,7 +15,7 @@ const AboutCTASection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <p className="text-[#A9A5F5] text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px] mb-3">
+            <p className="text-[#A9A5F5] text-[10px] sm:text-[14px] font-semibold uppercase tracking-[1.5px] mb-3">
               Start with a conversation
             </p>
 
@@ -23,7 +23,7 @@ const AboutCTASection = () => {
               Let’s bring more clarity to your building journey.
             </h2>
 
-            <p className="text-white/80 text-[12px] sm:text-[13px] leading-[1.7] mt-4 max-w-[650px]">
+            <p className="text-white/80 text-[12px] sm:text-[15px] leading-[1.7] mt-4 max-w-[650px]">
               Tell us where you are in your building journey. Let’s explore how Owner Builder can help you organize what comes next.
             </p>
           </motion.div>
@@ -49,7 +49,7 @@ const AboutCTASection = () => {
                 className="
                inline-flex items-center gap-2
   bg-white text-[#20244F]
-  text-[11px] sm:text-[12px] font-medium
+  text-[11px] sm:text-[13px] font-medium
   px-3 py-2
   rounded-sm
   hover:bg-[#A9A5F5]
@@ -62,7 +62,7 @@ const AboutCTASection = () => {
             </motion.div>
 
             {/* BUTTON DESCRIPTION */}
-            <p className="mt-4 max-w-[220px] text-[10px] sm:text-[11px] text-white/70 leading-[1.6]">
+            <p className="mt-4 max-w-[220px] text-[10px] sm:text-[12px] text-white/70 leading-[1.6]">
              A practical next step. No pressure
             </p>
           </motion.div>

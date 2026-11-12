@@ -81,7 +81,7 @@ const ServicesFeatures = () => {
           transition={{ duration: 0.6 }}
           className="mb-8 sm:mb-10"
         >
-          <p className="text-[10px] sm:text-[11px] tracking-[1.5px] font-semibold text-white/70 uppercase mb-4">
+          <p className="text-[10px] sm:text-[14x] tracking-[1.5px] font-semibold text-white/70 uppercase mb-4">
             The platform toolkit
           </p>
 
@@ -118,11 +118,11 @@ const ServicesFeatures = () => {
                 </span>
               </div>
 
-              <h3 className="text-[#20244F] text-[13px] sm:text-[14px] font-semibold leading-snug mb-2">
+              <h3 className="text-[#20244F] text-[13px] sm:text-[16px] font-semibold leading-snug mb-2">
                 {feature.title}
               </h3>
 
-              <p className="text-[#777777] text-[11px] sm:text-[12px] leading-[1.7]">
+              <p className="text-[#777777] text-[11px] sm:text-[14px] leading-[1.7]">
                 {feature.description}
               </p>
             </motion.li>
