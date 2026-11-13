@@ -2,6 +2,8 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
+import { TiltCard } from "../../common/Animations";
+
 const iconProps = {
   viewBox: "0 0 24 24",
   className: "h-5 w-5 text-[#20244F]",
@@ -13,7 +15,6 @@ const iconProps = {
   "aria-hidden": true,
 };
 
-// Placeholder icons: apne asli icons se badal sakte ho
 const PersonIcon = () => (
   <svg {...iconProps}>
     <circle cx="10" cy="8" r="3.2" />
@@ -85,18 +86,54 @@ const ServicesProcessSection = () => {
         </motion.div>
 
         {/* PROCESS CARDS */}
-        <ul className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
-          {processSteps.map((step, index) => (
-            <motion.li
+        <motion.ul
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={{
+            hidden: {},
+            visible: {
+              transition: { staggerChildren: 0.15 },
+            },
+          }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5"
+        >
+          {processSteps.map((step) => (
+            <TiltCard
               key={step.title}
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.12 }}
-              className="bg-white rounded-md p-5 sm:p-6"
+              variants={{
+                hidden: { opacity: 0, y: 25 },
+                visible: { opacity: 1, y: 0 },
+                hover: { y: -5 },
+              }}
+              transition={{ duration: 0.6 }}
+              whileHover="hover"
+              className="
+                bg-white
+                rounded-md
+                p-5 sm:p-6
+                transition-shadow duration-300
+                hover:shadow-md
+              "
             >
               <div className="flex items-start justify-between gap-3">
-                {step.icon}
+                {/* ICON ANIMATION */}
+                <motion.div
+                  style={{ transformPerspective: 400 }}
+                  variants={{
+                    hover: {
+                      rotateY: 360,
+                      scale: 1.15,
+                      transition: {
+                        duration: 0.7,
+                        ease: "easeInOut",
+                      },
+                    },
+                  }}
+                >
+                  {step.icon}
+                </motion.div>
+
                 <span className="text-[#9A9AAE] text-[10px] sm:text-[11px] font-semibold uppercase tracking-[1.5px] text-right">
                   {step.stage}
                 </span>
@@ -109,9 +146,9 @@ const ServicesProcessSection = () => {
               <p className="mt-2 text-[#777777] text-[11px] sm:text-[14px] leading-[1.7]">
                 {step.description}
               </p>
-            </motion.li>
+            </TiltCard>
           ))}
-        </ul>
+        </motion.ul>
 
         {/* QUESTIONS BOX */}
         <motion.div

@@ -16,42 +16,113 @@ const ArrowIcon = () => (
   </svg>
 );
 
+// Parent animation
+const contentV = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.18,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+// Individual content animation
+const itemV = {
+  hidden: {
+    opacity: 0,
+    y: 25,
+    filter: "blur(6px)",
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    filter: "blur(0px)",
+    transition: {
+      duration: 0.8,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+};
+
 export default function CtaBand() {
   return (
-    <section className="bg-[#1d1f6b] text-white">
+    <section className="overflow-hidden bg-[#1d1f6b] text-white">
       <div className="mx-auto flex max-w-[1280px] flex-col gap-8 px-6 py-14 md:flex-row md:items-center md:justify-between md:px-12 md:py-20">
 
         {/* LEFT CONTENT */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          variants={contentV}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="max-w-2xl"
         >
-          <p className="text-[10px] sm:text-[14px] font-semibold uppercase tracking-[1.5px] text-white/80">
+          {/* Label */}
+          <motion.p
+            variants={itemV}
+            className="text-[10px] font-semibold uppercase tracking-[1.5px] text-white/80 sm:text-[14px]"
+          >
             Still exploring?
-          </p>
+          </motion.p>
 
-          <h2 className="mt-3 font-serif text-[26px] sm:text-[30px] md:text-[34px] lg:text-[38px] font-normal leading-[1.15] tracking-[-1px]">
+          {/* Heading */}
+          <motion.h2
+            variants={itemV}
+            className="mt-3 font-serif text-[26px] font-normal leading-[1.15] tracking-[-1px] sm:text-[30px] md:text-[34px] lg:text-[38px]"
+          >
             Get to know the tools first.
-          </h2>
+          </motion.h2>
 
-          <p className="mt-3 max-w-lg text-[12px] sm:text-[15px] leading-[1.7] text-white/80">
+          {/* Description */}
+          <motion.p
+            variants={itemV}
+            className="mt-3 max-w-lg text-[12px] leading-[1.7] text-white/80 sm:text-[15px]"
+          >
             See how Owner Builder organizes the everyday details of a
             house-building project.
-          </p>
+          </motion.p>
         </motion.div>
 
         {/* BUTTON */}
         <motion.a
           href="/services"
-          initial={{ opacity: 0, x: 25 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          className="inline-flex items-center gap-2 self-start rounded-[3px] bg-white px-5 py-3 text-[11px] sm:text-[13px] font-medium text-[#1d2056] transition hover:bg-[#f4f2ed] focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#1d1f6b] md:self-center"
+          initial={{
+            opacity: 0,
+            x: 40,
+            scale: 0.95,
+            filter: "blur(6px)",
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            scale: 1,
+            filter: "blur(0px)",
+          }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{
+            duration: 0.9,
+            delay: 0.4,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+          whileHover={{
+            y: -5,
+            scale: 1.04,
+            transition: { duration: 0.3 },
+          }}
+          whileTap={{
+            scale: 0.96,
+          }}
+          className="inline-flex items-center gap-2 self-start rounded-[3px] bg-white px-5 py-3 text-[11px] font-medium text-[#1d2056] transition-colors hover:bg-[#f4f2ed] focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#1d1f6b] sm:text-[13px] md:self-center"
         >
-          Explore offerings <ArrowIcon />
+          Explore offerings
+
+          <motion.span
+            whileHover={{ x: 3, y: -3 }}
+            transition={{ duration: 0.25 }}
+          >
+            <ArrowIcon />
+          </motion.span>
         </motion.a>
 
       </div>

@@ -1,8 +1,11 @@
+
 import { motion } from "framer-motion";
 
 import featureIcon1 from "../../../assets/icons/Vector-2.png";
 import featureIcon2 from "../../../assets/icons/Vector-15.png";
 import featureIcon3 from "../../../assets/icons/Vector-7.png";
+
+import { TiltCard } from "../../common/Animations";
 
 const features = [
   {
@@ -65,15 +68,28 @@ const OrganisationSection = () => {
         </motion.div>
 
         {/* FEATURE CARDS */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
-
-          {features.map((feature, index) => (
-            <motion.div
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={{
+            hidden: {},
+            visible: {
+              transition: { staggerChildren: 0.15 },
+            },
+          }}
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-5"
+        >
+          {features.map((feature) => (
+            <TiltCard
               key={feature.title}
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.6, delay: index * 0.15 }}
+              variants={{
+                hidden: { opacity: 0, y: 25 },
+                visible: { opacity: 1, y: 0 },
+                hover: { y: -5 },
+              }}
+              transition={{ duration: 0.6 }}
+              whileHover="hover"
               className="
                 bg-white
                 border border-[#EAE8E3]
@@ -81,15 +97,29 @@ const OrganisationSection = () => {
                 p-6 md:p-7
                 min-h-[190px]
                 hover:border-[#A9A5F5]
-                transition-colors duration-300
+                hover:shadow-md
+                transition-all duration-300
               "
             >
-              {/* ICON */}
-              <img
-                src={feature.icon}
-                alt={`${feature.title} icon`}
-                className="w-5 h-5 object-contain"
-              />
+              {/* ICON ANIMATION */}
+              <div>
+                <motion.img
+                  src={feature.icon}
+                  alt={`${feature.title} icon`}
+                  className="w-5 h-5 object-contain"
+                  style={{ transformPerspective: 400 }}
+                  variants={{
+                    hover: {
+                      rotateY: 360,
+                      scale: 1.15,
+                      transition: {
+                        duration: 0.7,
+                        ease: "easeInOut",
+                      },
+                    },
+                  }}
+                />
+              </div>
 
               {/* TITLE */}
               <h3
@@ -109,10 +139,10 @@ const OrganisationSection = () => {
               <p className="text-[#666666] text-[11px] sm:text-[14px] leading-[1.6] mt-3">
                 {feature.description}
               </p>
-            </motion.div>
+            </TiltCard>
           ))}
+        </motion.div>
 
-        </div>
       </div>
     </section>
   );

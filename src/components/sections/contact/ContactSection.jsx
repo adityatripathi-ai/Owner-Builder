@@ -20,6 +20,71 @@ const initialForm = {
   consent: false,
 };
 
+// Form entrance animation
+const formV = {
+  hidden: {
+    opacity: 0,
+    x: -60,
+    filter: "blur(10px)",
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    filter: "blur(0px)",
+    transition: {
+      duration: 1,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+};
+
+// Info panel entrance animation
+const infoV = {
+  hidden: {
+    opacity: 0,
+    x: 60,
+    filter: "blur(10px)",
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    filter: "blur(0px)",
+    transition: {
+      duration: 1,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+};
+
+// Stagger animation
+const listV = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.18,
+      delayChildren: 0.3,
+    },
+  },
+};
+
+// Individual item animation
+const itemV = {
+  hidden: {
+    opacity: 0,
+    y: 25,
+    filter: "blur(6px)",
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    filter: "blur(0px)",
+    transition: {
+      duration: 0.7,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+};
+
 const inputClass =
   "mt-1.5 w-full rounded-[3px] border border-[#dcd9d0] bg-white px-3 py-2.5 text-[12px] text-[#1d2056] placeholder:text-[#1d2056]/40 focus:border-[#1d2056] focus:outline-none focus:ring-2 focus:ring-[#1d2056]/20";
 
@@ -80,8 +145,16 @@ const SendIcon = () => (
 );
 
 const contactItems = [
-  { icon: <MailIcon />, label: "Email", value: "Email to be confirmed" },
-  { icon: <PhoneIcon />, label: "Phone", value: "Phone to be confirmed" },
+  {
+    icon: <MailIcon />,
+    label: "Email",
+    value: "Email to be confirmed",
+  },
+  {
+    icon: <PhoneIcon />,
+    label: "Phone",
+    value: "Phone to be confirmed",
+  },
 ];
 
 export default function ContactSection() {
@@ -90,6 +163,7 @@ export default function ContactSection() {
 
   const update = (e) => {
     const { name, value, type, checked } = e.target;
+
     setForm((f) => ({
       ...f,
       [name]: type === "checkbox" ? checked : value,
@@ -98,33 +172,58 @@ export default function ContactSection() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     // TODO: yahan apni API call lagao
     console.log(form);
+
     setSent(true);
     setForm(initialForm);
   };
 
   return (
-    <section className="bg-[#1d1f6b] py-14 md:py-20">
+    <section className="overflow-hidden bg-[#1d1f6b] py-14 md:py-20">
       <div className="mx-auto grid max-w-[1280px] items-start gap-10 px-6 md:px-12 lg:grid-cols-[2.2fr_1fr] lg:gap-14">
 
-        {/* Form card */}
+        {/* Form Card */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          variants={formV}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          whileHover={{
+            y: -4,
+            transition: { duration: 0.3 },
+          }}
           className="rounded-md bg-[#f4f2ed] p-6 md:p-8"
         >
-          <h2 className="font-serif text-[26px] sm:text-[30px] md:text-[34px] lg:text-[38px] font-normal leading-[1.15] tracking-[-1px] text-[#1d2056]">
+          <h2 className="font-serif text-[26px] font-normal leading-[1.15] tracking-[-1px] text-[#1d2056] sm:text-[30px] md:text-[34px] lg:text-[38px]">
             Tell us about your project.
           </h2>
 
-          <p className="mt-1.5 text-[10px] sm:text-[14px] leading-[1.6] text-[#1d2056]/60">
+          <motion.p
+            initial={{
+              opacity: 0,
+              y: 15,
+              filter: "blur(6px)",
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              filter: "blur(0px)",
+            }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.7,
+              delay: 0.3,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            className="mt-1.5 text-[10px] leading-[1.6] text-[#1d2056]/60 sm:text-[14px]"
+          >
             Fields marked * are required. Share the details below and we’ll follow up.
-          </p>
+          </motion.p>
 
           <form onSubmit={handleSubmit} className="mt-6 space-y-3.5">
+
             <Field label="Full name *" htmlFor="name">
               <input
                 id="name"
@@ -164,7 +263,10 @@ export default function ContactSection() {
               </Field>
             </div>
 
-            <Field label="Where are you in your journey? *" htmlFor="stage">
+            <Field
+              label="Where are you in your journey? *"
+              htmlFor="stage"
+            >
               <select
                 id="stage"
                 name="stage"
@@ -185,7 +287,10 @@ export default function ContactSection() {
               </select>
             </Field>
 
-            <Field label="Project location (optional)" htmlFor="location">
+            <Field
+              label="Project location (optional)"
+              htmlFor="location"
+            >
               <input
                 id="location"
                 name="location"
@@ -196,7 +301,10 @@ export default function ContactSection() {
               />
             </Field>
 
-            <Field label="Message / requirements *" htmlFor="message">
+            <Field
+              label="Message / requirements *"
+              htmlFor="message"
+            >
               <textarea
                 id="message"
                 name="message"
@@ -209,7 +317,7 @@ export default function ContactSection() {
               />
             </Field>
 
-            <label className="flex items-start gap-2 pt-1 text-[10px] sm:text-[13px] leading-[1.6] text-[#1d2056]/70">
+            <label className="flex items-start gap-2 pt-1 text-[10px] leading-[1.6] text-[#1d2056]/70 sm:text-[13px]">
               <input
                 type="checkbox"
                 name="consent"
@@ -227,16 +335,23 @@ export default function ContactSection() {
               </span>
             </label>
 
-            <button
+            <motion.button
               type="submit"
-              className="inline-flex items-center gap-2 rounded-[3px] bg-[#1d1f6b] px-4 py-2.5 text-[11px] sm:text-[12px] font-medium text-white transition hover:bg-[#2a2d8f] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1d2056] focus-visible:ring-offset-2"
+              whileHover={{
+                scale: 1.04,
+                y: -2,
+              }}
+              whileTap={{ scale: 0.96 }}
+              transition={{ duration: 0.25 }}
+              className="inline-flex items-center gap-2 rounded-[3px] bg-[#1d1f6b] px-4 py-2.5 text-[11px] font-medium text-white transition-colors hover:bg-[#2a2d8f] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1d2056] focus-visible:ring-offset-2 sm:text-[12px]"
             >
-              <SendIcon /> Send inquiry
-            </button>
+              <SendIcon />
+              Send inquiry
+            </motion.button>
 
             <p
               role="status"
-              className="text-[10px] sm:text-[13px] leading-[1.6] text-[#1d2056]/55"
+              className="text-[10px] leading-[1.6] text-[#1d2056]/55 sm:text-[13px]"
             >
               {sent
                 ? "Thanks, your inquiry has been sent. We’ll reply by email."
@@ -245,74 +360,149 @@ export default function ContactSection() {
           </form>
         </motion.div>
 
-        {/* Info panel */}
+        {/* Info Panel */}
         <motion.div
-          initial={{ opacity: 0, x: 25 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+          variants={infoV}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
           className="text-white"
         >
-          <p className="text-[10px] sm:text-[14px] font-semibold uppercase tracking-[1.5px] text-white">
+          {/* Section Label */}
+          <motion.p
+            initial={{
+              opacity: 0,
+              letterSpacing: "6px",
+            }}
+            whileInView={{
+              opacity: 1,
+              letterSpacing: "1.5px",
+            }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.9,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            className="text-[10px] font-semibold uppercase text-white sm:text-[14px]"
+          >
             Talk to our team
-          </p>
+          </motion.p>
 
-          <h2 className="mt-3 max-w-[300px] font-serif text-[26px] sm:text-[30px] md:text-[34px] lg:text-[38px] font-normal leading-[1.15] tracking-[-1px]">
+          {/* Heading */}
+          <motion.h2
+            variants={itemV}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="mt-3 max-w-[300px] font-serif text-[26px] font-normal leading-[1.15] tracking-[-1px] sm:text-[30px] md:text-[34px] lg:text-[38px]"
+          >
             Let’s make the next step clearer.
-          </h2>
+          </motion.h2>
 
-          <p className="mt-3 max-w-[300px] text-[12px] sm:text-[15px] leading-[1.7] text-white/75">
+          {/* Description */}
+          <motion.p
+            variants={itemV}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ delay: 0.15 }}
+            className="mt-3 max-w-[300px] text-[12px] leading-[1.7] text-white/75 sm:text-[15px]"
+          >
             Use the inquiry form for questions about the platform and how it can
             support your building process.
-          </p>
+          </motion.p>
 
-          <ul className="mt-5 space-y-3">
-            {contactItems.map((item, index) => (
+          {/* Contact Details */}
+          <motion.ul
+            variants={listV}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="mt-5 space-y-3"
+          >
+            {contactItems.map((item) => (
               <motion.li
                 key={item.label}
-                initial={{ opacity: 0, y: 12 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
+                variants={itemV}
+                whileHover={{
+                  x: 8,
+                  transition: { duration: 0.3 },
+                }}
                 className="flex items-center gap-3"
               >
-                <span className="flex h-7 w-7 items-center justify-center rounded-[3px] border border-white/25 text-white/85">
+                <motion.span
+                  whileHover={{
+                    rotate: 360,
+                    scale: 1.12,
+                  }}
+                  transition={{ duration: 0.6 }}
+                  className="flex h-7 w-7 items-center justify-center rounded-[3px] border border-white/25 text-white/85"
+                >
                   {item.icon}
-                </span>
+                </motion.span>
 
                 <span>
-                  <span className="block text-[10px] sm:text-[11px] leading-[1.6] text-white/55">
+                  <span className="block text-[10px] leading-[1.6] text-white/55 sm:text-[11px]">
                     {item.label}
                   </span>
 
-                  <span className="block text-[11px] sm:text-[12px] leading-[1.6]">
+                  <span className="block text-[11px] leading-[1.6] sm:text-[12px]">
                     {item.value}
                   </span>
                 </span>
               </motion.li>
             ))}
-          </ul>
+          </motion.ul>
 
-          <p className="mt-3 max-w-[300px] text-[10px] sm:text-[13px] leading-[1.6] text-white/80">
-            Business contatct details are awaiting confirmation before publication.
-          </p>
-
-          <motion.img
-            src={aboutImage}
-            alt="Timber-framed home interior with large glass doors"
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="mt-6 aspect-square w-full rounded-md object-cover"
-          />
-
+          {/* Contact Note */}
           <motion.p
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            variants={itemV}
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="mt-2 max-w-[300px] text-[11px] sm:text-[13px] leading-[1.7] text-white/70"
+            className="mt-3 max-w-[300px] text-[10px] leading-[1.6] text-white/80 sm:text-[13px]"
+          >
+            Business contatct details are awaiting confirmation before publication.
+          </motion.p>
+
+          {/* Image */}
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 30,
+              scale: 0.92,
+              filter: "blur(8px)",
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              scale: 1,
+              filter: "blur(0px)",
+            }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 1,
+              delay: 0.3,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            className="mt-6 overflow-hidden rounded-md"
+          >
+            <motion.img
+              src={aboutImage}
+              alt="Timber-framed home interior with large glass doors"
+              whileHover={{ scale: 1.06 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="aspect-square w-full object-cover"
+            />
+          </motion.div>
+
+          {/* Bottom Description */}
+          <motion.p
+            variants={itemV}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="mt-2 max-w-[300px] text-[11px] leading-[1.7] text-white/70 sm:text-[13px]"
           >
             A short description of your project, its current stage and the part you're finding hardest to organize is a useful place to start,
           </motion.p>

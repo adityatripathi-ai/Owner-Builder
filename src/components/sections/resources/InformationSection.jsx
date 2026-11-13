@@ -3,8 +3,8 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-// Card ke top-right me arrow ki jagah ye icon. Baad me apna asli icon yahan badal dena.
 import vector1 from "../../../assets/icons/Vector.png";
+import { TiltCard } from "../../common/Animations";
 
 const filters = [
   { label: "All topics", value: "All" },
@@ -117,15 +117,34 @@ const InformationSection = () => {
         </div>
 
         {/* INFORMATION CARDS */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
-          {filteredCards.map((card, index) => (
-            <motion.article
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: {},
+            visible: {
+              transition: { staggerChildren: 0.15 },
+            },
+          }}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5"
+        >
+          {filteredCards.map((card) => (
+            <TiltCard
               key={card.title}
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.06 }}
-              className="bg-white rounded-[10px] p-5 sm:p-6"
+              variants={{
+                hidden: { opacity: 0, y: 25 },
+                visible: { opacity: 1, y: 0 },
+                hover: { y: -5 },
+              }}
+              transition={{ duration: 0.6 }}
+              whileHover="hover"
+              className="
+                bg-white
+                rounded-[10px]
+                p-5 sm:p-6
+                transition-shadow duration-300
+                hover:shadow-md
+              "
             >
               {/* CATEGORY + ICON */}
               <div className="flex items-center justify-between">
@@ -133,11 +152,23 @@ const InformationSection = () => {
                   {card.category}
                 </span>
 
-                <img
+                {/* ICON ANIMATION */}
+                <motion.img
                   src={vector1}
                   alt=""
                   aria-hidden="true"
                   className="h-4 w-4 object-contain"
+                  style={{ transformPerspective: 400 }}
+                  variants={{
+                    hover: {
+                      rotateY: 360,
+                      scale: 1.15,
+                      transition: {
+                        duration: 0.7,
+                        ease: "easeInOut",
+                      },
+                    },
+                  }}
                 />
               </div>
 
@@ -169,9 +200,9 @@ const InformationSection = () => {
                   Proposed guide · Awaiting approval
                 </p>
               </div>
-            </motion.article>
+            </TiltCard>
           ))}
-        </div>
+        </motion.div>
 
       </div>
     </section>

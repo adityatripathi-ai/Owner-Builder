@@ -79,29 +79,69 @@ const ServicesFAQSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
+                className="border-b border-[#E6E4DE]"
               >
-                <button
+                <motion.button
                   type="button"
                   onClick={() => toggleFAQ(index)}
                   aria-expanded={isOpen}
                   aria-controls={panelId}
+                  whileHover="hover"
                   className="w-full flex items-center justify-between gap-4 pt-5 pb-2 text-left"
                 >
-                  <span className="text-[#20244F] text-[13px] sm:text-[16px] font-semibold leading-snug">
+                  <motion.span
+                    variants={{
+                      hover: { x: 8 },
+                    }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 300,
+                      damping: 20,
+                    }}
+                    className="text-[#20244F] text-[13px] sm:text-[16px] font-semibold leading-snug"
+                  >
                     {item.question}
-                  </span>
+                  </motion.span>
 
-                  <ToggleIcon open={isOpen} />
-                </button>
+                  <motion.span
+                    animate={{ rotate: isOpen ? 180 : 0 }}
+                    variants={{
+                      hover: { scale: 1.3 },
+                    }}
+                    transition={{ duration: 0.35 }}
+                    className="shrink-0"
+                  >
+                    <ToggleIcon open={isOpen} />
+                  </motion.span>
+                </motion.button>
 
                 <AnimatePresence initial={false}>
                   {isOpen && (
                     <motion.div
                       id={panelId}
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.25 }}
+                      initial={{
+                        height: 0,
+                        opacity: 0,
+                        rotateX: -30,
+                      }}
+                      animate={{
+                        height: "auto",
+                        opacity: 1,
+                        rotateX: 0,
+                      }}
+                      exit={{
+                        height: 0,
+                        opacity: 0,
+                        rotateX: -30,
+                      }}
+                      transition={{
+                        duration: 0.35,
+                        ease: "easeOut",
+                      }}
+                      style={{
+                        transformPerspective: 700,
+                        transformOrigin: "top",
+                      }}
                       className="overflow-hidden"
                     >
                       <p className="text-[#666666] text-[11px] sm:text-[14px] leading-[1.6] pb-5 pr-6 sm:pr-8 max-w-[850px]">

@@ -11,6 +11,8 @@ import vector7 from "../../../assets/icons/Vector-16.png";
 import vector8 from "../../../assets/icons/Vector-18.png";
 import vector9 from "../../../assets/icons/Vector-19.png";
 
+import { TiltCard } from "../../common/Animations";
+
 const features = [
   {
     icon: vector1,
@@ -81,7 +83,7 @@ const ServicesFeatures = () => {
           transition={{ duration: 0.6 }}
           className="mb-8 sm:mb-10"
         >
-          <p className="text-[10px] sm:text-[14x] tracking-[1.5px] font-semibold text-white/70 uppercase mb-4">
+          <p className="text-[10px] sm:text-[14px] tracking-[1.5px] font-semibold text-white/70 uppercase mb-4">
             The platform toolkit
           </p>
 
@@ -96,23 +98,57 @@ const ServicesFeatures = () => {
         </motion.div>
 
         {/* FEATURE CARDS */}
-        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
+        <motion.ul
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={{
+            hidden: {},
+            visible: {
+              transition: { staggerChildren: 0.15 },
+            },
+          }}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6"
+        >
           {features.map((feature, index) => (
-            <motion.li
+            <TiltCard
               key={feature.title}
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: (index % 3) * 0.08 }}
-              className="bg-white rounded-md p-5 sm:p-6 flex flex-col"
+              variants={{
+                hidden: { opacity: 0, y: 25 },
+                visible: { opacity: 1, y: 0 },
+                hover: { y: -5 },
+              }}
+              transition={{ duration: 0.6 }}
+              whileHover="hover"
+              className="
+                bg-white
+                rounded-md
+                p-5 sm:p-6
+                flex flex-col
+                transition-shadow duration-300
+                hover:shadow-md
+              "
             >
               <div className="flex items-start justify-between mb-5">
-                <img
+                {/* ICON ANIMATION */}
+                <motion.img
                   src={feature.icon}
                   alt=""
                   aria-hidden="true"
                   className="h-5 w-5 object-contain"
+                  style={{ transformPerspective: 400 }}
+                  variants={{
+                    hover: {
+                      rotateY: 360,
+                      scale: 1.15,
+                      transition: {
+                        duration: 0.7,
+                        ease: "easeInOut",
+                      },
+                    },
+                  }}
                 />
+
                 <span className="text-[#9A9AAE] text-[10px]">
                   {String(index + 1).padStart(2, "0")}
                 </span>
@@ -125,9 +161,9 @@ const ServicesFeatures = () => {
               <p className="text-[#777777] text-[11px] sm:text-[14px] leading-[1.7]">
                 {feature.description}
               </p>
-            </motion.li>
+            </TiltCard>
           ))}
-        </ul>
+        </motion.ul>
 
       </div>
     </section>
