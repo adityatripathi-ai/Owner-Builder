@@ -140,7 +140,7 @@ const PreparationSection = () => {
               transition={{ duration: 0.9, delay: 0.2 }}
               className="text-[#7771D5] text-[10px] sm:text-[14px] font-semibold uppercase tracking-[1.5px] mb-3"
             >
-              The owner’s field notes
+              The project’s field notes
             </motion.p>
 
             <h2 className="font-['Georgia',serif] text-[26px] sm:text-[30px] md:text-[34px] lg:text-[38px] font-normal leading-[1.15] text-[#20244F]">

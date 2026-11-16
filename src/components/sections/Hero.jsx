@@ -150,12 +150,12 @@ const Hero = () => {
             >
 
               {/* HERO BANNER */}
-              <div className="relative w-full h-[430px] sm:h-[440px] md:h-[500px] lg:h-[560px] overflow-hidden rounded-md">
+              <div className="relative w-full h-[510px] sm:h-[530px] md:h-[600px] lg:h-[640px] overflow-hidden rounded-md">
 
                 {/* BACKGROUND IMAGE (scroll parallax wrapper) */}
                 <motion.div
                   style={{ y: imgScrollY }}
-                  className="absolute inset-x-0 -top-[12%] h-[124%]"
+                  className="absolute inset-x-0 -top-[12%] h-[144%]"
                 >
                   {/* focus pull: blur to sharp + dolly in */}
                   <motion.div
@@ -270,7 +270,7 @@ const Hero = () => {
                         }}
                         className="text-[#7771D5] text-[10px] sm:text-[13px] font-semibold uppercase tracking-[1.5px] mb-3"
                       >
-                        The Owner's Advantage
+                        The Owner's Builders Advantage
                       </motion.p>
 
                       {/* MAIN HEADING */}
@@ -305,6 +305,14 @@ const Hero = () => {
                             className="inline-block"
                           >
                             your vision.
+                          </motion.span>
+                        </span>
+                        <span className="block overflow-hidden py-[2px]">
+                          <motion.span
+                            variants={wordVariants}
+                            className="inline-block"
+                          >
+                            Save Your Money
                           </motion.span>
                         </span>
                       </motion.h1>
@@ -367,7 +375,7 @@ const Hero = () => {
                             <span className="pointer-events-none absolute inset-y-0 -left-full w-1/2 -skew-x-12 bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-700 group-hover/btn:translate-x-[450%]" />
 
                             <span className="relative z-10">
-                              Discuss your project
+                              Your project
                             </span>
 
                             <motion.span
@@ -410,7 +418,7 @@ const Hero = () => {
                     delay: 1.5,
                     ease: [0.22, 1, 0.36, 1],
                   }}
-                  className="absolute z-10 overflow-hidden bottom-1 sm:bottom-5 left-3 right-3 sm:left-6 sm:right-6 min-h-[30px] bg-white/95 rounded-full origin-left flex items-center px-3 py-2 shadow-md"
+                  className="absolute z-10 overflow-hidden bottom-4 sm:bottom-4 left-3 right-3 sm:left-6 sm:right-6 min-h-[30px] bg-white/95 rounded-full origin-left  flex items-center px-3 py-2 shadow-md"
                 >
 
                   {/* MOVING LIGHT */}

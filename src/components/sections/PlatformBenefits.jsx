@@ -17,13 +17,13 @@ const benefits = [
     icon: featureIcon2,
     title: "Coordinate the work",
     description:
-      "Schedules, action tasks, subcontractors, vendors and utility setup keep moving parts organized.",
+      "Schedules, action schedule, subcontractors, vendors and utility setup keep moving parts organized.",
   },
   {
     icon: featureIcon3,
     title: "Keep a clear record",
     description:
-      "Forms, contracts, pictures, documents and punch lists preserve the details through completion.",
+      "Upload ypur forms, contracts, pictures, documents and plans preserve the details through completion.",
   },
 ];
 
@@ -48,7 +48,7 @@ const PlatformBenefits = () => {
           </h2>
 
           <p className="text-[#666666] text-[12px] sm:text-[15px] leading-[1.7] mt-3 max-w-[550px]">
-            Practical tools for the responsibilities that come with building
+            Practical easy to use tools for the tasks that come with building
             your own home.
           </p>
         </motion.div>

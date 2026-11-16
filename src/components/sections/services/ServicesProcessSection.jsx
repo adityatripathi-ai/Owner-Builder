@@ -150,17 +150,17 @@ const ServicesProcessSection = () => {
           ))}
         </motion.ul>
 
-        {/* QUESTIONS BOX */}
+{/* QUESTIONS BOX */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-8 sm:mt-10"
+          className="mt-8 sm:mt-10 flex justify-center"
         >
           <Link
             to="/contact"
-            className="inline-block w-full sm:w-auto rounded-md bg-white px-6 sm:px-12 py-5 sm:py-4 text-center text-[11px] sm:text-[14px] font-medium text-[#20244F] transition-colors hover:bg-[#F4F2ED] focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#1D1F6B]"
+            className="inline-block flex  items-center justify-center w-full sm:w-auto rounded-md bg-white px-6 sm:px-12 py-5 sm:py-4 text-center text-[11px] sm:text-[14px] font-medium text-[#20244F] transition-colors hover:bg-[#F4F2ED] focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus        -visible:ring-offset-2 focus-visible:ring-offset-[#1D1F6B]"
           >
             Got Questions?... Ask the builder right in your pocket
           </Link>

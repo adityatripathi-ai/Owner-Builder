@@ -12,14 +12,14 @@ const steps = [
     icon: featureIcon1,
     title: "Set your foundation",
     description:
-      "Gather project details, initial estimates and the documents that define your build.",
+      "Gather and store your project details, initial estimates and the documents that define your build.",
   },
   {
     number: "02/COORDINATE",
     icon: featureIcon2,
     title: "Connect the details",
     description:
-      "Organize your trades, selections and schedule around the work ahead.",
+      "Organize your suppliers, contractors, selections and schedule around the work ahead.",
   },
   {
     number: "03/FOLLOW THROUGH",

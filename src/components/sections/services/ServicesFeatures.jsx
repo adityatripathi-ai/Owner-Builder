@@ -88,11 +88,11 @@ const ServicesFeatures = () => {
           </p>
 
           <h2 className="font-['Georgia',serif] text-white text-[26px] sm:text-[30px] md:text-[34px] lg:text-[38px] leading-[1.15] tracking-[-1px] font-normal">
-            Built for the Whole Construction Process
+            Built for the full building journey.
           </h2>
 
           <p className="text-white/80 text-[12px] sm:text-[13px] mt-4 max-w-[640px] leading-[1.7]">
-            The tools that fit the work in front of you, while keeping the
+            Use the tools that fit the work in front of you, while keeping the
             wider project in view.
           </p>
         </motion.div>

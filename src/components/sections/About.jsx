@@ -27,7 +27,7 @@ const features = [
     icon: featureIcon3,
     title: "Know what comes next",
     description:
-      "Keep schedules, daily tasks and the people doing the work in view.",
+      "Easy follow schedules, daily tasks and the people doing the work in view.",
   },
 ];
 
@@ -62,11 +62,12 @@ const About = () => {
             className="flex flex-col justify-center"
           >
             <p className="text-[#666666] text-[12px] sm:text-[15px] leading-[1.7]">
-              A house is built through thousands of connected decisions.
+              A house is built through many connected decisions.
               Owner Builder is a construction and real-estate project
-              platform that gives those decisions a home — from the first
-              estimate to the final punch list.
+              platform that gives those decisions a home — from plans to the first
+              estimate to the final punch list. <span className="font-bold">Got real questions?</span>
             </p>
+            <p className="text-[#666666] text-[12px] sm:text-[15px] leading-[1.7]"><span className="font-bold">"ASK THE BUILDER" -</span> builder and AI answers to real Questions from right from your phone.</p>
 
             <Link
               to="/about"
