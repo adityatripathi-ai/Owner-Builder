@@ -76,7 +76,7 @@ const ServicesHero = () => {
               max-w-[520px]
             ">
               <SplitText
-                text="Owner Builder software connects you to every stage and decision of your home"
+                text="Builder Owner software connects you to every stage and decision of your home"
                 delay={0.2}
                 stagger={0.05}
               />
