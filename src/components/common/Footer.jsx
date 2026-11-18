@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 import logo from "../../assets/images/logo.png";
 import appstore from "../../assets/icons/appstore.png";
@@ -12,18 +12,24 @@ const exploreLinks = [
   { name: "Contact Us", to: "/contact" },
 ];
 
+const footerLinkClass = ({ isActive }) =>
+  `inline-block py-1 md:py-0.5 transition-all duration-300 ${
+    isActive
+      ? "font-semibold text-[#20244F] underline underline-offset-[5px] decoration-2 decoration-[#7771D5]"
+      : "font-medium text-[#3D4056] hover:text-[#7771D5]"
+  }`;
+
 const Footer = () => {
   return (
     <footer className="w-full bg-white text-[#20244F]">
       <div className="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-10">
 
-        {/* MAIN FOOTER: mobile = brand full width + 2 columns, md+ = 3 columns */}
+        {/* MAIN FOOTER */}
         <div className="grid grid-cols-2 md:grid-cols-[1.5fr_0.8fr_0.8fr] gap-x-6 md:gap-x-12 gap-y-8 py-8 sm:py-10 md:py-12">
 
           {/* BRAND */}
           <div className="col-span-2 md:col-span-1">
             <Link to="/" className="inline-block">
-              {/* fixed height + auto width: wide ya square, dono logo sahi dikhenge */}
               <img
                 src={logo}
                 alt="Owner Builders logo"
@@ -43,16 +49,16 @@ const Footer = () => {
               Explore
             </h4>
 
-            <ul className="flex flex-col gap-1 sm:gap-2 md:gap-2.5 text-[14px] text-[#3D4056]">
+            <ul className="flex flex-col gap-1 sm:gap-2 md:gap-2.5 text-[14px]">
               {exploreLinks.map((link) => (
                 <li key={link.name}>
-                  {/* py-1 on mobile = bigger tap area */}
-                  <Link
+                  <NavLink
                     to={link.to}
-                    className="inline-block py-1 md:py-0.5 hover:text-[#7771D5] transition-colors duration-200"
+                    end={link.to === "/"}
+                    className={footerLinkClass}
                   >
                     {link.name}
-                  </Link>
+                  </NavLink>
                 </li>
               ))}
             </ul>
@@ -65,13 +71,6 @@ const Footer = () => {
             </h4>
 
             <div className="flex flex-col gap-2 sm:gap-3">
-              <p className="text-[14px] text-[#5B5E70]">
-                Email to be confirmed
-              </p>
-
-              <p className="text-[14px] text-[#5B5E70]">
-                Phone to be confirmed
-              </p>
 
               {/* APP LINKS */}
               <div className="flex items-center gap-3 mt-1">
@@ -104,27 +103,29 @@ const Footer = () => {
 
         </div>
 
-        {/* BOTTOM FOOTER: jagah ho to ek line, warna apne aap wrap */}
+        {/* BOTTOM FOOTER */}
         <div className="border-t border-[#EAEAEA] py-4 sm:py-5 flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
 
           <p className="text-[12px] text-[#6B6E7E]">
             © 2026 Owner Builder. All rights reserved.
           </p>
 
-          <div className="flex flex-wrap items-center gap-x-4 sm:gap-x-5 gap-y-1 text-[12px] text-[#6B6E7E]">
-            <Link
+          <div className="flex flex-wrap items-center gap-x-4 sm:gap-x-5 gap-y-1 text-[12px]">
+
+            <NavLink
               to="/privacy-policy"
-              className="hover:text-[#20244F] transition-colors"
+              className={footerLinkClass}
             >
               Privacy Policy
-            </Link>
+            </NavLink>
 
-            <Link
+            <NavLink
               to="/terms-conditions"
-              className="hover:text-[#20244F] transition-colors"
+              className={footerLinkClass}
             >
               Terms &amp; Conditions
-            </Link>
+            </NavLink>
+
           </div>
 
         </div>
