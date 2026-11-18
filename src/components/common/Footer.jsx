@@ -9,7 +9,7 @@ const exploreLinks = [
   { name: "About", to: "/about" },
   { name: "Services", to: "/services" },
   { name: "Resources", to: "/resources" },
-  { name: "Contact Us", to: "/contact" },
+  // { name: "Contact Us", to: "/contact" },
 ];
 
 const footerLinkClass = ({ isActive }) =>

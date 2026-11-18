@@ -45,14 +45,14 @@ const AppRoutes = () => {
   }
 />
 
- <Route
+ {/* <Route
   path="/contact"
   element={
     <MainLayout>
       <ContactUs />
     </MainLayout>
   }
-/>
+/> */}
     </Routes>
   );
 };

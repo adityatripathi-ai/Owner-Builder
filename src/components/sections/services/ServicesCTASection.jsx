@@ -17,18 +17,15 @@ const ServicesCTASection = () => {
             transition={{ duration: 0.7 }}
           >
             <p className="text-[#D0CDFB] text-[8px] sm:text-[14px] uppercase tracking-[1.5px] font-medium mb-3">
-              Start with a conversation
+             YOUR NEXT STEP STARTS HERE
             </p>
 
             <h2 className="font-serif text-[27px] sm:text-[34px] md:text-[36px] lg:text-[40px] leading-[1.08] max-w-[650px]">
-              Your home. Your vision. A clearer way
-              forward.
+              Build a clearer path to what's next.
             </h2>
 
             <p className="text-white/70 text-[10px] sm:text-[14px] leading-[1.7] mt-4 max-w-[650px]">
-              Tell us where you are in your building journey.
-              Let's explore how Owner Builder can help you organize
-              what comes next.
+              Explore the right tools, resources, and possibilities to move your project forward. Discover an approach that aligns with your goals and where you want to go.
             </p>
           </motion.div>
 
@@ -60,15 +57,14 @@ const ServicesCTASection = () => {
   transition-colors duration-300
                 "
               >
-                Discuss your project
+                Explore Our Approach
                 <span>↗</span>
               </Link>
             </motion.div>
 
             {/* BUTTON DESCRIPTION */}
-            <p className="mt-4 max-w-[250px] text-[10px] sm:text-[12px] text-white/60 leading-5">
-              Have a project in mind? Get in touch and let's explore
-              how we can help.
+            <p className="mt-4 max-w-[280px] text-[10px] sm:text-[12px] text-white/60 leading-5">
+             A clearer direction. A smarter way forward.
             </p>
           </motion.div>
 

@@ -6,7 +6,7 @@ const faqItems = [
   {
     question: "Is Owner Builder a construction company?",
     answer:
-      "Owner Builder is a project coordination platform. It was designed and built by a professional builder with over 40 years of experience, 1,600+ homes built and a home building coach, with first-time owner builders in mind as his students.",
+      "Created by a professional home builder with over 40 years of industry experience and more than 1,600+ homes to his credit. Every insight, tool, and resource is shaped by decades of hands-on building knowledge.",
   },
   {
     question: "What can I manage in one project?",
@@ -16,7 +16,7 @@ const faqItems = [
   {
     question: "Where should I begin?",
     answer:
-      "Start with your project details and goals. Create a plan, organize important documents and use the platform to keep track of your next steps.",
+      "Start with your project details and a list of the decisions ahead. ",
   },
 ];
 
