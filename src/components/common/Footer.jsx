@@ -1,3 +1,4 @@
+
 import { NavLink, Link } from "react-router-dom";
 
 import logo from "../../assets/images/logo.png";
@@ -64,40 +65,40 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* CONTACT & APP LINKS */}
+          {/* DOWNLOAD OUR APP */}
           <div className="min-w-0">
             <h4 className="text-[12px] uppercase tracking-[0.12em] font-semibold mb-3 sm:mb-4">
-              Get in touch
+              DOWNLOAD OUR APP
             </h4>
 
-            <div className="flex flex-col gap-2 sm:gap-3">
+            <div className="flex items-center gap-2 mt-1">
 
-              {/* APP LINKS */}
-              <div className="flex items-center gap-3 mt-1">
-                <a
-                  href="#"
-                  aria-label="Google Play"
-                  className="flex items-center justify-center hover:opacity-75 transition-opacity"
-                >
-                  <img
-                    src={appstore}
-                    alt="Google Play"
-                    className="w-8 h-8 md:w-7 md:h-7 object-contain"
-                  />
-                </a>
+              {/* GOOGLE PLAY */}
+              <a
+                href="#"
+                aria-label="Google Play"
+                className="flex items-center justify-center w-[40px] h-[40px]  rounded-[5px] hover:opacity-75 transition-opacity"
+              >
+                <img
+                  src={appstore}
+                  alt="Google Play"
+                  className="w-[38px] h-[38px] object-contain"
+                />
+              </a>
 
-                <a
-                  href="#"
-                  aria-label="App Store"
-                  className="flex items-center justify-center hover:opacity-75 transition-opacity"
-                >
-                  <img
-                    src={playstore}
-                    alt="App Store"
-                    className="w-8 h-8 md:w-7 md:h-7 object-contain"
-                  />
-                </a>
-              </div>
+              {/* APP STORE */}
+              <a
+                href="#"
+                aria-label="App Store"
+                className="flex items-center justify-center w-[40px] h-[40px] rounded-[5px] hover:opacity-75 transition-opacity"
+              >
+                <img
+                  src={playstore}
+                  alt="App Store"
+                  className="w-[38px] h-[38px] object-contain"
+                />
+              </a>
+
             </div>
           </div>
 
