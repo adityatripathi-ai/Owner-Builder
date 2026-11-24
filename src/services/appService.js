@@ -15,10 +15,6 @@ export const getAppRedirectUrl = async (deviceType) => {
 
     const result = await response.json();
 
-    console.log("Device Type:", deviceType);
-    console.log("API Response:", result);
-    console.log("Redirect URL:", result?.data?.redirectUrl);
-
     if (
       !response.ok ||
       !result.success ||
@@ -32,7 +28,6 @@ export const getAppRedirectUrl = async (deviceType) => {
     return result.data.redirectUrl;
 
   } catch (error) {
-    console.error("App Redirect API Error:", error);
     throw error;
   }
 };

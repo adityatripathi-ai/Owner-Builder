@@ -23,7 +23,7 @@ const footerLinkClass = ({ isActive }) =>
 
 const Footer = () => {
 
-  // Detect mobile device and fetch app redirect URL
+  // Detect device and redirect to respective app store
   const handleAppDownload = async () => {
     try {
       const userAgent = navigator.userAgent || "";
@@ -39,22 +39,13 @@ const Footer = () => {
         return;
       }
 
-      console.log("Detected Device:", deviceType);
-
-      // API call
+      // Get redirect URL from API
       const redirectUrl = await getAppRedirectUrl(deviceType);
 
-      // Show API response for testing
-      alert(
-        `Device: ${deviceType}\nRedirect URL: ${redirectUrl}`
-      );
-
-      // Testing complete hone ke baad is line ko uncomment karna
-      // window.location.href = redirectUrl;
+      // Redirect to Play Store or App Store
+      window.location.href = redirectUrl;
 
     } catch (error) {
-      console.error("App Download Error:", error);
-
       alert(
         error.message || "Something went wrong. Please try again."
       );
@@ -70,7 +61,6 @@ const Footer = () => {
 
           {/* BRAND */}
           <div className="col-span-2 md:col-span-1">
-
             <Link to="/" className="inline-block">
               <img
                 src={logo}
@@ -83,18 +73,15 @@ const Footer = () => {
               A clearer way to organize the journey from your first
               plan to your final walkthrough.
             </p>
-
           </div>
 
           {/* EXPLORE LINKS */}
           <div className="min-w-0">
-
             <h4 className="text-[12px] uppercase tracking-[0.12em] font-semibold mb-3 sm:mb-4">
               Explore
             </h4>
 
             <ul className="flex flex-col gap-1 sm:gap-2 md:gap-2.5 text-[14px]">
-
               {exploreLinks.map((link) => (
                 <li key={link.name}>
                   <NavLink
@@ -106,14 +93,11 @@ const Footer = () => {
                   </NavLink>
                 </li>
               ))}
-
             </ul>
-
           </div>
 
           {/* DOWNLOAD OUR APP */}
           <div className="min-w-0">
-
             <h4 className="text-[12px] uppercase tracking-[0.12em] font-semibold mb-3 sm:mb-4">
               DOWNLOAD OUR APP
             </h4>
@@ -124,7 +108,7 @@ const Footer = () => {
               <button
                 type="button"
                 onClick={handleAppDownload}
-                aria-label="Download app"
+                aria-label="Google Play"
                 className="flex items-center justify-center w-[40px] h-[40px] rounded-[5px] hover:opacity-75 transition-opacity cursor-pointer"
               >
                 <img
@@ -138,7 +122,7 @@ const Footer = () => {
               <button
                 type="button"
                 onClick={handleAppDownload}
-                aria-label="Download app"
+                aria-label="App Store"
                 className="flex items-center justify-center w-[40px] h-[40px] rounded-[5px] hover:opacity-75 transition-opacity cursor-pointer"
               >
                 <img
@@ -149,7 +133,6 @@ const Footer = () => {
               </button>
 
             </div>
-
           </div>
 
         </div>
