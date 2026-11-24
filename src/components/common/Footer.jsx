@@ -5,12 +5,13 @@ import logo from "../../assets/images/logo.png";
 import appstore from "../../assets/icons/appstore.png";
 import playstore from "../../assets/icons/playstore.png";
 
+import { getAppRedirectUrl } from "../../services/appService";
+
 const exploreLinks = [
   { name: "Home", to: "/" },
   { name: "About", to: "/about" },
   { name: "Services", to: "/services" },
   { name: "Resources", to: "/resources" },
-  // { name: "Contact Us", to: "/contact" },
 ];
 
 const footerLinkClass = ({ isActive }) =>
@@ -21,6 +22,45 @@ const footerLinkClass = ({ isActive }) =>
   }`;
 
 const Footer = () => {
+
+  // Detect mobile device and fetch app redirect URL
+  const handleAppDownload = async () => {
+    try {
+      const userAgent = navigator.userAgent || "";
+
+      let deviceType = "";
+
+      if (/android/i.test(userAgent)) {
+        deviceType = "android";
+      } else if (/iphone|ipad|ipod/i.test(userAgent)) {
+        deviceType = "ios";
+      } else {
+        alert("Please open this website on your mobile device.");
+        return;
+      }
+
+      console.log("Detected Device:", deviceType);
+
+      // API call
+      const redirectUrl = await getAppRedirectUrl(deviceType);
+
+      // Show API response for testing
+      alert(
+        `Device: ${deviceType}\nRedirect URL: ${redirectUrl}`
+      );
+
+      // Testing complete hone ke baad is line ko uncomment karna
+      // window.location.href = redirectUrl;
+
+    } catch (error) {
+      console.error("App Download Error:", error);
+
+      alert(
+        error.message || "Something went wrong. Please try again."
+      );
+    }
+  };
+
   return (
     <footer className="w-full bg-white text-[#20244F]">
       <div className="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-10">
@@ -30,6 +70,7 @@ const Footer = () => {
 
           {/* BRAND */}
           <div className="col-span-2 md:col-span-1">
+
             <Link to="/" className="inline-block">
               <img
                 src={logo}
@@ -42,15 +83,18 @@ const Footer = () => {
               A clearer way to organize the journey from your first
               plan to your final walkthrough.
             </p>
+
           </div>
 
           {/* EXPLORE LINKS */}
           <div className="min-w-0">
+
             <h4 className="text-[12px] uppercase tracking-[0.12em] font-semibold mb-3 sm:mb-4">
               Explore
             </h4>
 
             <ul className="flex flex-col gap-1 sm:gap-2 md:gap-2.5 text-[14px]">
+
               {exploreLinks.map((link) => (
                 <li key={link.name}>
                   <NavLink
@@ -62,11 +106,14 @@ const Footer = () => {
                   </NavLink>
                 </li>
               ))}
+
             </ul>
+
           </div>
 
           {/* DOWNLOAD OUR APP */}
           <div className="min-w-0">
+
             <h4 className="text-[12px] uppercase tracking-[0.12em] font-semibold mb-3 sm:mb-4">
               DOWNLOAD OUR APP
             </h4>
@@ -74,32 +121,35 @@ const Footer = () => {
             <div className="flex items-center gap-2 mt-1">
 
               {/* GOOGLE PLAY */}
-              <a
-                href="#"
-                aria-label="Google Play"
-                className="flex items-center justify-center w-[40px] h-[40px]  rounded-[5px] hover:opacity-75 transition-opacity"
-              >
-                <img
-                  src={appstore}
-                  alt="Google Play"
-                  className="w-[38px] h-[38px] object-contain"
-                />
-              </a>
-
-              {/* APP STORE */}
-              <a
-                href="#"
-                aria-label="App Store"
-                className="flex items-center justify-center w-[40px] h-[40px] rounded-[5px] hover:opacity-75 transition-opacity"
+              <button
+                type="button"
+                onClick={handleAppDownload}
+                aria-label="Download app"
+                className="flex items-center justify-center w-[40px] h-[40px] rounded-[5px] hover:opacity-75 transition-opacity cursor-pointer"
               >
                 <img
                   src={playstore}
+                  alt="Google Play"
+                  className="w-[38px] h-[38px] object-contain"
+                />
+              </button>
+
+              {/* APP STORE */}
+              <button
+                type="button"
+                onClick={handleAppDownload}
+                aria-label="Download app"
+                className="flex items-center justify-center w-[40px] h-[40px] rounded-[5px] hover:opacity-75 transition-opacity cursor-pointer"
+              >
+                <img
+                  src={appstore}
                   alt="App Store"
                   className="w-[38px] h-[38px] object-contain"
                 />
-              </a>
+              </button>
 
             </div>
+
           </div>
 
         </div>

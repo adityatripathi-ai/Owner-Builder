@@ -32,7 +32,8 @@ const Features = () => {
           </p>
 
           <h2 className="font-['Georgia',serif] text-[26px] sm:text-[30px] md:text-[34px] lg:text-[38px] font-normal leading-[1.15] text-white">
-            <SplitText text="Easy To Use Tools For A More Organized Project." />
+            <SplitText text="Easy To Use Tools For A More" /> <br />
+            <SplitText text="Organize Project." />
           </h2>
 
           <p className="text-white/80 text-[12px] sm:text-[15px] leading-[1.7] mt-3 max-w-[500px]">

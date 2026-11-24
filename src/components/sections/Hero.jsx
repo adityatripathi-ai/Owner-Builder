@@ -286,7 +286,7 @@ const Hero = () => {
                             variants={wordVariants}
                             className="inline-block"
                           >
-                            Build your
+                            Build your home,
                           </motion.span>
                         </span>
 
@@ -295,7 +295,7 @@ const Hero = () => {
                             variants={wordVariants}
                             className="inline-block"
                           >
-                            home. Keep
+                             Keep your vision,
                           </motion.span>
                         </span>
 
@@ -304,17 +304,10 @@ const Hero = () => {
                             variants={wordVariants}
                             className="inline-block"
                           >
-                            your vision.
+                            Save Your Money.
                           </motion.span>
                         </span>
-                        <span className="block overflow-hidden py-[2px]">
-                          <motion.span
-                            variants={wordVariants}
-                            className="inline-block"
-                          >
-                            Save Your Money
-                          </motion.span>
-                        </span>
+                       
                       </motion.h1>
 
                       {/* DESCRIPTION */}
@@ -375,7 +368,7 @@ const Hero = () => {
                             <span className="pointer-events-none absolute inset-y-0 -left-full w-1/2 -skew-x-12 bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-700 group-hover/btn:translate-x-[450%]" />
 
                             <span className="relative z-10">
-                              Your project
+                              Let's Collaborate
                             </span>
 
                             <motion.span
