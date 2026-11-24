@@ -1,8 +1,10 @@
+
 import { motion } from "framer-motion";
 
 import playstore from "../../assets/images/playstore.png";
 import appstore from "../../assets/images/appstore.png";
 import { SplitText } from "../common/Animations";
+import { redirectToAppStore } from "../../services/appService";
 
 const CTASection = () => {
   return (
@@ -37,7 +39,6 @@ const CTASection = () => {
 
           </motion.div>
 
-
           {/* RIGHT STORE BUTTONS */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
@@ -51,40 +52,36 @@ const CTASection = () => {
             <div className="flex flex-row md:flex-col items-center justify-center md:justify-center gap-2 sm:gap-3 w-full">
 
               {/* GOOGLE PLAY */}
-              <motion.a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
+              <motion.button
+                type="button"
+                onClick={redirectToAppStore}
                 aria-label="Get it on Google Play"
                 whileHover={{ scale: 1.05 }}
-                className="block w-[125px] sm:w-[145px]"
+                className="block w-[125px] sm:w-[145px] cursor-pointer"
               >
                 <img
                   src={playstore}
                   alt="Get it on Google Play"
                   className="w-full h-auto object-contain"
                 />
-              </motion.a>
-
+              </motion.button>
 
               {/* APP STORE */}
-              <motion.a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
+              <motion.button
+                type="button"
+                onClick={redirectToAppStore}
                 aria-label="Download on the App Store"
                 whileHover={{ scale: 1.05 }}
-                className="block w-[125px] sm:w-[145px]"
+                className="block w-[125px] sm:w-[145px] cursor-pointer"
               >
                 <img
                   src={appstore}
                   alt="Download on the App Store"
                   className="w-full h-auto object-contain"
                 />
-              </motion.a>
+              </motion.button>
 
             </div>
-
 
             {/* DESCRIPTION */}
             <p className="text-white/70 text-[10px] sm:text-[13px] leading-[1.5] mt-1 text-center md:text-left w-[145px] sm:w-[165px]">

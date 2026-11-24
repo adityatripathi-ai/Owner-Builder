@@ -5,7 +5,7 @@ import logo from "../../assets/images/logo.png";
 import appstore from "../../assets/icons/appstore.png";
 import playstore from "../../assets/icons/playstore.png";
 
-import { getAppRedirectUrl } from "../../services/appService";
+import { redirectToAppStore } from "../../services/appService";
 
 const exploreLinks = [
   { name: "Home", to: "/" },
@@ -22,36 +22,6 @@ const footerLinkClass = ({ isActive }) =>
   }`;
 
 const Footer = () => {
-
-  // Detect device and redirect to respective app store
-  const handleAppDownload = async () => {
-    try {
-      const userAgent = navigator.userAgent || "";
-
-      let deviceType = "";
-
-      if (/android/i.test(userAgent)) {
-        deviceType = "android";
-      } else if (/iphone|ipad|ipod/i.test(userAgent)) {
-        deviceType = "ios";
-      } else {
-        alert("Please open this website on your mobile device.");
-        return;
-      }
-
-      // Get redirect URL from API
-      const redirectUrl = await getAppRedirectUrl(deviceType);
-
-      // Redirect to Play Store or App Store
-      window.location.href = redirectUrl;
-
-    } catch (error) {
-      alert(
-        error.message || "Something went wrong. Please try again."
-      );
-    }
-  };
-
   return (
     <footer className="w-full bg-white text-[#20244F]">
       <div className="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-10">
@@ -107,7 +77,7 @@ const Footer = () => {
               {/* GOOGLE PLAY */}
               <button
                 type="button"
-                onClick={handleAppDownload}
+                onClick={redirectToAppStore}
                 aria-label="Google Play"
                 className="flex items-center justify-center w-[40px] h-[40px] rounded-[5px] hover:opacity-75 transition-opacity cursor-pointer"
               >
@@ -121,7 +91,7 @@ const Footer = () => {
               {/* APP STORE */}
               <button
                 type="button"
-                onClick={handleAppDownload}
+                onClick={redirectToAppStore}
                 aria-label="App Store"
                 className="flex items-center justify-center w-[40px] h-[40px] rounded-[5px] hover:opacity-75 transition-opacity cursor-pointer"
               >
@@ -145,7 +115,6 @@ const Footer = () => {
           </p>
 
           <div className="flex flex-wrap items-center gap-x-4 sm:gap-x-5 gap-y-1 text-[12px]">
-
             <NavLink
               to="/privacy-policy"
               className={footerLinkClass}
@@ -159,7 +128,6 @@ const Footer = () => {
             >
               Terms &amp; Conditions
             </NavLink>
-
           </div>
 
         </div>
