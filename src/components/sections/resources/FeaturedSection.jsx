@@ -193,7 +193,7 @@ const FeaturedSection = () => {
                       The owner’s field notes
                     </p>
                     <p className="mt-1.5 text-[#20244F] text-[13px] sm:text-[14px] font-semibold leading-[1.3]">
-                      Preparation is part of the build.
+                      Preparation is an important part of the build.
                     </p>
                   </motion.div>
                 </motion.div>

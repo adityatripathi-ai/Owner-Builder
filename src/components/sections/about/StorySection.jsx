@@ -16,7 +16,7 @@ const StorySection = () => {
             transition={{ duration: 0.7 }}
           >
             <p className="text-[#7771D5] text-[10px] sm:text-[14px] font-semibold uppercase tracking-[1.5px] mb-3">
-              Why Owner Builder
+              Why Owner Builder software
             </p>
 
             <h2 className="font-['Georgia',serif] text-[#303030] text-[26px] sm:text-[30px] md:text-[34px] lg:text-[38px] leading-[1.15] font-normal max-w-[430px]">

@@ -27,15 +27,15 @@ const screens = [
     image: phone2,
   },
   {
-    title: "Contractor",
+    title: "Selections",
     description:
-      "Organize bid categories and amounts before moving into cost review.",
+      "Keep all of your selections in one easy to find location.",
     image: phone3,
   },
   {
-    title: "Keep agreements close",
+    title: "Dashboard Arrangement",
     description:
-      "Maintain a clear place for forms and contracts throughout the project.",
+      "Easy to find your bids, cost variances, + your entire building information at your fingertips.",
     image: phone4,
   },
 ];

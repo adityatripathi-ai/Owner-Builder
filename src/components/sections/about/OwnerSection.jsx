@@ -220,7 +220,7 @@ const OwnerSection = () => {
             </motion.p>
 
             <h2 className="font-['Georgia',serif] text-[26px] sm:text-[40px] md:text-[34px] lg:text-[38px] font-normal leading-[1.15] text-[#20244F] max-w-[460px]">
-              <SplitText text="Keep the owner at the center." delay={0.2} />
+              <SplitText text="Keep you the owner at the center." delay={0.2} />
             </h2>
 
             {/* POINTS */}

@@ -6,6 +6,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import logo from "../../assets/images/logo.png";
 import apps from "../../assets/images/primaryaction.png";
 
+import { redirectToAppStore } from "../../services/appService";
+
 const navLinks = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
@@ -23,6 +25,10 @@ const linkClass = (size) => ({ isActive }) =>
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleAppRedirect = () => {
+    redirectToAppStore();
+  };
 
   return (
     <header className="w-full bg-white relative z-50">
@@ -71,16 +77,21 @@ const Navbar = () => {
             ))}
           </motion.div>
 
-          {/* RIGHT ACTION IMAGE */}
-          <Link to="/contact" className="hidden lg:flex items-center shrink-0">
+          {/* RIGHT ACTION IMAGE - DESKTOP */}
+          <button
+            type="button"
+            onClick={handleAppRedirect}
+            aria-label="Download App"
+            className="hidden lg:flex items-center shrink-0 bg-transparent border-0 cursor-pointer"
+          >
             <motion.img
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.2 }}
               src={apps}
-              alt="Primary actions"
+              alt="Download App"
               className="w-[90px] xl:w-[105px] h-auto object-contain"
             />
-          </Link>
+          </button>
 
           {/* MOBILE MENU BUTTON */}
           <button
@@ -104,6 +115,7 @@ const Navbar = () => {
               className="lg:hidden overflow-hidden bg-white"
             >
               <div className="bg-white border-t border-gray-100 py-5 px-4 flex flex-col gap-4">
+
                 {navLinks.map((link) => (
                   <NavLink
                     key={link.name}
@@ -118,17 +130,23 @@ const Navbar = () => {
                   </NavLink>
                 ))}
 
-                <Link
-                  to="/contact"
-                  onClick={() => setMenuOpen(false)}
-                  className="w-fit"
+                {/* RIGHT ACTION IMAGE - MOBILE */}
+                <button
+                  type="button"
+                  onClick={() => {
+                    setMenuOpen(false);
+                    handleAppRedirect();
+                  }}
+                  aria-label="Download App"
+                  className="w-fit bg-transparent border-0 cursor-pointer"
                 >
                   <img
                     src={apps}
-                    alt="Primary actions"
+                    alt="Download App"
                     className="w-[100px] h-auto object-contain"
                   />
-                </Link>
+                </button>
+
               </div>
             </motion.div>
           )}

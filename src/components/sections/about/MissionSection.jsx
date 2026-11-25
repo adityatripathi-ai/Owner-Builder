@@ -45,7 +45,7 @@ const MissionSection = () => {
             mt-5
             max-w-[750px]
           ">
-           We believe an organized project gives owners a stronger foundation for conversations, decisions and the work ahead. Clarity should be part of the building process, not something you have to build yourself.
+           We believe an organized project gives owners builders a stronger foundation for conversations, decisions and the work ahead. Clarity should be part of the building process, not something you have to build yourself.
           </p>
 
         </motion.div>

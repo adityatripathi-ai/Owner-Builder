@@ -27,7 +27,14 @@ const features = [
     icon: featureIcon3,
     title: "Know what comes next",
     description:
-      "Easy follow schedules, daily tasks and the people doing the work in view.",
+      "Keep schedules, daily tasks and the people doing the work in view.",
+  },
+  {
+    number: "04",
+    icon: featureIcon1,
+    title: "Ask The Builder",
+    description:
+      "Get answers from builders and AI to real questions, right from your phone.",
   },
 ];
 
@@ -65,19 +72,20 @@ const About = () => {
               A house is built through many connected decisions.
               Owner Builder is a construction and real-estate project
               platform that gives those decisions a home — from plans to the first
-              estimate to the final punch list. <span className="font-bold">Got real questions?</span>
+              estimate to the final punch list.{" "}
+              {/* <span className="font-bold">Got real questions?</span> */}
             </p>
-            <p className="text-[#666666] text-[12px] sm:text-[15px] leading-[1.7]"><span className="font-bold">"ASK THE BUILDER" -</span> builder and AI answers to real Questions from right from your phone.</p>
 
-            <Link
+            {/* <Link
               to="/about"
               className="group text-[11px] sm:text-[15px] font-medium inline-flex items-center gap-2 text-[#20244F] mt-4 hover:text-[#7771D5] transition-colors"
             >
               The thinking behind Owner Builder
+
               <span className="inline-block transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
                 ↗
               </span>
-            </Link>
+            </Link> */}
           </motion.div>
 
         </div>
@@ -93,7 +101,7 @@ const About = () => {
               transition: { staggerChildren: 0.15 },
             },
           }}
-          className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4"
         >
           {features.map((feature) => (
             <TiltCard
@@ -105,7 +113,7 @@ const About = () => {
               }}
               transition={{ duration: 0.6 }}
               whileHover="hover"
-              className="bg-white border border-gray-100 rounded-md p-4 sm:p-4 md:p-5 min-h-[125px] transition-shadow duration-300 hover:shadow-md"
+              className="bg-white border border-gray-100 rounded-md p-4 sm:p-4 md:p-5 min-h-[145px] transition-shadow duration-300 hover:shadow-md"
             >
               {/* ICON ANIMATION */}
               <div className="mb-3">
@@ -127,10 +135,12 @@ const About = () => {
                 />
               </div>
 
+              {/* CARD TITLE */}
               <h3 className="text-[#20244F] text-[13px] sm:text-[16px] font-semibold leading-snug mb-2">
                 {feature.title}
               </h3>
 
+              {/* CARD DESCRIPTION */}
               <p className="text-[#666666] text-[11px] sm:text-[14px] leading-[1.6]">
                 {feature.description}
               </p>

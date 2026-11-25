@@ -43,7 +43,7 @@ const ResourcesHero = () => {
             </p>
 
             <p className="text-[#777777] text-[11px] sm:text-[14px] leading-[1.7] mt-2">
-              This library presents proposed editorial content. Guide previews are for review; final resource documents and downloads will be supplied or approved by the client.
+             This library presents proposed editorial content for review and consideration. All content is intended to provide helpful insights and practical information for owner builders.
             </p>
 
             <Link

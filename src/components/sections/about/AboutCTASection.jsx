@@ -24,7 +24,7 @@ const AboutCTASection = () => {
             </h2>
 
             <p className="text-white/80 text-[12px] sm:text-[15px] leading-[1.7] mt-4 max-w-[650px]">
-              Tell us where you are in your building journey. Let’s explore how Owner Builder can help you organize what comes next.
+            Let’s explore how Owner Builder can help you organize what comes next.
             </p>
           </motion.div>
 
@@ -56,7 +56,7 @@ const AboutCTASection = () => {
   transition-colors duration-300
                 "
               >
-                Discuss your project
+               Start Building
                 <span>↗</span>
               </Link>
             </motion.div>
