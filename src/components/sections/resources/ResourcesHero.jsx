@@ -47,7 +47,7 @@ const ResourcesHero = () => {
             </p>
 
             <Link
-              to="/contact"
+              to="/"
               className="inline-flex items-center gap-2 text-[#20244F] text-[11px] sm:text-[13px] font-medium mt-3 hover:text-[#7771D5] transition-colors"
             >
               Preview library / Not a download archive

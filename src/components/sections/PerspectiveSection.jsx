@@ -9,7 +9,7 @@ import {
 } from "framer-motion";
 import { Link } from "react-router-dom";
 
-import phone4 from "../../assets/images/phone-3.png";
+import phone4 from "../../assets/images/Vector-36.png";
 import warmBg from "../../assets/images/Warm-architectural-setting.png";
 import { SplitText, Magnetic } from "../common/Animations";
 

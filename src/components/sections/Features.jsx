@@ -1,9 +1,9 @@
 
 import { motion } from "framer-motion";
 
-import phone1 from "../../assets/images/phone-1.png";
-import phone2 from "../../assets/images/phone-2.png";
-import phone3 from "../../assets/images/phone-3.png";
+import phone1 from "../../assets/images/Vector-34.png";
+import phone2 from "../../assets/images/Vector-35.png";
+import phone3 from "../../assets/images/Vector-36.png";
 
 import { SplitText, TiltCard, FloatingOrbs } from "../common/Animations";
 

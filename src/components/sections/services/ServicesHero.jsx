@@ -1,9 +1,11 @@
+
 import { motion, useMotionValue, useSpring, useTransform, useMotionTemplate } from "framer-motion";
 import { Link } from "react-router-dom";
 
 import heroImage from "../../../assets/images/Architectural-plan-setting-2.png";
-import phoneImage from "../../../assets/images/Unchanged-application-screen.png";
+import phoneImage from "../../../assets/images/Vector-37.png";
 import { SplitText, Magnetic } from "../../common/Animations";
+import { redirectToAppStore } from "../../../services/appService";
 
 const ServicesHero = () => {
   /* ---------- mouse tilt + glare ---------- */
@@ -31,10 +33,15 @@ const ServicesHero = () => {
     ny.set((e.clientY - r.top) / r.height - 0.5);
     hover.set(1);
   };
+
   const onLeave = () => {
     nx.set(0);
     ny.set(0);
     hover.set(0);
+  };
+
+  const handleAppRedirect = () => {
+    redirectToAppStore();
   };
 
   return (
@@ -100,8 +107,9 @@ const ServicesHero = () => {
               className="mt-6"
             >
               <Magnetic strength={0.3}>
-                <Link
-                  to="/contact"
+                <button
+                  type="button"
+                  onClick={handleAppRedirect}
                   className="group relative overflow-hidden inline-flex items-center gap-3 bg-[#20244F] text-white text-[11px] sm:text-[12px] font-medium px-5 py-3 rounded-[3px] hover:bg-[#7771D5] transition-colors duration-300"
                 >
                   <span className="pointer-events-none absolute inset-y-0 -left-full w-1/2 -skew-x-12 bg-white/25 transition-transform duration-700 group-hover:translate-x-[450%]" />
@@ -112,7 +120,7 @@ const ServicesHero = () => {
                   >
                     ↗
                   </span>
-                </Link>
+                </button>
               </Magnetic>
             </motion.div>
           </motion.div>

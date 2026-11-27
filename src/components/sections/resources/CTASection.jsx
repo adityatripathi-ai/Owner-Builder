@@ -1,8 +1,12 @@
 
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { redirectToAppStore } from "../../../services/appService";
 
 const CTASection = () => {
+  const handleAppRedirect = () => {
+    redirectToAppStore();
+  };
+
   return (
     <section className="w-full bg-[#20244F] px-5 sm:px-8 lg:px-10 py-10 sm:py-12">
 
@@ -47,8 +51,9 @@ const CTASection = () => {
               transition={{ delay: 0.3, duration: 0.6 }}
               className="mt-4"
             >
-              <Link
-                to="/contact"
+              <button
+                type="button"
+                onClick={handleAppRedirect}
                 className="
                   inline-flex items-center gap-2
                   bg-white text-[#20244F]
@@ -59,9 +64,9 @@ const CTASection = () => {
                   transition-colors duration-300
                 "
               >
-                Discuss your project
+                Start Building
                 <span>↗</span>
-              </Link>
+              </button>
             </motion.div>
 
             {/* BUTTON DESCRIPTION */}

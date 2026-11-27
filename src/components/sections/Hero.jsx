@@ -1,3 +1,4 @@
+
 import { useRef } from "react";
 import {
   motion,
@@ -7,12 +8,16 @@ import {
   useTransform,
   useMotionTemplate,
 } from "framer-motion";
-import { Link } from "react-router-dom";
 
 import heroImage from "../../assets/images/herobg.png";
+import { redirectToAppStore } from "../../services/appService";
 
 const Hero = () => {
   const wrapRef = useRef(null);
+
+  const handleCollaborate = () => {
+    redirectToAppStore();
+  };
 
   /* ---------- mouse position (-0.5 to 0.5) ---------- */
   const nx = useMotionValue(0);
@@ -23,7 +28,7 @@ const Hero = () => {
   const sy = useSpring(ny, { stiffness: 90, damping: 20 });
   const hoverSpring = useSpring(hover, { stiffness: 80, damping: 20 });
 
-  /* ---------- image mouse parallax (your values) ---------- */
+  /* ---------- image mouse parallax ---------- */
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
   const x = useSpring(mouseX, { stiffness: 45, damping: 20 });
@@ -34,12 +39,16 @@ const Hero = () => {
     target: wrapRef,
     offset: ["start start", "end start"],
   });
+
   const imgScrollY = useTransform(scrollYProgress, [0, 1], ["0%", "9%"]);
   const cardScrollY = useTransform(scrollYProgress, [0, 1], [0, -30]);
 
-  /* ---------- 3D tilt of the whole banner (mouse + scroll) ---------- */
+  /* ---------- 3D tilt of the whole banner ---------- */
   const bannerRotY = useTransform(sx, [-0.5, 0.5], [-4, 4]);
-  const bannerRotX = useTransform([sy, scrollYProgress], ([m, s]) => m * -4 + s * 8);
+  const bannerRotX = useTransform(
+    [sy, scrollYProgress],
+    ([m, s]) => m * -4 + s * 8
+  );
 
   /* ---------- card depth ---------- */
   const cardRotY = useTransform(sx, [-0.5, 0.5], [-6, 6]);
@@ -50,11 +59,13 @@ const Hero = () => {
   /* ---------- cursor glare on image ---------- */
   const gx = useTransform(sx, [-0.5, 0.5], ["0%", "100%"]);
   const gy = useTransform(sy, [-0.5, 0.5], ["0%", "100%"]);
+
   const glare = useMotionTemplate`radial-gradient(circle at ${gx} ${gy}, rgba(255,255,255,0.35), transparent 50%)`;
 
-  /* ---------- button magnetic (your values) ---------- */
+  /* ---------- button magnetic ---------- */
   const buttonX = useMotionValue(0);
   const buttonY = useMotionValue(0);
+
   const springButtonX = useSpring(buttonX, { stiffness: 180, damping: 15 });
   const springButtonY = useSpring(buttonY, { stiffness: 180, damping: 15 });
 
@@ -126,7 +137,7 @@ const Hero = () => {
     <section className="w-full bg-[#F8F7F3] px-3 sm:px-4 lg:px-6 pt-3 pb-3">
       <div className="max-w-[1400px] mx-auto">
 
-        {/* PERSPECTIVE WRAPPER (receives mouse, never rotates itself) */}
+        {/* PERSPECTIVE WRAPPER */}
         <div
           ref={wrapRef}
           onMouseMove={handleMouseMove}
@@ -152,12 +163,12 @@ const Hero = () => {
               {/* HERO BANNER */}
               <div className="relative w-full h-[510px] sm:h-[530px] md:h-[600px] lg:h-[640px] overflow-hidden rounded-md">
 
-                {/* BACKGROUND IMAGE (scroll parallax wrapper) */}
+                {/* BACKGROUND IMAGE */}
                 <motion.div
                   style={{ y: imgScrollY }}
                   className="absolute inset-x-0 -top-[12%] h-[144%]"
                 >
-                  {/* focus pull: blur to sharp + dolly in */}
+                  {/* FOCUS PULL */}
                   <motion.div
                     initial={{ filter: "blur(16px)", scale: 1.18 }}
                     animate={{ filter: "blur(0px)", scale: 1 }}
@@ -221,10 +232,10 @@ const Hero = () => {
                   className="absolute inset-y-0 w-[35%] bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-[-20deg] pointer-events-none"
                 />
 
-                {/* CONTENT WRAPPER: centers the card so Framer transforms never fight Tailwind's translate */}
+                {/* CONTENT WRAPPER */}
                 <div className="absolute inset-0 z-10 flex items-center px-3 sm:px-0 pointer-events-none">
 
-                  {/* CONTENT CARD: 3D hinge unfold + scroll drift */}
+                  {/* CONTENT CARD */}
                   <motion.div
                     initial={{ opacity: 0, rotateY: -75, x: -40 }}
                     animate={{ opacity: 1, rotateY: 0, x: 0 }}
@@ -295,7 +306,7 @@ const Hero = () => {
                             variants={wordVariants}
                             className="inline-block"
                           >
-                             Keep your vision,
+                            Keep your vision,
                           </motion.span>
                         </span>
 
@@ -307,7 +318,6 @@ const Hero = () => {
                             Save Your Money.
                           </motion.span>
                         </span>
-                       
                       </motion.h1>
 
                       {/* DESCRIPTION */}
@@ -359,8 +369,10 @@ const Hero = () => {
                           }}
                           className="inline-block"
                         >
-                          <Link
-                            to="/contact"
+                          <button
+                            type="button"
+                            onClick={handleCollaborate}
+                            aria-label="Let's Collaborate"
                             className="relative overflow-hidden group/btn text-[11px] sm:text-[15px] font-medium inline-flex items-center gap-2 bg-[#20244F] text-white px-4 py-2.5 rounded-sm hover:bg-[#7771D5] transition-colors duration-300 shadow-lg shadow-[#20244F]/20"
                           >
 
@@ -386,7 +398,7 @@ const Hero = () => {
                               ↗
                             </motion.span>
 
-                          </Link>
+                          </button>
                         </motion.div>
                       </motion.div>
 
@@ -411,7 +423,7 @@ const Hero = () => {
                     delay: 1.5,
                     ease: [0.22, 1, 0.36, 1],
                   }}
-                  className="absolute z-10 overflow-hidden bottom-4 sm:bottom-4 left-3 right-3 sm:left-6 sm:right-6 min-h-[30px] bg-white/95 rounded-full origin-left  flex items-center px-3 py-2 shadow-md"
+                  className="absolute z-10 overflow-hidden bottom-4 sm:bottom-4 left-3 right-3 sm:left-6 sm:right-6 min-h-[30px] bg-white/95 rounded-full origin-left flex items-center px-3 py-2 shadow-md"
                 >
 
                   {/* MOVING LIGHT */}

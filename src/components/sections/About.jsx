@@ -1,10 +1,11 @@
 
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { redirectToAppStore } from "../../services/appService";
 
 import featureIcon1 from "../../assets/icons/Vector-1.png";
 import featureIcon2 from "../../assets/icons/Vector-2.png";
 import featureIcon3 from "../../assets/icons/Vector-3.png";
+import featureIcon4 from "../../assets/icons/Vector-8.png";
 import { SplitText, TiltCard } from "../common/Animations";
 
 const features = [
@@ -31,7 +32,7 @@ const features = [
   },
   {
     number: "04",
-    icon: featureIcon1,
+    icon: featureIcon4,
     title: "Ask The Builder",
     description:
       "Get answers from builders and AI to real questions, right from your phone.",
@@ -39,6 +40,10 @@ const features = [
 ];
 
 const About = () => {
+  const handleAppRedirect = () => {
+    redirectToAppStore();
+  };
+
   return (
     <section className="w-full bg-[#F8F7F3]">
       <div className="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-10 py-12 md:py-16 lg:py-20">
@@ -136,9 +141,48 @@ const About = () => {
               </div>
 
               {/* CARD TITLE */}
-              <h3 className="text-[#20244F] text-[13px] sm:text-[16px] font-semibold leading-snug mb-2">
-                {feature.title}
-              </h3>
+              {feature.number === "04" ? (
+                <button
+                  type="button"
+                  onClick={handleAppRedirect}
+                  aria-label="Ask The Builder - Open app"
+                  className="
+                    group
+                    inline-flex items-center gap-2
+                    text-[#20244F]
+                    text-[13px] sm:text-[16px]
+                    font-semibold leading-snug mb-2
+                    cursor-pointer
+                    hover:text-[#7771D5]
+                    transition-all duration-300
+                    focus-visible:outline-none
+                    focus-visible:ring-2
+                    focus-visible:ring-[#7771D5]
+                    focus-visible:ring-offset-2
+                    rounded-sm
+                  "
+                >
+                  <span className="relative">
+                    {feature.title}
+                    <span className="absolute left-0 -bottom-0.5 w-0 h-[1.5px] bg-[#7771D5] transition-all duration-300 group-hover:w-full" />
+                  </span>
+
+                  <span
+                    className="
+                      inline-block
+                      transition-transform duration-300
+                      group-hover:translate-x-1
+                      group-hover:-translate-y-1
+                    "
+                  >
+                    ↗
+                  </span>
+                </button>
+              ) : (
+                <h3 className="text-[#20244F] text-[13px] sm:text-[16px] font-semibold leading-snug mb-2">
+                  {feature.title}
+                </h3>
+              )}
 
               {/* CARD DESCRIPTION */}
               <p className="text-[#666666] text-[11px] sm:text-[14px] leading-[1.6]">

@@ -1,8 +1,12 @@
 
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { redirectToAppStore } from "../../../services/appService";
 
 const ServicesCTASection = () => {
+  const handleAppRedirect = () => {
+    redirectToAppStore();
+  };
+
   return (
     <section className="w-full bg-[#20244F] text-white overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-10 py-10 sm:py-12 md:py-14">
@@ -17,7 +21,7 @@ const ServicesCTASection = () => {
             transition={{ duration: 0.7 }}
           >
             <p className="text-[#D0CDFB] text-[8px] sm:text-[14px] uppercase tracking-[1.5px] font-medium mb-3">
-             YOUR NEXT STEP STARTS HERE
+              YOUR NEXT STEP STARTS HERE
             </p>
 
             <h2 className="font-serif text-[27px] sm:text-[34px] md:text-[36px] lg:text-[40px] leading-[1.08] max-w-[650px]">
@@ -45,26 +49,27 @@ const ServicesCTASection = () => {
               transition={{ delay: 0.3, duration: 0.6 }}
               className="mt-4"
             >
-              <Link
-                to="/contact"
+              <button
+                type="button"
+                onClick={handleAppRedirect}
                 className="
-               inline-flex items-center gap-2
-  bg-white text-[#20244F]
-  text-[8px] sm:text-[12px]
-  px-3 py-2
-  rounded-sm
-  hover:bg-[#A9A5F5]
-  transition-colors duration-300
+                  inline-flex items-center gap-2
+                  bg-white text-[#20244F]
+                  text-[8px] sm:text-[12px]
+                  px-3 py-2
+                  rounded-sm
+                  hover:bg-[#A9A5F5]
+                  transition-colors duration-300
                 "
               >
                 Explore Our Approach
                 <span>↗</span>
-              </Link>
+              </button>
             </motion.div>
 
             {/* BUTTON DESCRIPTION */}
             <p className="mt-4 max-w-[280px] text-[10px] sm:text-[12px] text-white/60 leading-5">
-             A clearer direction. A smarter way forward.
+              A clearer direction. A smarter way forward.
             </p>
           </motion.div>
 
